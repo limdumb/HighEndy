@@ -5,8 +5,8 @@ import TopRank from "./pages/TopRank";
 import AuthPage from "./pages/AuthPage";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 
 export default function App() {
   return (
