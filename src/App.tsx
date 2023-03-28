@@ -12,12 +12,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route />
-        <Route />
-        <Route />
-        <Route>
-          <Route />
-          <Route />
+        <Route path="/" element={<ProductList />} />
+        <Route path="product/:productId" element={<ProductDetail />} />
+        <Route path="search" element={<Search />} />
+        <Route path="toprank" element={<TopRank />} />
+        <Route path="auth" element={<AuthPage />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
         </Route>
       </Routes>
     </BrowserRouter>
