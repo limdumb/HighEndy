@@ -1,16 +1,16 @@
-.Header_Logo_Image{
+.Header_Logo_Image {
   background-color: pink;
   width: 130px;
   height: 33px;
   cursor: pointer;
 }
 
-.Header_Tab_Content{
+.Header_Tab_Content {
   color: black;
   font-weight: 500;
 }
 
-.Header_Profile_Container{
+.Header_Profile_Container {
   display: flex;
   align-items: center;
   width: 200px;
@@ -21,7 +21,7 @@
   margin-right: 10px;
 }
 
-.DropDown_Button{
+.DropDown_Button {
   font-size: 30px;
   cursor: pointer;
 }

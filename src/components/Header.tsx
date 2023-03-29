@@ -50,7 +50,7 @@ export default function Header() {
           <div className="Header_Profile_Container">
             <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
             <span>닉네임이에요ㅋㅋ</span>
-            <RxTriangleDown className="DropDown_Button"/>
+            <RxTriangleDown className="DropDown_Button" />
           </div>
         )}
       </div>
