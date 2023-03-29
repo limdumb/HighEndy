@@ -2,17 +2,18 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Search from "./pages/Search";
 import TopRank from "./pages/TopRank";
+import styled from "styled-components";
 import AuthPage from "./pages/AuthPage";
 import Header from "./components/Header";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import styled from "styled-components";
 
 const RootContainer = styled.div`
   height: 100%;
   margin: 0 auto;
+  background-color: #ebebeb;
 `;
 
 export default function App() {
