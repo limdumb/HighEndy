@@ -17,6 +17,10 @@ const AsideContainer = styled.aside`
     background-color: #FFFFFF;
     cursor: pointer;
   }
+  & > h1:last-child{
+    margin-top: 20px;
+    cursor: pointer;
+  }
 `;
 
 export default function AsideTab() {
@@ -36,6 +40,7 @@ export default function AsideTab() {
         {asideTabList.map((tab) => {
           return <button>{tab.tabTitle}</button>;
         })}
+      <h1>이달의 Top 10</h1>
     </AsideContainer>
   );
 }
