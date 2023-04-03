@@ -62,4 +62,8 @@
   .Header_Profile_Container {
     display: none;
   }
+
+  .Header_Auth_Wrapper {
+    display: none;
+  }
 }
