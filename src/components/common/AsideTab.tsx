@@ -18,15 +18,29 @@ const AsideContainer = styled.aside`
     cursor: pointer;
   }
 
+  & > h1:nth-last-child(2) {
+    margin-top: 20px;
+  }
+
+  & > h1:last-child {
+    display: none;
+  }
+
   @media (max-width: 390px) {
     padding-top: 0px;
     background-color: rgba(217, 217, 217, 45%);
+    
+    & > h1 {
+      margin-top: 20px;
+    }
+
     & > h1,
     button {
       background-color: rgba(217, 217, 217, 45%);
     }
-    & > h1 {
-      margin-top: 20px;
+
+    & > h1:last-child {
+      display: block;
     }
   }
 `;
@@ -50,12 +64,8 @@ export default function AsideTab() {
       {asideTabList.map((tab) => {
         return <button key={tab.tabTitle}>{tab.tabTitle}</button>;
       })}
-      {!memberId ? (
-        <div>
-          <h1>이달의 Top 10</h1>
-          <h1>로그인/회원가입</h1>
-        </div>
-      ) : null}
+      <h1>이달의 Top 10</h1>
+      {memberId ? <h1>로그인/회원가입</h1> : null}
     </AsideContainer>
   );
 }
