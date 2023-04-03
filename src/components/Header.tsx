@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { RxTriangleDown } from "react-icons/rx";
+import { AiOutlineMenuUnfold } from "react-icons/ai";
 import "./style/header.css";
 
 const HeaderContainer = styled.div`
@@ -9,12 +10,29 @@ const HeaderContainer = styled.div`
   height: 50px;
   border-bottom: 1px solid #b6b6b697;
   padding: 5px 30px;
+
+  @media (max-width: 390px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #b6b6b697;
+    padding-left: 10px;
+    & > .Header_Logo_Image,
+    span,
+    a {
+      display: none;
+    }
+  }
 `;
 
 const ProfileImage = styled.img`
   width: 35px;
   height: 35px;
   border-radius: 25px;
+  @media (max-width: 390px) {
+    display: none;
+  }
 `;
 
 export default function Header() {
@@ -27,10 +45,18 @@ export default function Header() {
 
   return (
     <HeaderContainer>
+      <AiOutlineMenuUnfold className="Header_Menu_Button" />
+      <div >
+        <img className="Header_Mobile_Logo_Image" />
+      </div>
       <img className="Header_Logo_Image" />
       {headerTabs.map((tab) => {
         return (
-          <a className="Header_Tab_Content" href={tab.linkUrl}>
+          <a
+            key={tab.tabTitle}
+            className="Header_Tab_Content"
+            href={tab.linkUrl}
+          >
             {tab.tabTitle}
           </a>
         );

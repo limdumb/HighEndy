@@ -38,7 +38,7 @@ export default function AsideTab() {
     <AsideContainer>
       <h1>제품 브랜드</h1>
       {asideTabList.map((tab) => {
-        return <button>{tab.tabTitle}</button>;
+        return <button key={tab.tabTitle}>{tab.tabTitle}</button>;
       })}
       <h1>이달의 Top 10</h1>
     </AsideContainer>
