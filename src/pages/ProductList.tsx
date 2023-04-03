@@ -5,7 +5,7 @@ export default function ProductList() {
   return (
     <>
       <AsideTab />
-      <ProductCard productImage={"ddd"} productName={"Gucci 마몽드백"}/>
+      <ProductCard productImage={""} productName={"Gucci 마몽드백"} />
     </>
   );
 }
