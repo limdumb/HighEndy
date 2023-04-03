@@ -1,4 +1,4 @@
-import "./style/titleSection.css"
+import "./style/titleSection.css";
 
 export default function TitleSection() {
   return (
