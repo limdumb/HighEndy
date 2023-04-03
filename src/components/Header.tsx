@@ -46,7 +46,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <AiOutlineMenuUnfold className="Header_Menu_Button" />
-      <div>
+      <div className="Mobile_Logo_Wrapper">
         <img className="Header_Mobile_Logo_Image" />
       </div>
       <img className="Header_Logo_Image" />
