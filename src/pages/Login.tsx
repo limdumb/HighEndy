@@ -17,7 +17,7 @@ export default function Login() {
           label={"닉네임"}
           onChange={() => {}}
           type={"text"}
-          placeholder={""}
+          placeholder={"닉네임을 입력해주세요"}
         />
         <CommonInput
           width={window.innerWidth <= 390 ? "320px" : "490px"}
@@ -27,7 +27,7 @@ export default function Login() {
           label={"비밀번호"}
           onChange={() => {}}
           type={"password"}
-          placeholder={""}
+          placeholder={"비밀번호를 입력해주세요"}
         />
       </div>
       <div className="SignUp_Button_Wrapper">
