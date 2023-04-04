@@ -1,0 +1,16 @@
+.Auth_Tab_Wrapper {
+  display: flex;
+}
+
+.Auth_Tab_Wrapper > :first-child {
+  margin-right: 30px;
+}
+
+.Auth_Tab_Wrapper > li {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Auth_Tab_Wrapper{
+  margin-top: 40px;
+}
