@@ -1,4 +1,5 @@
 import CommonInput from "../components/common/CommonInput";
+import CustomButton from "../components/common/CustomButton";
 import { AuthContent } from "./SignUp";
 
 export default function Login() {
@@ -30,8 +31,7 @@ export default function Login() {
         />
       </div>
       <div className="SignUp_Button_Wrapper">
-        {/* 추후 공용 Button으로 변경 예정 */}
-        <button>로그인</button>
+        <CustomButton width={"120px"} height={"41px"} contents={"로그인"} />
       </div>
     </AuthContent>
   );

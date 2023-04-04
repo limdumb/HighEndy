@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CommonInput from "../components/common/CommonInput";
+import CustomButton from "../components/common/CustomButton";
 import "./style/signup.css";
 
 export const AuthContent = styled.div`
@@ -51,7 +52,7 @@ export default function SignUp() {
       </div>
       <div className="SignUp_Button_Wrapper">
         {/* 추후 공용 Button으로 변경 예정 */}
-        <button>회원가입</button>
+        <CustomButton width={"120px"} height={"41px"} contents={"회원가입"} />
       </div>
     </AuthContent>
   );
