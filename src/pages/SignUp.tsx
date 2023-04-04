@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CommonInput from "../components/common/CommonInput";
+import "./style/signup.css";
 
 export const AuthContent = styled.div`
   display: flex;
@@ -12,7 +13,6 @@ export const AuthContent = styled.div`
   margin-bottom: 40px;
   border-radius: 10px;
   border: 1px solid 1px solid rgba(164, 164, 164, 0.153);
-  justify-content: space-between;
   margin-top: 50px;
   box-shadow: 3px 2px 5px rgba(164, 164, 164, 0.153);
 `;
@@ -23,9 +23,9 @@ export default function SignUp() {
       <div>
         <h2>회원가입</h2>
       </div>
-      <div>
+      <div className="Input_Wrapper">
         <CommonInput
-          width="470px"
+          width="490px"
           height="34px"
           radius="3px"
           value={""}
@@ -34,6 +34,20 @@ export default function SignUp() {
           type={"text"}
           placeholder={""}
         />
+        <CommonInput
+          width="490px"
+          height="34px"
+          radius="3px"
+          value={""}
+          label={"비밀번호"}
+          onChange={() => {}}
+          type={"password"}
+          placeholder={""}
+        />
+      </div>
+      <div className="SignUp_Button_Wrapper">
+        {/* 추후 공용 Button으로 변경 예정 */}
+        <button>회원가입</button>
       </div>
     </AuthContent>
   );
