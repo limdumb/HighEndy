@@ -1,5 +1,11 @@
 .Auth_Tab_Wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 190px;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .Auth_Tab_Wrapper > :first-child {
