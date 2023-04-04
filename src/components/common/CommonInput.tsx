@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from "react";
 import styled from "styled-components";
-// import "./Style/commonInput.css"; 추후 적용예정
+import "./style/commonInput.css"
 
 interface InputProps {
   width?: string;
@@ -8,7 +8,7 @@ interface InputProps {
   value: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   type: "text" | "password" | "email";
-  placeholder: string
+  placeholder: string;
   radius?: string;
   label?: string;
   name?: string;
@@ -28,19 +28,19 @@ const Input = styled.input<InputProps>`
 export default function CommonInput(props: InputProps) {
   return (
     <div className="Input_Container">
-      <label className="Input_Label">
-        {props.label}
-      </label>
-      <Input
-        name={props.name}
-        radius={props.radius}
-        placeholder={props.placeholder}
-        type={props.type}
-        value={props.value}
-        onChange={props.onChange}
-        width={props.width}
-        height={props.height}
-      />
+      <label className="Input_Label">{props.label}</label>
+      <div className="Common_Input_Wrapper">
+        <Input
+          name={props.name}
+          radius={props.radius}
+          placeholder={props.placeholder}
+          type={props.type}
+          value={props.value}
+          onChange={props.onChange}
+          width={props.width}
+          height={props.height}
+        />
+      </div>
     </div>
   );
 }

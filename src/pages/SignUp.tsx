@@ -15,6 +15,10 @@ export const AuthContent = styled.div`
   border: 1px solid 1px solid rgba(164, 164, 164, 0.153);
   margin-top: 50px;
   box-shadow: 3px 2px 5px rgba(164, 164, 164, 0.153);
+
+  @media (max-width: 390px) {
+    width: 360px;
+  }
 `;
 
 export default function SignUp() {
@@ -25,7 +29,7 @@ export default function SignUp() {
       </div>
       <div className="Input_Wrapper">
         <CommonInput
-          width="490px"
+          width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
           value={""}
@@ -35,7 +39,7 @@ export default function SignUp() {
           placeholder={""}
         />
         <CommonInput
-          width="490px"
+          width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
           value={""}
