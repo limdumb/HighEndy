@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from "react";
 import styled from "styled-components";
-import "./Style/commonInput.css";
+// import "./Style/commonInput.css"; 추후 적용예정
 
 interface InputProps {
   width?: string;
