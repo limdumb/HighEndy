@@ -8,6 +8,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 50px;
+  background-color: white;
   border-bottom: 1px solid #b6b6b697;
   padding: 5px 30px;
 
