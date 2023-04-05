@@ -10,4 +10,9 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+button {
+  cursor: pointer;
 }

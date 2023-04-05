@@ -29,7 +29,7 @@ const AsideContainer = styled.aside`
   @media (max-width: 390px) {
     padding-top: 0px;
     background-color: rgba(217, 217, 217, 45%);
-    
+
     & > h1 {
       margin-top: 20px;
     }
