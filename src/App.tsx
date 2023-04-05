@@ -4,7 +4,7 @@ import Search from "./pages/Search";
 import TopRank from "./pages/TopRank";
 import styled from "styled-components";
 import AuthPage from "./pages/AuthPage";
-import Header from "./components/Header";
+import Header from "./components/common/Header";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
