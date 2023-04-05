@@ -57,7 +57,7 @@ export default function ProductList() {
         <h2>Gucci</h2>
         <ProductListWrapper>
           {test.map((el) => {
-            return <ProductCard productImage={el} productName={el} />;
+            return <ProductCard key={el} productImage={el} productName={el} />;
           })}
         </ProductListWrapper>
       </ProductListContainer>
