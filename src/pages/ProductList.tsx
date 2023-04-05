@@ -5,6 +5,12 @@ import TitleSection from "../components/common/TitleSection";
 
 const HomeContainer = styled.div`
   display: flex;
+
+  @media (max-width: 390px) {
+    & > .Aside_Tab_Wrapper {
+      display: none;
+    }
+  }
 `;
 
 const ProductListContainer = styled.div`
@@ -13,7 +19,10 @@ const ProductListContainer = styled.div`
   align-items: center;
   width: calc(100% - 160px);
   padding-top: 20px;
-  
+  padding-bottom: 20px;
+  @media (max-width: 390px) {
+    width: 100%;
+  }
 `;
 
 const ProductListWrapper = styled.ul`
@@ -22,7 +31,6 @@ const ProductListWrapper = styled.ul`
   justify-content: center;
   padding-top: 3em;
   gap: 3em 12.5%;
-  
 `;
 
 export default function ProductList() {
@@ -38,12 +46,12 @@ export default function ProductList() {
     "9번상품",
     "10번상품",
     "11번상품",
-    "12번상품"
+    "12번상품",
   ];
   return (
     <HomeContainer>
-      <div>
-      <AsideTab />
+      <div className="Aside_Tab_Wrapper">
+        <AsideTab />
       </div>
       <ProductListContainer>
         <h2>Gucci</h2>

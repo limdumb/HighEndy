@@ -1,3 +1,7 @@
+.Product_Container{
+  cursor: pointer;
+}
+
 .Product_Container {
   background-color: white;
   width: 190px;
@@ -23,4 +27,28 @@
 .Product_Name_Wrapper > span {
   font-size: 16px;
   font-weight: 500;
+}
+
+@media (max-width: 390px) {
+  .Product_Container{
+    width: 150px;
+    height: 150px;
+  }
+
+  .Product_Image_Wrapper{
+    height: 114px;
+  }
+
+  .Product_Name_Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 36px;
+  }
+
+  .Product_Name_Wrapper > span {
+    font-size: 12px;
+    font-weight: 500;
+  }
 }

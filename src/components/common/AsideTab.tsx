@@ -5,6 +5,7 @@ const AsideContainer = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   height: 100%;
   width: 160px;
   border-right: 1px solid #aaaaaa;
