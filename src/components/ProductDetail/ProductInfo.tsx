@@ -5,6 +5,11 @@ export const ContourLine = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid gray;
+
+  @media (max-width: 390px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 `;
 
 export default function ProductInfo() {

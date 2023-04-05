@@ -3,12 +3,35 @@
   justify-content: space-between;
 }
 
-.Product_Detail_Info_Wrapper {
-  width: 820px;
-  height: 300px;
-}
-
-.Product_Detail_Outfit_Container{
+.Product_Detail_Outfit_Container {
   display: flex;
   margin-top: 60px;
+}
+
+.Product_Explanation {
+  display: none;
+}
+
+@media (max-width: 390px) {
+  .Product_Detaile_Info_Container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .Product_Explanation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .Product_Explation_Content {
+    margin-top: 15px;
+  }
+
+  .Product_Detail_Outfit_Container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
 }

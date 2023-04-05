@@ -1,21 +1,36 @@
 import styled from "styled-components";
-import ProductInfo from "../components/ProductDetail/ProductInfo";
+import ProductInfo, {
+  ContourLine,
+} from "../components/ProductDetail/ProductInfo";
 import "./style/productDetail.css";
 
 const ProductDetailContainer = styled.div`
   padding: 40px 0px;
   width: 1440px;
   margin: 0 auto;
+  @media (max-width: 390px) {
+    width: 350px;
+  }
 `;
 
 const ProductImage = styled.img`
   width: 300px;
   height: 300px;
+
+  @media (max-width: 390px) {
+    width: 140px;
+    height: 140px;
+  }
 `;
 
 const ProductOutfitImage = styled.img`
   width: 720px;
   height: 720px;
+
+  @media (max-width: 390px) {
+    width: 350px;
+    height: 350px;
+  }
 `;
 
 export default function ProductDetail() {
@@ -27,6 +42,17 @@ export default function ProductDetail() {
         </div>
         <div className="Product_Detail_Info">
           <ProductInfo />
+        </div>
+      </div>
+      {window.innerWidth <= 390 ? <ContourLine /> : null}
+      <div className="Product_Explanation">
+        <h3>제품설명</h3>
+        <div className="Product_Explation_Content">
+          <span>
+            하우스 아카이브로부터 탄생한 구찌 블론디 라인을 특징하는 라운드
+            인터로킹 G. 구찌 블론디 숄더백 및 크로스백과 같은 시그니처
+            아이템에서 섬세한 레더 패치 디테일로 엠블럼을 구현함.
+          </span>
         </div>
       </div>
       <div className="Product_Detail_Outfit_Container">
