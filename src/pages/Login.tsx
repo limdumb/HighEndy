@@ -1,4 +1,5 @@
 import CommonInput from "../components/common/CommonInput";
+import CustomButton from "../components/common/CustomButton";
 import { AuthContent } from "./SignUp";
 
 export default function Login() {
@@ -16,7 +17,7 @@ export default function Login() {
           label={"닉네임"}
           onChange={() => {}}
           type={"text"}
-          placeholder={""}
+          placeholder={"닉네임을 입력해주세요"}
         />
         <CommonInput
           width={window.innerWidth <= 390 ? "320px" : "490px"}
@@ -26,12 +27,11 @@ export default function Login() {
           label={"비밀번호"}
           onChange={() => {}}
           type={"password"}
-          placeholder={""}
+          placeholder={"비밀번호를 입력해주세요"}
         />
       </div>
       <div className="SignUp_Button_Wrapper">
-        {/* 추후 공용 Button으로 변경 예정 */}
-        <button>로그인</button>
+        <CustomButton width={"120px"} height={"41px"} contents={"로그인"} />
       </div>
     </AuthContent>
   );
