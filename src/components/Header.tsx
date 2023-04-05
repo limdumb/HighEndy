@@ -62,7 +62,13 @@ export default function Header() {
         );
       })}
       <div>
-        {!memberId ? (
+        {memberId ? (
+          <div className="Header_Profile_Container">
+            <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
+            <span>닉네임이에요ㅋㅋ</span>
+            <RxTriangleDown className="DropDown_Button" />
+          </div>
+        ) : (
           <div className="Header_Auth_Wrapper">
             <a className="Header_Tab_Content" href="auth/login">
               로그인
@@ -71,12 +77,6 @@ export default function Header() {
             <a className="Header_Tab_Content" href="auth/signup">
               회원가입
             </a>
-          </div>
-        ) : (
-          <div className="Header_Profile_Container">
-            <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
-            <span>닉네임이에요ㅋㅋ</span>
-            <RxTriangleDown className="DropDown_Button" />
           </div>
         )}
       </div>

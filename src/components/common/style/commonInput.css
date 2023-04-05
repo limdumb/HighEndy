@@ -1,0 +1,8 @@
+.Input_Container{
+  display: flex;
+  flex-direction: column;
+}
+
+.Input_Label{
+  font-weight: bold;
+}
