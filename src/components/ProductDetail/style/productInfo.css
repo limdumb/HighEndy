@@ -1,0 +1,37 @@
+.Product_Detail_Title > h2 {
+  margin-top: 10px;
+}
+
+.Product_Detail_Title > h3 {
+  color: #477ac8;
+}
+
+.Product_Detail_Info_Title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 198px;
+  width: 300px;
+}
+
+.Product_Detail_Info_Container{
+  display: flex;
+}
+
+.Product_Detail_Info_Title > span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.Product_Detail_Info_Contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  padding-bottom: 4px;
+}
+
+.Product_Detail_Info_Contents > :first-child {
+  font-size: 20px;
+  font-weight: bold;
+}

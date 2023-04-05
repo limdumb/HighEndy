@@ -5,7 +5,6 @@ import TitleSection from "../components/common/TitleSection";
 
 const HomeContainer = styled.div`
   display: flex;
-
   @media (max-width: 390px) {
     & > .Aside_Tab_Wrapper {
       display: none;

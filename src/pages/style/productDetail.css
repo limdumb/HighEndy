@@ -1,0 +1,9 @@
+.Product_Detaile_Info_Container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Product_Detail_Info_Wrapper {
+  width: 820px;
+  height: 300px;
+}

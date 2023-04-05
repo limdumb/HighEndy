@@ -13,7 +13,6 @@ import "./App.css";
 const RootContainer = styled.div`
   height: 100%;
   margin: 0 auto;
-  background-color: #ebebeb;
 `;
 
 export default function App() {
