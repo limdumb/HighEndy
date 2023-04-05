@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CommonInput from "../components/common/CommonInput";
+import CustomButton from "../components/common/CustomButton";
 import "./style/signup.css";
 
 export const AuthContent = styled.div`
@@ -15,6 +16,10 @@ export const AuthContent = styled.div`
   border: 1px solid 1px solid rgba(164, 164, 164, 0.153);
   margin-top: 50px;
   box-shadow: 3px 2px 5px rgba(164, 164, 164, 0.153);
+
+  @media (max-width: 390px) {
+    width: 360px;
+  }
 `;
 
 export default function SignUp() {
@@ -25,29 +30,28 @@ export default function SignUp() {
       </div>
       <div className="Input_Wrapper">
         <CommonInput
-          width="490px"
+          width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
           value={""}
           label={"닉네임"}
           onChange={() => {}}
           type={"text"}
-          placeholder={""}
+          placeholder={"닉네임을 입력해주세요"}
         />
         <CommonInput
-          width="490px"
+          width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
           value={""}
           label={"비밀번호"}
           onChange={() => {}}
           type={"password"}
-          placeholder={""}
+          placeholder={"비밀번호를 입력해주세요"}
         />
       </div>
       <div className="SignUp_Button_Wrapper">
-        {/* 추후 공용 Button으로 변경 예정 */}
-        <button>회원가입</button>
+        <CustomButton width={"120px"} height={"41px"} contents={"회원가입"} />
       </div>
     </AuthContent>
   );
