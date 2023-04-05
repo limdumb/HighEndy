@@ -16,8 +16,8 @@ export default function AuthTab() {
     <>
       {authTabArray.map((element) => {
         return (
-          <Link to={element.tabNavigate}>
-            <li className="Auth_List" key={element.tabTitle}>{element.tabTitle}</li>
+          <Link key={element.tabTitle} to={element.tabNavigate}>
+            <li className="Auth_List">{element.tabTitle}</li>
           </Link>
         );
       })}
