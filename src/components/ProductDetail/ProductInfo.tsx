@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "./style/productInfo.css";
 
-const ContourLine = styled.div`
+export const ContourLine = styled.div`
   margin-top: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid gray;
