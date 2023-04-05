@@ -5,6 +5,10 @@
   cursor: pointer;
 }
 
+.Header_Mobile_Logo_Image {
+  display: none;
+}
+
 .Header_Tab_Content {
   color: black;
   font-weight: 500;
@@ -24,4 +28,50 @@
 .DropDown_Button {
   font-size: 30px;
   cursor: pointer;
+}
+
+.Header_Menu_Button {
+  display: none;
+}
+
+.Mobile_Logo_Wrapper {
+  display: none;
+}
+
+@media (max-width: 390px) {
+  .DropDown_Button {
+    display: none;
+  }
+
+  .Header_Menu_Button {
+    display: block;
+    position: relative;
+    right: 83px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .Header_Logo_Image {
+    display: none;
+  }
+
+  .Header_Mobile_Logo_Image {
+    display: block;
+    background-color: pink;
+    width: 130px;
+    height: 33px;
+    cursor: pointer;
+  }
+
+  .Header_Profile_Container {
+    display: none;
+  }
+
+  .Header_Auth_Wrapper {
+    display: none;
+  }
+
+  .Mobile_Logo_Wrapper {
+    display: block;
+  }
 }

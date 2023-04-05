@@ -17,13 +17,36 @@ const AsideContainer = styled.aside`
     background-color: #ffffff;
     cursor: pointer;
   }
-  & > h1:last-child {
+
+  & > h1:nth-last-child(2) {
     margin-top: 20px;
-    cursor: pointer;
+  }
+
+  & > h1:last-child {
+    display: none;
+  }
+
+  @media (max-width: 390px) {
+    padding-top: 0px;
+    background-color: rgba(217, 217, 217, 45%);
+
+    & > h1 {
+      margin-top: 20px;
+    }
+
+    & > h1,
+    button {
+      background-color: rgba(217, 217, 217, 45%);
+    }
+
+    & > h1:last-child {
+      display: block;
+    }
   }
 `;
 
 export default function AsideTab() {
+  const memberId = 1; // 추후 로그인 정보가 들어올 예정
   const asideTabList = [
     { tabTitle: "Hermès" },
     { tabTitle: "Louis Vuitton" },
@@ -34,13 +57,15 @@ export default function AsideTab() {
     { tabTitle: "Dior" },
     { tabTitle: "Gucci" },
   ];
+
   return (
     <AsideContainer>
       <h1>제품 브랜드</h1>
       {asideTabList.map((tab) => {
-        return <button>{tab.tabTitle}</button>;
+        return <button key={tab.tabTitle}>{tab.tabTitle}</button>;
       })}
       <h1>이달의 Top 10</h1>
+      {memberId ? <h1>로그인/회원가입</h1> : null}
     </AsideContainer>
   );
 }
