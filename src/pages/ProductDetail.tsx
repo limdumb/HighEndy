@@ -60,8 +60,7 @@ export default function ProductDetail() {
         <ProductOutfitImage src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679682629/742360_1IV0G_6420_004_100_0000_Light-.jpg" />
       </div>
       <div>
-        <div></div>
-        <div></div>
+        {/* 추후 Comment 컴포넌트 예정 */}
       </div>
     </ProductDetailContainer>
   );
