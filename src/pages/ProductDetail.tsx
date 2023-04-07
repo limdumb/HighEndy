@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import CommentBox from "../components/ProductDetail/CommentBox";
+import ProductComment from "../components/ProductDetail/ProductComment";
 import ProductInfo, {
   ContourLine,
 } from "../components/ProductDetail/ProductInfo";
@@ -59,8 +61,12 @@ export default function ProductDetail() {
         <ProductOutfitImage src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679682627/742360_1IV0G_6420_003_100_0000_Light-.jpg" />
         <ProductOutfitImage src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679682629/742360_1IV0G_6420_004_100_0000_Light-.jpg" />
       </div>
-      <div>
-        {/* 추후 Comment 컴포넌트 예정 */}
+      <div className="Product_Review_Container">
+        <ProductComment />
+        <ContourLine />
+        <div>
+          <CommentBox />
+        </div>
       </div>
     </ProductDetailContainer>
   );
