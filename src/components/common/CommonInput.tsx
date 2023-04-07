@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from "react";
 import styled from "styled-components";
-import "./style/commonInput.css"
+import "./style/commonInput.css";
 
 interface InputProps {
   width?: string;
@@ -12,12 +12,13 @@ interface InputProps {
   radius?: string;
   label?: string;
   name?: string;
+  border?: string;
 }
 
 const Input = styled.input<InputProps>`
   width: ${(props) => (props.width ? props.width : {})};
   height: ${(props) => (props.height ? props.height : {})};
-  border: 1px solid gray;
+  border: ${(props) => (props.border ? props.border : "1px solid gray")};
   border-radius: ${(props) => (props.radius ? props.radius : "none")};
   padding-left: 5px;
   ::placeholder {
@@ -39,6 +40,7 @@ export default function CommonInput(props: InputProps) {
           onChange={props.onChange}
           width={props.width}
           height={props.height}
+          border={props.border}
         />
       </div>
     </div>
