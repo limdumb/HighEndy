@@ -12,19 +12,43 @@ const CommentBoxContainer = styled.div`
   & > :last-child {
     font-weight: 600;
   }
+  @media (max-width: 390px) {
+    padding: 5px 10px;
+    & > :last-child {
+      padding-bottom: 10px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    height: 60px;
+  }
 `;
 
 const ReviewContents = styled.div`
   display: flex;
+  align-items: center;
+  height: 100%;
   & > :first-child {
     font-size: 14px;
     font-weight: 600;
-    padding-bottom: 22px;
   }
   & > :last-child {
     width: 1200px;
     padding-left: 40px;
     font-size: 15px;
+  }
+
+  @media (max-width: 390px) {
+    & > :first-child {
+      font-size: 10px;
+      font-weight: 600;
+      padding-bottom: 10px;
+    }
+    & > :last-child {
+      width: 210px;
+      padding-left: 10px;
+      font-size: 10px;
+      padding: 0px 10px;
+    }
   }
 `;
 
@@ -37,8 +61,7 @@ export default function CommentBox() {
         </div>
         <div>
           <span>
-            gd
-            리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d리뷰내용d
+            제품 상태는 되게 좋았고 근데 뭔가 문제는 좀 있었어요
           </span>
         </div>
       </ReviewContents>

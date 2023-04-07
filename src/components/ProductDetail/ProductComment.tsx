@@ -27,10 +27,6 @@ export default function ProductComment() {
           border={"1px solid #afafaf"}
         />
       </div>
-      <ContourLine />
-      <div>
-        <CommentBox />
-      </div>
     </div>
   );
 }
