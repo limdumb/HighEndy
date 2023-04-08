@@ -3,7 +3,7 @@ import AsideTab from "../components/common/AsideTab";
 import ProductCard from "../components/common/ProductCard";
 import TitleSection from "../components/common/TitleSection";
 
-const HomeContainer = styled.div`
+export const HomeContainer = styled.div`
   display: flex;
   @media (max-width: 390px) {
     & > .Aside_Tab_Wrapper {
@@ -12,7 +12,7 @@ const HomeContainer = styled.div`
   }
 `;
 
-const ProductListContainer = styled.div`
+export const ProductListContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@ const ProductListContainer = styled.div`
   }
 `;
 
-const ProductListWrapper = styled.ul`
+export const ProductListWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
