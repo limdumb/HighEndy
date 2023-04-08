@@ -1,0 +1,15 @@
+.Top_Rank_Container {
+  width: 81%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+@media (max-width: 390px) {
+  .Top_Rank_Container {
+    width: 89%;
+  }
+}
