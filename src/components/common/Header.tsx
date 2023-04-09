@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import "./style/header.css";
@@ -44,13 +45,15 @@ export default function Header() {
 
   const memberId = "1";
 
+  const navigate = useNavigate();
+
   return (
     <HeaderContainer>
       <AiOutlineMenuUnfold className="Header_Menu_Button" />
       <div className="Mobile_Logo_Wrapper">
         <img className="Header_Mobile_Logo_Image" />
       </div>
-      <img className="Header_Logo_Image" />
+      <img className="Header_Logo_Image" onClick={() => navigate("/")} />
       {headerTabs.map((tab) => {
         return (
           <a

@@ -1,0 +1,13 @@
+.Brand_Tab_Container{
+  display: flex;
+  flex-direction: column;
+}
+
+.Brand_Tab_Container > * {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}

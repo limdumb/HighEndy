@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import "./style/asideTab.css"
 
 const AsideContainer = styled.aside`
   padding-top: 20px;
@@ -49,22 +51,28 @@ const AsideContainer = styled.aside`
 export default function AsideTab() {
   const memberId = 1; // 추후 로그인 정보가 들어올 예정
   const asideTabList = [
-    { tabTitle: "Hermès" },
-    { tabTitle: "Louis Vuitton" },
-    { tabTitle: "Burberry" },
-    { tabTitle: "Chanel" },
-    { tabTitle: "Prada" },
-    { tabTitle: "MIUMIU" },
-    { tabTitle: "Dior" },
-    { tabTitle: "Gucci" },
+    { tabTitle: "Hermès", tabUrl: "?brand=hermes" },
+    { tabTitle: "Louis Vuitton", tabUrl: "?brand=louisvuitton" },
+    { tabTitle: "Burberry", tabUrl: "?brand=burberry" },
+    { tabTitle: "Chanel", tabUrl: "?brand=chanel" },
+    { tabTitle: "Prada", tabUrl: "?brand=prada" },
+    { tabTitle: "MIUMIU", tabUrl: "?brand=miumiu" },
+    { tabTitle: "Dior", tabUrl: "?brand=dior" },
+    { tabTitle: "Gucci", tabUrl: "?brand=gucci" },
   ];
 
   return (
     <AsideContainer>
       <h1>제품 브랜드</h1>
-      {asideTabList.map((tab) => {
-        return <button key={tab.tabTitle}>{tab.tabTitle}</button>;
-      })}
+      <div className="Brand_Tab_Container">
+        {asideTabList.map((tab) => {
+          return (
+            <Link to={""}>
+              <span key={tab.tabTitle}>{tab.tabTitle}</span>
+            </Link>
+          );
+        })}
+      </div>
       <h1>이달의 Top 10</h1>
       {memberId ? <h1>로그인/회원가입</h1> : null}
     </AsideContainer>
