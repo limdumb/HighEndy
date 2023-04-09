@@ -67,7 +67,7 @@ export default function AsideTab() {
       <div className="Brand_Tab_Container">
         {asideTabList.map((tab) => {
           return (
-            <Link to={""}>
+            <Link to={tab.tabUrl}>
               <span key={tab.tabTitle}>{tab.tabTitle}</span>
             </Link>
           );
