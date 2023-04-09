@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import "./style/asideTab.css"
+import "./style/asideTab.css";
 
 const AsideContainer = styled.aside`
   padding-top: 20px;
@@ -19,10 +19,6 @@ const AsideContainer = styled.aside`
     border: none;
     background-color: #ffffff;
     cursor: pointer;
-  }
-
-  & > h1:nth-last-child(2) {
-    margin-top: 20px;
   }
 
   & > h1:last-child {
@@ -51,14 +47,14 @@ const AsideContainer = styled.aside`
 export default function AsideTab() {
   const memberId = 1; // 추후 로그인 정보가 들어올 예정
   const asideTabList = [
-    { tabTitle: "Hermès", tabUrl: "?brand=hermes" },
-    { tabTitle: "Louis Vuitton", tabUrl: "?brand=louisvuitton" },
-    { tabTitle: "Burberry", tabUrl: "?brand=burberry" },
-    { tabTitle: "Chanel", tabUrl: "?brand=chanel" },
-    { tabTitle: "Prada", tabUrl: "?brand=prada" },
-    { tabTitle: "MIUMIU", tabUrl: "?brand=miumiu" },
-    { tabTitle: "Dior", tabUrl: "?brand=dior" },
-    { tabTitle: "Gucci", tabUrl: "?brand=gucci" },
+    { tabTitle: "Hermès", tabUrl: "/?brand=hermes" },
+    { tabTitle: "Louis Vuitton", tabUrl: "/?brand=louisvuitton" },
+    { tabTitle: "Burberry", tabUrl: "/?brand=burberry" },
+    { tabTitle: "Chanel", tabUrl: "/?brand=chanel" },
+    { tabTitle: "Prada", tabUrl: "/?brand=prada" },
+    { tabTitle: "MIUMIU", tabUrl: "/?brand=miumiu" },
+    { tabTitle: "Dior", tabUrl: "/?brand=dior" },
+    { tabTitle: "Gucci", tabUrl: "/?brand=gucci" },
   ];
 
   return (
@@ -73,7 +69,9 @@ export default function AsideTab() {
           );
         })}
       </div>
-      <h1>이달의 Top 10</h1>
+      <Link to={"/toprank"} className="Top_Rank_Tab">
+        <h2>이달의 Top10</h2>
+      </Link>
       {memberId ? <h1>로그인/회원가입</h1> : null}
     </AsideContainer>
   );

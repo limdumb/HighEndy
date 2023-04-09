@@ -1,4 +1,4 @@
-.Brand_Tab_Container{
+.Brand_Tab_Container {
   display: flex;
   flex-direction: column;
 }
@@ -10,4 +10,8 @@
   border: none;
   background-color: #ffffff;
   cursor: pointer;
+}
+
+.Top_Rank_Tab {
+  margin-top: 20px;
 }
