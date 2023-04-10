@@ -67,7 +67,7 @@ export default function AsideTab(props: Props) {
       <div className="Brand_Tab_Container">
         {asideTabList.map((tab) => {
           return (
-            <span onClick={() => props.categoryClickHandler(tab.tabUrl)}>
+            <span key={tab.tabTitle} onClick={() => props.categoryClickHandler(tab.tabUrl)}>
               {tab.tabTitle}
             </span>
           );
