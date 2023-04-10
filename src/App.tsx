@@ -30,7 +30,7 @@ export default function App() {
         <Routes>
           <Route
             path="/"
-            element={<ProductDefaultPage isActiveTab={isActiveTab} />}
+            element={<ProductDefaultPage isActiveTab={isActiveTab} asideTabHandler={asideTabHandler}/>}
           >
             <Route
               path="products"

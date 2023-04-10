@@ -26,16 +26,13 @@ const AsideContainer = styled.aside`
   }
 
   @media (max-width: 390px) {
+    min-height: 100vh;
     padding-top: 0px;
-    background-color: rgba(217, 217, 217, 45%);
+    background-color: #fffffffe;
+    /* background-color: rgba(211, 211, 211, 98%); */
 
     & > h1 {
       margin-top: 20px;
-    }
-
-    & > h1,
-    button {
-      background-color: rgba(217, 217, 217, 45%);
     }
 
     & > h1:last-child {
@@ -46,6 +43,7 @@ const AsideContainer = styled.aside`
 
 interface Props {
   categoryClickHandler: (brand: string) => void;
+  asideTabHandler: () => void;
 }
 
 export default function AsideTab(props: Props) {
@@ -67,16 +65,30 @@ export default function AsideTab(props: Props) {
       <div className="Brand_Tab_Container">
         {asideTabList.map((tab) => {
           return (
-            <span key={tab.tabTitle} onClick={() => props.categoryClickHandler(tab.tabUrl)}>
+            <span
+              key={tab.tabTitle}
+              onClick={() => {
+                props.categoryClickHandler(tab.tabUrl);
+                props.asideTabHandler();
+              }}
+            >
               {tab.tabTitle}
             </span>
           );
         })}
       </div>
-      <Link to={"/toprank"} className="Top_Rank_Tab">
+      <Link
+        to={"/toprank"}
+        className="Top_Rank_Tab"
+        onClick={() => props.asideTabHandler()}
+      >
         <h2>이달의 Top10</h2>
       </Link>
-      <Link to={"/search"} className="Search_Nav_Tab">
+      <Link
+        to={"/search"}
+        className="Search_Nav_Tab"
+        onClick={() => props.asideTabHandler()}
+      >
         <h2>상품 검색</h2>
       </Link>
       {memberId ? <h1>로그인/회원가입</h1> : null}
