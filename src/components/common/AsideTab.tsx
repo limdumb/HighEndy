@@ -72,6 +72,9 @@ export default function AsideTab() {
       <Link to={"/toprank"} className="Top_Rank_Tab">
         <h2>이달의 Top10</h2>
       </Link>
+      <Link to={"/search"} className="Search_Nav_Tab">
+        <h2>상품 검색</h2>
+      </Link>
       {memberId ? <h1>로그인/회원가입</h1> : null}
     </AsideContainer>
   );

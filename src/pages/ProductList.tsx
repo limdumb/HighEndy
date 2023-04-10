@@ -12,7 +12,7 @@ export const HomeContainer = styled.div`
   }
 `;
 
-export const ProductListContainer = styled.div`
+export const ProductListContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
