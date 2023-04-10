@@ -9,8 +9,8 @@ import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDefaultPage from "./pages/ProductDefaultPage";
-import "./App.css";
 import { useState } from "react";
+import "./App.css";
 
 const RootContainer = styled.div`
   height: 100%;
@@ -20,7 +20,9 @@ const RootContainer = styled.div`
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
   const asideTabHandler = () => {
-    setIstActiveTab(!isActiveTab);
+    if (window.innerWidth <= 390) {
+      setIstActiveTab(!isActiveTab);
+    }
   };
 
   return (
@@ -30,7 +32,12 @@ export default function App() {
         <Routes>
           <Route
             path="/"
-            element={<ProductDefaultPage isActiveTab={isActiveTab} asideTabHandler={asideTabHandler}/>}
+            element={
+              <ProductDefaultPage
+                isActiveTab={isActiveTab}
+                asideTabHandler={asideTabHandler}
+              />
+            }
           >
             <Route
               path="products"

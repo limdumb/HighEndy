@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import AsideTab from "../components/common/AsideTab";
 import TitleSection from "../components/common/TitleSection";
 import { HomeContainer } from "./ProductList";
-import "./style/asideDetaile.css";
+import "./style/productDefault.css";
 
 interface Props {
   isActiveTab: boolean;
@@ -22,13 +22,19 @@ export default function ProductDefaultPage(props: Props) {
   return (
     <HomeContainer>
       {props.isActiveTab ? (
-        <div className="Aside_Tab_Wrapper">
+        <div className="Aside_Tab_Mobile_Wrapper">
           <AsideTab
             categoryClickHandler={categoryClickHandler}
             asideTabHandler={props.asideTabHandler}
           />
         </div>
       ) : null}
+      <div className="Aside_Tab_Wrapper">
+        <AsideTab
+          categoryClickHandler={categoryClickHandler}
+          asideTabHandler={props.asideTabHandler}
+        />
+      </div>
       {/* Main Page에 대한 부분은 좀더 구상해볼 예정 */}
       {/* {isClickCategory ? null : <TitleSection />} */}
       <Outlet />

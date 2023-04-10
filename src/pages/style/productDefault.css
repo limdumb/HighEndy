@@ -1,0 +1,15 @@
+@media (max-width: 390px) {
+  .Aside_Tab_Mobile_Wrapper {
+    position: absolute;
+    z-index: 100000;
+  }
+
+  .Aside_Tab_Mobile_Wrapper {
+    width: 100%;
+    background-color: rgba(94, 94, 94, 0.7);
+  }
+
+  .Aside_Tab_Wrapper{
+    display: none;
+  }
+}

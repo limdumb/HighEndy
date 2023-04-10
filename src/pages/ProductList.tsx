@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import AsideTab from "../components/common/AsideTab";
 import ProductCard from "../components/common/ProductCard";
-import TitleSection from "../components/common/TitleSection";
 
 export const HomeContainer = styled.div`
   display: flex;
