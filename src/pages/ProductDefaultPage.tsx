@@ -17,11 +17,11 @@ export default function ProductDefaultPage() {
     setIsCategory(true);
     navigate(brand);
   };
-  
+
   return (
     <HomeContainer>
       <div className="Aside_Tab_Wrapper">
-        <AsideTab categoryClickHandler={categoryClickHandler}/>
+        <AsideTab categoryClickHandler={categoryClickHandler} />
       </div>
       {/* Main Page에 대한 부분은 좀더 구상해볼 예정 */}
       {/* {isClickCategory ? null : <TitleSection />} */}

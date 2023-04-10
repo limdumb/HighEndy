@@ -8,8 +8,8 @@ import Header from "./components/common/Header";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import ProductDefaultPage from "./pages/ProductDefaultPage";
+import "./App.css";
 
 const RootContainer = styled.div`
   height: 100%;
