@@ -16,7 +16,6 @@ export const ProductListContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 160px);
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -59,9 +58,6 @@ export default function ProductList() {
   ];
   return (
     <HomeContainer>
-      <div className="Aside_Tab_Wrapper">
-        <AsideTab />
-      </div>
       <ProductListContainer>
         <div className="Product_List_Title">
           <h2>Gucci</h2>
