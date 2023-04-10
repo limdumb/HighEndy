@@ -5,18 +5,12 @@ import TitleSection from "../components/common/TitleSection";
 
 export const HomeContainer = styled.div`
   display: flex;
-  @media (max-width: 390px) {
-    & > .Aside_Tab_Wrapper {
-      display: none;
-    }
-  }
 `;
 
 export const ProductListContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 160px);
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -63,9 +57,6 @@ export default function ProductList(props: Props) {
   ];
   return (
     <HomeContainer>
-      <div className="Aside_Tab_Wrapper">
-        <AsideTab />
-      </div>
       <ProductListContainer>
         <div className="Product_List_Title">
           <h2>Gucci</h2>

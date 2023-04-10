@@ -8,6 +8,7 @@ import Header from "./components/common/Header";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProductDefaultPage from "./pages/ProductDefaultPage";
 import "./App.css";
 import { useState } from "react";
 
@@ -27,10 +28,17 @@ export default function App() {
       <Header asideTabHandler={asideTabHandler} />
       <RootContainer>
         <Routes>
-          {/* 추후 "/","search","topRank" Outlet으로 묶을 예정 */}
-          <Route path="/" element={<ProductList isActiveTab={isActiveTab} />} />
-          <Route path="search" element={<Search />} />
-          <Route path="toprank" element={<TopRank />} />
+          <Route
+            path="/"
+            element={<ProductDefaultPage isActiveTab={isActiveTab} />}
+          >
+            <Route
+              path="products"
+              element={<ProductList isActiveTab={false} />}
+            />
+            <Route path="search" element={<Search />} />
+            <Route path="toprank" element={<TopRank />} />
+          </Route>
           <Route path="product/:productId" element={<ProductDetail />} />
           <Route path="auth" element={<AuthPage />}>
             <Route path="login" element={<Login />} />
