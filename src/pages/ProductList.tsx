@@ -42,7 +42,11 @@ export const ProductListWrapper = styled.ul`
   gap: 3em 12.5%;
 `;
 
-export default function ProductList() {
+interface Props {
+  isActiveTab: boolean
+}
+
+export default function ProductList(props: Props) {
   const test = [
     "1번상품",
     "2번상품",

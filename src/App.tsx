@@ -9,6 +9,7 @@ import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { useState } from "react";
 
 const RootContainer = styled.div`
   height: 100%;
@@ -16,15 +17,21 @@ const RootContainer = styled.div`
 `;
 
 export default function App() {
+  const [isActiveTab, setIstActiveTab] = useState(false);
+  const asideTabHandler = () => {
+    setIstActiveTab(!isActiveTab);
+  };
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header asideTabHandler={asideTabHandler} />
       <RootContainer>
         <Routes>
-          <Route path="/" element={<ProductList />} />
-          <Route path="product/:productId" element={<ProductDetail />} />
+          {/* 추후 "/","search","topRank" Outlet으로 묶을 예정 */}
+          <Route path="/" element={<ProductList isActiveTab={isActiveTab} />} />
           <Route path="search" element={<Search />} />
           <Route path="toprank" element={<TopRank />} />
+          <Route path="product/:productId" element={<ProductDetail />} />
           <Route path="auth" element={<AuthPage />}>
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<SignUp />} />

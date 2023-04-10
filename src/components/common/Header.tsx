@@ -37,7 +37,11 @@ const ProfileImage = styled.img`
   }
 `;
 
-export default function Header() {
+interface Props {
+  asideTabHandler: () => void;
+}
+
+export default function Header(props: Props) {
   const headerTabs = [
     { tabTitle: "추천순", linkUrl: "/toprank" },
     { tabTitle: "브랜드별", linkUrl: "/" },
@@ -49,7 +53,10 @@ export default function Header() {
 
   return (
     <HeaderContainer>
-      <AiOutlineMenuUnfold className="Header_Menu_Button" />
+      <AiOutlineMenuUnfold
+        className="Header_Menu_Button"
+        onClick={() => props.asideTabHandler()}
+      />
       <div className="Mobile_Logo_Wrapper">
         <img className="Header_Mobile_Logo_Image" />
       </div>
