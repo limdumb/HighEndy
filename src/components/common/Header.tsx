@@ -51,7 +51,7 @@ export default function Header() {
     <HeaderContainer>
       <AiOutlineMenuUnfold className="Header_Menu_Button" />
       <div className="Mobile_Logo_Wrapper">
-        <img className="Header_Mobile_Logo_Image" />
+        <img className="Header_Mobile_Logo_Image" onClick={() => navigate("/")}/>
       </div>
       <img className="Header_Logo_Image" onClick={() => navigate("/")} />
       {headerTabs.map((tab) => {
