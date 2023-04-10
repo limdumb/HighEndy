@@ -20,14 +20,14 @@ export const ProductListContainer = styled.ul`
   padding-top: 20px;
   padding-bottom: 20px;
 
-  & > .Product_List_Title{
+  & > .Product_List_Title {
     width: 81%;
-  height: 50px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
   }
   @media (max-width: 390px) {
     width: 100%;
