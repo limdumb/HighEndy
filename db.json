@@ -1,0 +1,479 @@
+{
+  "gucci": {
+    "productList": [
+      {
+        "productId": 1,
+        "productName": "자수 코튼 포플린 셔츠",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676506566/732517_ZANF5_4670_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 2,
+        "productName": "코튼 캔버스 및 GG 수프림 재킷",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675989031/742854_XDCEY_1168_001_100_0000_Light--GG.jpg"
+      },
+      {
+        "productId": 3,
+        "productName": "코튼 캔버스 버뮤다 쇼츠",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880136/742598_XDCEY_1168_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 4,
+        "productName": "자수 레트로 트위드 재킷",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880116/741095_ZAM2H_4613_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 5,
+        "productName": "기하학적 스퀘어 G 프린트 실크 셔츠",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1679104913/740319_ZAMZX_4589_001_100_0000_Light--G.jpg"
+      },
+      {
+        "productId": 6,
+        "productName": "리넨 캔버스 재킷",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132003/734327_Z8BHT_9300_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 7,
+        "productName": "캔버스 리넨 스커트",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677131103/734533_ZAMC7_9300_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 8,
+        "productName": "체인 벨트 레트로 트위드 드레스",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1680092165/748079_ZANJE_9169_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 9,
+        "productName": "코튼 포플린 미디 드레스",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676971842/741057_Z8BGE_4910_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 10,
+        "productName": "[구찌 블론디] 탑 핸들백",
+        "productImage": "https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1680628128/744434_1IV0G_9022_001_054_0000_Light-.jpg"
+      },
+      {
+        "productId": 11,
+        "productName": "[구찌 블론디] 미디엄 핸드백",
+        "productImage": "https://media.gucci.com/style/HEXF1E9FB_Center_0_0_800x800/1673373681/721172_FABM5_4084_001_100_0000_Light-.jpg"
+      },
+      {
+        "productId": 12,
+        "productName": "[구찌 홀스빗 1955] 숄더백",
+        "productImage": "https://media.gucci.com/style/DarkGray_Center_0_0_490x490/1581706806/602204_1DB0G_6638_001_074_0000_Light--1955.jpg"
+      }
+    ]
+  },
+
+  "hermes": {
+    "productList": [
+      {
+        "productId": 13,
+        "productName": "“Chaine d'Ancre” 쇼트 슬리브 트윌렌 스웨터",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EC%87%BC%ED%8A%B8-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%8A%B8%EC%9C%8C%EB%A0%8C-%EC%8A%A4%EC%9B%A8%ED%84%B0--3E2810DVU4-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 14,
+        "productName": "“Ex-Libris” 셔츠",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/ex-libris-%EC%85%94%EC%B8%A0--3E0607D7S6-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 15,
+        "productName": "숄더 스트랩 장식 “Ex-Libris” 드레스",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/%EC%88%84%EB%8D%94-%EC%8A%A4%ED%8A%B8%EB%9E%A9-%EC%9E%A5%EC%8B%9D-ex-libris-%EB%93%9C%EB%A0%88%EC%8A%A4--3E0521D7W4-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 16,
+        "productName": "에르메스 봄버 재킷",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/%EB%B4%84%EB%B2%84-%EC%9E%AC%ED%82%B7--3E0224DZ3B-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 17,
+        "productName": "Space Malice 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/space-malice-%EB%B0%B1--082067CKAA-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 18,
+        "productName": "Hermes Cadenas 클러치",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/hermes-cadenas-%ED%81%B4%EB%9F%AC%EC%B9%98--083984CK89-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 19,
+        "productName": "Chaine d'Ancre 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EB%B0%B1--080245CAAC-front-1-300-0-800-800_g.jpg"
+      },
+      {
+        "productId": 20,
+        "productName": "Sac a Malice 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/sac-a-malice-%EB%B0%B1--083670CKAA-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 21,
+        "productName": "Grace 샌들",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/grace-%EC%83%8C%EB%93%A4--231130Z%2090-worn-1-0-0-800-800_g.jpg"
+      },
+      {
+        "productId": 22,
+        "productName": "Hermes Flash 세일러 백팩",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/hermes-flash-%EC%84%B8%EC%9D%BC%EB%9F%AC-%EB%B0%B1%ED%8C%A9--078254CK89-front-1-300-0-800-800_g.jpg"
+      },
+      {
+        "productId": 23,
+        "productName": "Cityslide Endless Road 벨트 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/cityslide-endless-road-%EB%B2%A8%ED%8A%B8-%EB%B0%B1--078568CBAB-front-1-300-0-800-800_g.jpg"
+      },
+      {
+        "productId": 24,
+        "productName": "Pursangle 토트백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/pursangle-%ED%86%A0%ED%8A%B8%EB%B0%B1--083894CAAA-worn-1-0-0-800-800_g.jpg"
+      }
+    ]
+  },
+
+  "productDetail": {
+    "productDetail": [
+      {
+        "productId": 1,
+        "productName": "자수 코튼 포플린 셔츠",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676506566/732517_ZANF5_4670_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 890000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/men/ready-to-wear-for-men/shirts-for-men/short-slevees-for-men/cotton-poplin-shirt-with-embroidery-p-732517ZANF54670",
+        "productExplain": "구찌 유니버스 전반에 나타나는 작은 자수로 2023 봄/여름 컬렉션의 레디-투-웨어 아이템과 패션소품에 재치 있는 변화를 더함. 라이트 포인트 카라와 숏 슬리브 디테일의 라이트 블루 코튼 포플린 셔츠에 이번 시즌에 반복적으로 등장하는 섬세한 구찌 피글렛 자수 디테일이 돋보임",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676506580/732517_ZANF5_4670_004_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676506587/732517_ZANF5_4670_010_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 2,
+        "productName": "코튼 캔버스 및 GG 수프림 재킷",
+
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675989031/742854_XDCEY_1168_001_100_0000_Light--GG.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 4900000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/men/ready-to-wear-for-men/denim-for-men/denim-pants-for-men/cotton-canvas-and-gg-supreme-jacket-p-742854XDCEY1168",
+        "productExplain": "2023 봄 여름 컬렉션에 시그니처 구찌 아이템으로 등장해 하우스의 자유분방한 감성을 담아 데이웨어를 새롭게 정의한 재킷. 브라운 코튼 캔버스 소재에 베이지/에보니 GG 수프림 캔버스 인서트를 더해 완성한 셀렉션의 스타일.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675878328/742854_XDCEY_1168_010_100_0000_Light--GG.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675878330/742854_XDCEY_1168_011_100_0000_Light--GG.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 3,
+        "productName": "코튼 캔버스 버뮤다 쇼츠",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880136/742598_XDCEY_1168_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 2000000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/men/ready-to-wear-for-men/denim-for-men/denim-pants-for-men/cotton-canvas-bermuda-short-with-gg-inserts-p-742598XDCEY1168",
+        "productExplain": "소재와 실루엣을 다양하게 선보인 2023 봄 여름 컬렉션에서는 캐주얼한 스타일과 세련된 스타일을 결합하여 여러 하이브리드 룩을 완성함. 다크 그레이 코튼 캔버스 소재의 볼륨감 넘치는 쇼츠는 허리 밴드의 엘라스틱 디테일과 같이 스포츠웨어 실루엣에서 영감을 받은 현대적인 요소와 레트로 감각이 조화를 이루도록 함께 연출. 하우스의 유서 깊은 모노그램을 새롭게 선보이며 앞면 전체를 장식한 오버사이즈 패치 포켓을 강조함.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880138/742598_XDCEY_1168_002_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880141/742598_XDCEY_1168_003_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 4,
+        "productName": "자수 레트로 트위드 재킷",
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880116/741095_ZAM2H_4613_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 4900000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/men/ready-to-wear-for-men/formalwear-for-men/jackets-for-men/retro-tweed-jacket-with-embroidery-p-741095ZAM2H4613",
+        "productExplain": "프랑스 귀족의 옷차림에서 영감을 받아 트위드를 활용해 본톤 스타일을 새롭게 풀어낸 2023 봄/여름 컬렉션, 브랜드의 가장 독특한 소재로 손꼽히며 이번 시즌 컬렉션의 다양한 룩으로 등장한 클래식 소재인 트위드. Photosynthesis 공식을 뒷면에 수놓은 다크 블루 카라리스 재킷.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880127/741095_ZAM2H_4613_010_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880130/741095_ZAM2H_4613_011_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 5,
+        "productName": "기하학적 스퀘어 G 프린트 실크 셔츠",
+
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1679104913/740319_ZAMZX_4589_001_100_0000_Light--G.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 1640000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/men/ready-to-wear-for-men/shirts-for-men/short-slevees-for-men/geometric-square-g-print-silk-shirt-p-740319ZAMZX4589",
+        "productExplain": "컬러와 로고를 다채롭게 활용하며 새로운 상징을 만들어내는 2023 봄/여름 컬렉션. 다양한 색감과 질감이 어우러지며 신선하고도 남다른 디자인을 완성함. 레드 토르숑 프린트로 밑단을 장식하고 기하학적 스퀘어 G 프린트가 돋보이는 라이트 블루 실크 셔츠.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1679104918/740319_ZAMZX_4589_002_100_0000_Light--G.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1679105703/740319_ZAMZX_4589_003_100_0000_Light--G.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 6,
+        "productName": "리넨 캔버스 재킷",
+
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132003/734327_Z8BHT_9300_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 5100000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/women/ready-to-wear-for-women/coats-jackets-for-women/jackets-for-women/linen-canvas-jacket-p-734327Z8BHT9300",
+        "productExplain": "새로운 시선으로 테일러링의 개념을 바라본 2023 봄/여름 컬렉션. 란제리에서 받은 영감에 1990년대 감성과 미니멀한 재킷 스타일을 녹여내 클래식한 실루엣을 혁신적으로 재해석한 아이템. 대조적인 파이핑과 레더 벨트가 돋보이는 비대칭 디자인의 오프화이트 리넨 재킷.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132007/734327_Z8BHT_9300_002_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132010/734327_Z8BHT_9300_003_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 7,
+        "productName": "캔버스 리넨 스커트",
+
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677131103/734533_ZAMC7_9300_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 2730000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/women/ready-to-wear-for-women/skirts-for-women/midi-long-skirts-for-women/canvas-linen-skirt-p-734533ZAMC79300",
+        "productExplain": "구찌의 헤리티지를 탐구한 끝에 과거에 대한 열정을 불어넣어 선보이는 2023 봄 여름 컬렉션. 측면 트임을 따라 대조적인 루렉스 파이핑 디테일을 장식한 비대칭 랩 스타일 구조의 캔버스 리넨 스커트.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132007/734327_Z8BHT_9300_002_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132010/734327_Z8BHT_9300_003_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 8,
+        "productName": "체인 벨트 레트로 트위드 드레스",
+
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1680092165/748079_ZANJE_9169_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 5800000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/women/ready-to-wear-for-women/dresses-and-jumpsuits-for-women/mini-dresses-for-women/retro-tweed-dress-with-chain-belt-p-748079ZANJE9169",
+        "productExplain": "헤리티지를 깊이 있게 탐구하며 과거를 향한 열정을 하우스 컬렉션에 계속해서 녹여내는 구찌. 빈티지 디자인에서 영감을 받아 트위드를 활용해 우아함을 새롭게 풀어낸 2023 봄 여름 컬렉션. 대조적인 리본 트리밍과 탈부착 가능한 체인 벨트로 한층 돋보이도록 완성한 구조적인 오프화이트 레트로 트위드 드레스.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676483159/748079_ZANJE_9169_002_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1680092171/748079_ZANJE_9169_011_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 9,
+        "productName": "코튼 포플린 미디 드레스",
+
+        "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676971842/741057_Z8BGE_4910_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 4300000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/women/ready-to-wear-for-women/dresses-and-jumpsuits-for-women/midi-long-dresses-for-women/cotton-poplin-midi-dress-p-741057Z8BGE4910",
+        "productExplain": "창립자 구찌오 구찌(Guccio Gucci)의 이니셜을 나타내는 유서 깊은 모노그램을 통해 매 컬렉션마다 신선한 해석을 탐구함. 플리츠 스커트의 구조와 형태를 재해석해 토널 GG 프린트를 적용한 프레피 코튼 포플린 미니 드레스. 상징적인 GG 버튼을 장식하고 허리를 강조하는 버클 벨트를 더해 한층 돋보이는 실루엣을 완성함.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676971845/741057_Z8BGE_4910_002_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676971848/741057_Z8BGE_4910_003_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 10,
+        "productName": "[구찌 블론디] 탑 핸들백",
+
+        "productImage": "https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1680628128/744434_1IV0G_9022_001_054_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 2820000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/women/handbags/top-handle-bags-for-women/gucci-blondie-top-handle-bag-p-7444341IV0G9022",
+        "productExplain": "하우스 아카이브로부터 탄생한 구찌 블론디 라인을 특징하는 라운드 인터로킹 G. 구찌 블론디 숄더백 및 탑 핸들 크로스백과 같은 시그니처 아이템에서 섬세한 레더 패치 디테일로 엠블럼을 구현함.",
+        "productMainImage": [
+          "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679910324/744434_1IV0G_9022_004_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679910321/744434_1IV0G_9022_003_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 11,
+        "productName": "[구찌 블론디] 미디엄 핸드백",
+        "productImage": "https://media.gucci.com/style/HEXF1E9FB_Center_0_0_800x800/1673373681/721172_FABM5_4084_001_100_0000_Light-.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 4900000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/women/handbags/top-handle-bags-for-women/gucci-blondie-medium-bag-p-721172FABM54084",
+        "productExplain": "하우스의 아카이브에서 가져온 기하학적 쉐입의 인터로킹 G 로고를 전면에 내세움. 독특한 빈티지 감성의 골드 톤 메탈 장식으로 패션쇼의 중요한 포인트인 할리우드의 화려한 타임리스 감성을 부여한 디자인. 이 아이템은 1개의 스터드 핸들, 1개의 캔버스 스트랩 및 1개의 레더 스트랩이 함께 제공됨.",
+        "productMainImage": [
+          "https://media.gucci.com/style/HEXF1E9FB_Center_0_0_800x800/1675208759/721172_FABM5_4084_006_100_0000_Light-.jpg",
+          "https://media.gucci.com/style/HEXF1E9FB_Center_0_0_800x800/1673373686/721172_FABM5_4084_008_100_0000_Light-.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 12,
+        "productName": "[구찌 홀스빗 1955] 숄더백",
+        "productImage": "https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1581706806/602204_1DB0G_6638_001_074_0000_Light--1955.jpg",
+        "productBrand": "GUCCI",
+        "productPrice": 4000000,
+        "productLink": "https://www.gucci.com/kr/ko/pr/women/handbags/shoulder-bags-for-women/gucci-horsebit-1955-shoulder-bag-p-6022041DB0G6638",
+        "productExplain": "2020 크루즈 컬렉션에서 소개하는 구찌 홀스빗 1955 핸드백. 아카이브 디자인을 재해석. 약 60년 전 처음 도입된 라인과 형태를 동일하게 사용하여 기존의 디테일과 현대적인 감성을 통합하고 홀스빗을 강조한 상품. 구찌 특유의 코드인 더블 링과 바 디자인은 승마 세계에서 가져온 하우스의 심볼 중 가장 상징적인 요소. 스몰 플랩 숄더백에 적용된 메탈 장식은 텍스처드 레드 레더와 조화를 이룸. 길이를 조절할 수 있는 숄더 스트랩을 활용해 숄더백이나 크로스 바디백으로 착용 가능.",
+        "productMainImage": [
+          "https://mblogthumb-phinf.pstatic.net/MjAyMzAzMjZfNTYg/MDAxNjc5ODMxNTYxMTg0.g5XU4yfia8G7b-tgU1A1zZZjy7BebT7w2HwAdge9tQQg.HRKpGX_AZeGb_g45le7RcNFXvGQYc-R2AC3REcGXyzMg.PNG.cocoleenice/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-03-26_%EC%98%A4%ED%9B%84_8.50.01.png?type=w800",
+          "https://images.khan.co.kr/article/2023/03/24/news-p.v1.20230324.4eaab1af59fb4f71a1699623f872bb2c_P1.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 13,
+        "productName": "“Chaine d'Ancre” 쇼트 슬리브 트윌렌 스웨터",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EC%87%BC%ED%8A%B8-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%8A%B8%EC%9C%8C%EB%A0%8C-%EC%8A%A4%EC%9B%A8%ED%84%B0--3E2810DVU4-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 3030000,
+        "productLink": "https://www.hermes.com/kr/ko/product/chaine-d-ancre-%EC%87%BC%ED%8A%B8-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%8A%B8%EC%9C%8C%EB%A0%8C-%EC%8A%A4%EC%9B%A8%ED%84%B0-H3E2810DVU434/",
+        "productExplain": "새틴 안감이 장식된 “Chaine d'Ancre” 자수 실크 크레이프, 실크 및 코튼 소재의 쇼트 슬리브 트윌렌 스웨터(실크 100%, 니트: 실크 57%, 코튼 43%) 얇은 투톤 케이블 스티치 장식의 뒷면 및 슬리브 니트",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EC%87%BC%ED%8A%B8-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%8A%B8%EC%9C%8C%EB%A0%8C-%EC%8A%A4%EC%9B%A8%ED%84%B0--3E2810DVU4-worn-3-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EC%87%BC%ED%8A%B8-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%8A%B8%EC%9C%8C%EB%A0%8C-%EC%8A%A4%EC%9B%A8%ED%84%B0--3E2810DVU4-worn-2-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 14,
+        "productName": "“Ex-Libris” 셔츠",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/ex-libris-%EC%85%94%EC%B8%A0--3E0607D7S6-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 4140000,
+        "productLink": "https://www.hermes.com/kr/ko/product/ex-libris-%EC%85%94%EC%B8%A0-H3E0607D7S634/",
+        "productExplain": "세련된 소재와 깔끔한 핏, 실용적인 디테일을 결합한 우아한 오버사이즈 셔츠입니다. 클래식 실크 트윌 소재의 아이코닉한 Ex Libris 스카프가 그래픽적인 버전으로 재탄생했습니다. 파자마에서 영감을 받은 와이드 팬츠와 함께 매치하여 캐주얼한 룩을 연출하거나, 스커트 안에 넣어 착용하여 보다 구조적인 테일러드 핏을 완성할 수 있습니다.",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/ex-libris-%EC%85%94%EC%B8%A0--3E0607D7S6-worn-1-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/ex-libris-%EC%85%94%EC%B8%A0--3E0607D7S6-worn-3-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 15,
+        "productName": "숄더 스트랩 장식 “Ex-Libris” 드레스",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/%EC%88%84%EB%8D%94-%EC%8A%A4%ED%8A%B8%EB%9E%A9-%EC%9E%A5%EC%8B%9D-ex-libris-%EB%93%9C%EB%A0%88%EC%8A%A4--3E0521D7W4-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 4620000,
+        "productLink": "https://www.hermes.com/kr/ko/product/%EC%88%84%EB%8D%94-%EC%8A%A4%ED%8A%B8%EB%9E%A9-%EC%9E%A5%EC%8B%9D-ex-libris-%EB%93%9C%EB%A0%88%EC%8A%A4-H3E0521D7W434/",
+        "productExplain": "“Ex-Libris” 프린트가 돋보이는 실크 소재의 숄더 스트랩 장식 드레스(실크 100%)",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/%EC%88%84%EB%8D%94-%EC%8A%A4%ED%8A%B8%EB%9E%A9-%EC%9E%A5%EC%8B%9D-ex-libris-%EB%93%9C%EB%A0%88%EC%8A%A4--3E0521D7W4-worn-2-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/%EC%88%84%EB%8D%94-%EC%8A%A4%ED%8A%B8%EB%9E%A9-%EC%9E%A5%EC%8B%9D-ex-libris-%EB%93%9C%EB%A0%88%EC%8A%A4--3E0521D7W4-worn-3-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 16,
+        "productName": "에르메스 봄버 재킷",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/%EB%B4%84%EB%B2%84-%EC%9E%AC%ED%82%B7--3E0224DZ3B-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 8920000,
+        "productLink": "https://www.hermes.com/kr/ko/product/%EB%B4%84%EB%B2%84-%EC%9E%AC%ED%82%B7-H3E0224DZ3B34/",
+        "productExplain": "더블 사이드 베이비 캐시미어 소재의 봄버 재킷(캐시미어 100%)",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/%EB%B4%84%EB%B2%84-%EC%9E%AC%ED%82%B7--3E0224DZ3B-worn-4-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/%EB%B4%84%EB%B2%84-%EC%9E%AC%ED%82%B7--3E0224DZ3B-worn-3-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 17,
+        "productName": "Space Malice 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/space-malice-%EB%B0%B1--082067CKAA-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 30620000,
+        "productLink": "https://www.hermes.com/kr/ko/product/space-malice-%EB%B0%B1-H082067CKAA/",
+        "productExplain": "탈착 가능한 숄더 스트랩과 중앙 수납공간, 2개의 플랫 포켓, 팔라듐 도금 장식이 특징인 무슈 카프스킨 소재의 백",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/space-malice-%EB%B0%B1--082067CKAA-worn-3-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/space-malice-%EB%B0%B1--082067CKAA-worn-4-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 18,
+        "productName": "Hermes Cadenas 클러치",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/hermes-cadenas-%ED%81%B4%EB%9F%AC%EC%B9%98--083984CK89-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 8800000,
+        "productLink": "https://www.hermes.com/kr/ko/product/hermes-cadenas-%ED%81%B4%EB%9F%AC%EC%B9%98-H083984CK89/",
+        "productExplain": "램스킨 안감과 핸들, 팔라듐 도금 장식이 특징인 타들락 카프스킨 소재의 클러치",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/hermes-cadenas-%ED%81%B4%EB%9F%AC%EC%B9%98--083984CK89-worn-3-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/hermes-cadenas-%ED%81%B4%EB%9F%AC%EC%B9%98--083984CK89-worn-2-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 19,
+        "productName": "Chaine d'Ancre 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EB%B0%B1--080245CAAC-front-1-300-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 15840000,
+        "productLink": "https://www.hermes.com/kr/ko/product/chaine-d-ancre-%EB%B0%B1-H080245CAAC/",
+        "productExplain": "2020년을 맞이해 탄생한 혁신적인 시그니처 오브제, Chaine d'Ancre 카바 백은 에르메스 장인 기술의 결정체입니다. 두 조각의 가죽으로부터 잘라낸 16개의 체인 링크를 중앙 심으로 연결한 백은 에르메스의 상징인 Chaine d'Ancre 링크를 재해석하여 새로운 모습으로 선보입니다. 가죽 링크를 바닥에 고정한 구조로, 따듯한 바닷가의 모래 위에 올려놓으면 아름다운 실루엣이 돋보이는 모래 자국을 남길 수 있습니다. 아울러 Manufacture de Boucleries Zoom 스카프의 모티프를 재해석한 실크 파우치는 그래픽적인 요소가 가미된 상품입니다. 세련된 우아함을 선사하는 Chaine d'Ancre 카바 백이 따사로운 여름을 그 무엇보다도 반갑게 맞이합니다.",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EB%B0%B1--080245CAAC-worn-9-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EB%B0%B1--080245CAAC-side-2-300-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 20,
+        "productName": "Sac a Malice 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/sac-a-malice-%EB%B0%B1--083670CKAA-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 22000000,
+        "productLink": "https://www.hermes.com/kr/ko/product/sac-a-malice-%EB%B0%B1-H083670CKAA/",
+        "productExplain": "탈착 가능한 숄더 스트랩과 1개의 메인 수납공간, 2개의 내부 포켓, 팔라듐 도금 장식이 특징인 엡솜 카프스킨, 미조레 고트스킨 및 스위프트 카프스킨 소재의 백",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/sac-a-malice-%EB%B0%B1--083670CKAA-worn-3-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/sac-a-malice-%EB%B0%B1--083670CKAA-worn-4-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 21,
+        "productName": "Grace 샌들",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/grace-%EC%83%8C%EB%93%A4--231130Z%2090-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 1170000,
+        "productLink": "https://www.hermes.com/kr/ko/product/grace-%EC%83%8C%EB%93%A4-H231130Zv90375/",
+        "productExplain": "아이코닉한 오버사이즈 “Chaine Gourmette” 및 “Chaine Torsade” 모티프가 장식된 나파 가죽 소재의 샌들, 여성스러운 룩으로 완벽한 서머 스타일을 연출해줍니다.",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/grace-%EC%83%8C%EB%93%A4--231130Z%2090-worn-3-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/grace-%EC%83%8C%EB%93%A4--231130Z%2090-worn-4-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 22,
+        "productName": "Hermes Flash 세일러 백팩",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/hermes-flash-%EC%84%B8%EC%9D%BC%EB%9F%AC-%EB%B0%B1%ED%8C%A9--078254CK89-front-1-300-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 4000000,
+        "productLink": "https://www.hermes.com/kr/ko/product/hermes-flash-%EC%84%B8%EC%9D%BC%EB%9F%AC-%EB%B0%B1%ED%8C%A9-H078254CK89/",
+        "productExplain": "Flash 백 라인은 트렁크에서 영감을 얻은 폴딩 방식과 코너 디자인이 특징입니다. 백팩에서 클러치까지 아우르는 다양한 제품으로 구성되었으며, 견고한 베이스와 대비되는 유연한 바디를 갖추고 있어 접혀도 흔적이 남지 않습니다.",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/hermes-flash-%EC%84%B8%EC%9D%BC%EB%9F%AC-%EB%B0%B1%ED%8C%A9--078254CK89-side-2-300-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/hermes-flash-%EC%84%B8%EC%9D%BC%EB%9F%AC-%EB%B0%B1%ED%8C%A9--078254CK89-above-4-300-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 23,
+        "productName": "Cityslide Endless Road 벨트 백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/cityslide-endless-road-%EB%B2%A8%ED%8A%B8-%EB%B0%B1--078568CBAB-front-1-300-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 11620000,
+        "productLink": "https://www.hermes.com/kr/ko/product/cityslide-endless-road-%EB%B2%A8%ED%8A%B8-%EB%B0%B1-H078568CBAB/",
+        "productExplain": "남성용 메신저백을 재해석하여 선보이는 특별한 라인입니다. 숄더백 또는 웨이스트백으로 연출 가능하며 스포티하고 모던한 이 백에는 시그니처 Etriviere 버클이 장식되어 있습니다. Cityslide 백으로 완성한 자연스러운 스타일로 도시의 거리를 우아하게 거닐어보시기 바랍니다.",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/cityslide-endless-road-%EB%B2%A8%ED%8A%B8-%EB%B0%B1--078568CBAB-worn-9-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/cityslide-endless-road-%EB%B2%A8%ED%8A%B8-%EB%B0%B1--078568CBAB-front-1-300-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      },
+      {
+        "productId": 24,
+        "productName": "Pursangle 토트백",
+        "productImage": "https://assets.hermes.com/is/image/hermesproduct/pursangle-%ED%86%A0%ED%8A%B8%EB%B0%B1--083894CAAA-worn-1-0-0-800-800_g.jpg",
+        "productBrand": "Hermes",
+        "productPrice": 4930000,
+        "productLink": "https://www.hermes.com/kr/ko/product/pursangle-%ED%86%A0%ED%8A%B8%EB%B0%B1-H083894CAAA/",
+        "productExplain": "컬러풀한 Pursangle 캔버스 및 가죽 소재의 카바스 백은 기능성과 유쾌한 감성을 결합했습니다. 승마 복대에서 영감을 받은 양쪽의 스트라이프 “H” 디테일이 포켓을 감추고 있습니다. 대조적인 가죽 핸들과 트리밍이 특징인 데일리 필수 아이템으로, 넉넉한 볼륨감과 캐주얼하고 세련된 스타일이 돋보입니다. 여름휴가에 어울리는 다양한 캔버스 및 가죽 컬러로 출시됩니다.",
+        "productMainImage": [
+          "https://assets.hermes.com/is/image/hermesproduct/pursangle-%ED%86%A0%ED%8A%B8%EB%B0%B1--083894CAAA-worn-3-0-0-800-800_g.jpg",
+          "https://assets.hermes.com/is/image/hermesproduct/pursangle-%ED%86%A0%ED%8A%B8%EB%B0%B1--083894CAAA-worn-6-0-0-800-800_g.jpg"
+        ],
+        "comments": [{}]
+      }
+    ]
+  }
+}
