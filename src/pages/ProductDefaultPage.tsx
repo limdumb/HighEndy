@@ -22,11 +22,13 @@ export default function ProductDefaultPage(props: Props) {
   return (
     <HomeContainer>
       {props.isActiveTab ? (
-        <div className="Aside_Tab_Mobile_Wrapper">
-          <AsideTab
-            categoryClickHandler={categoryClickHandler}
-            asideTabHandler={props.asideTabHandler}
-          />
+        <div className="Menu_Active_Wrapper">
+          <div className="Aside_Tab_Mobile_Wrapper">
+            <AsideTab
+              categoryClickHandler={categoryClickHandler}
+              asideTabHandler={props.asideTabHandler}
+            />
+          </div>
         </div>
       ) : null}
       <div className="Aside_Tab_Wrapper">
