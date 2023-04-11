@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header asideTabHandler={asideTabHandler} />
+      <Header asideTabHandler={asideTabHandler} isActiveTab={isActiveTab}/>
       <RootContainer>
         <Routes>
           <Route

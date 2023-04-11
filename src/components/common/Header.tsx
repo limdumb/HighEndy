@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
-import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import "./style/header.css";
 
 const HeaderContainer = styled.div`
@@ -39,6 +39,7 @@ const ProfileImage = styled.img`
 
 interface Props {
   asideTabHandler: () => void;
+  isActiveTab: boolean;
 }
 
 export default function Header(props: Props) {
@@ -53,10 +54,17 @@ export default function Header(props: Props) {
 
   return (
     <HeaderContainer>
-      <AiOutlineMenuUnfold
-        className="Header_Menu_Button"
-        onClick={() => props.asideTabHandler()}
-      />
+      {props.isActiveTab ? (
+        <AiOutlineMenuFold
+          className="Header_Menu_Button"
+          onClick={() => props.asideTabHandler()}
+        />
+      ) : (
+        <AiOutlineMenuUnfold
+          className="Header_Menu_Button"
+          onClick={() => props.asideTabHandler()}
+        />
+      )}
       <div className="Mobile_Logo_Wrapper">
         <img className="Header_Mobile_Logo_Image" />
       </div>
