@@ -44,17 +44,21 @@ const AsideContainer = styled.aside`
   }
 `;
 
-export default function AsideTab() {
+interface Props {
+  categoryClickHandler: (brand: string) => void;
+}
+
+export default function AsideTab(props: Props) {
   const memberId = 1; // 추후 로그인 정보가 들어올 예정
   const asideTabList = [
-    { tabTitle: "Hermès", tabUrl: "/?brand=hermes" },
-    { tabTitle: "Louis Vuitton", tabUrl: "/?brand=louisvuitton" },
-    { tabTitle: "Burberry", tabUrl: "/?brand=burberry" },
-    { tabTitle: "Chanel", tabUrl: "/?brand=chanel" },
-    { tabTitle: "Prada", tabUrl: "/?brand=prada" },
-    { tabTitle: "MIUMIU", tabUrl: "/?brand=miumiu" },
-    { tabTitle: "Dior", tabUrl: "/?brand=dior" },
-    { tabTitle: "Gucci", tabUrl: "/?brand=gucci" },
+    { tabTitle: "Hermès", tabUrl: "/products/?brand=hermes" },
+    { tabTitle: "Louis Vuitton", tabUrl: "/products/?brand=louisvuitton" },
+    { tabTitle: "Burberry", tabUrl: "/products/?brand=burberry" },
+    { tabTitle: "Chanel", tabUrl: "/products/?brand=chanel" },
+    { tabTitle: "Prada", tabUrl: "/products/?brand=prada" },
+    { tabTitle: "MIUMIU", tabUrl: "/products/?brand=miumiu" },
+    { tabTitle: "Dior", tabUrl: "/products/?brand=dior" },
+    { tabTitle: "Gucci", tabUrl: "/products/?brand=gucci" },
   ];
 
   return (
@@ -63,9 +67,9 @@ export default function AsideTab() {
       <div className="Brand_Tab_Container">
         {asideTabList.map((tab) => {
           return (
-            <Link key={tab.tabTitle} to={tab.tabUrl}>
-              <span>{tab.tabTitle}</span>
-            </Link>
+            <span onClick={() => props.categoryClickHandler(tab.tabUrl)}>
+              {tab.tabTitle}
+            </span>
           );
         })}
       </div>

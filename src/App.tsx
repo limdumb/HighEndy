@@ -8,6 +8,7 @@ import Header from "./components/common/Header";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProductDefaultPage from "./pages/ProductDefaultPage";
 import "./App.css";
 
 const RootContainer = styled.div`
@@ -21,10 +22,12 @@ export default function App() {
       <Header />
       <RootContainer>
         <Routes>
-          <Route path="/" element={<ProductList />} />
+          <Route path="/" element={<ProductDefaultPage />}>
+            <Route path="products" element={<ProductList />} />
+            <Route path="search" element={<Search />} />
+            <Route path="toprank" element={<TopRank />} />
+          </Route>
           <Route path="product/:productId" element={<ProductDetail />} />
-          <Route path="search" element={<Search />} />
-          <Route path="toprank" element={<TopRank />} />
           <Route path="auth" element={<AuthPage />}>
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<SignUp />} />
