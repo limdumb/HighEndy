@@ -40,7 +40,7 @@ const ProfileImage = styled.img`
 export default function Header() {
   const headerTabs = [
     { tabTitle: "추천순", linkUrl: "/toprank" },
-    { tabTitle: "브랜드별", linkUrl: "/" },
+    { tabTitle: "브랜드별", linkUrl: "/products" },
   ];
 
   const memberId = "1";

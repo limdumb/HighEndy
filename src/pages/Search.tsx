@@ -28,9 +28,6 @@ export default function Search() {
 
   return (
     <HomeContainer>
-      <div className="Aside_Tab_Wrapper">
-        <AsideTab />
-      </div>
       <ProductListContainer>
         <div className="Search_Input_Container">
           <RiSearchLine className="Search_Icon" />
