@@ -1,15 +1,8 @@
 import styled from "styled-components";
-import AsideTab from "../components/common/AsideTab";
 import ProductCard from "../components/common/ProductCard";
-import TitleSection from "../components/common/TitleSection";
 
 export const HomeContainer = styled.div`
   display: flex;
-  @media (max-width: 390px) {
-    & > .Aside_Tab_Wrapper {
-      display: none;
-    }
-  }
 `;
 
 export const ProductListContainer = styled.ul`
@@ -41,7 +34,11 @@ export const ProductListWrapper = styled.ul`
   gap: 3em 12.5%;
 `;
 
-export default function ProductList() {
+interface Props {
+  isActiveTab: boolean
+}
+
+export default function ProductList(props: Props) {
   const test = [
     "1번상품",
     "2번상품",
