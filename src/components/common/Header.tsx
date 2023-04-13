@@ -38,7 +38,7 @@ const ProfileImage = styled.img`
 `;
 
 interface Props {
-  asideTabHandler: () => void;
+  onTabClicked: () => void;
   isActiveTab: boolean;
 }
 
@@ -57,12 +57,12 @@ export default function Header(props: Props) {
       {props.isActiveTab ? (
         <AiOutlineMenuFold
           className="Header_Menu_Button"
-          onClick={() => props.asideTabHandler()}
+          onClick={() => props.onTabClicked()}
         />
       ) : (
         <AiOutlineMenuUnfold
           className="Header_Menu_Button"
-          onClick={() => props.asideTabHandler()}
+          onClick={() => props.onTabClicked()}
         />
       )}
       <div className="Mobile_Logo_Wrapper">

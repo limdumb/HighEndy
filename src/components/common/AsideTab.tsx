@@ -43,7 +43,7 @@ const AsideContainer = styled.aside`
 
 interface Props {
   categoryClickHandler: (brand: string) => void;
-  asideTabHandler: () => void;
+  onTabClicked: () => void;
 }
 
 export default function AsideTab(props: Props) {
@@ -69,7 +69,7 @@ export default function AsideTab(props: Props) {
               key={tab.tabTitle}
               onClick={() => {
                 props.categoryClickHandler(tab.tabUrl);
-                props.asideTabHandler();
+                props.onTabClicked();
               }}
             >
               {tab.tabTitle}
@@ -80,14 +80,14 @@ export default function AsideTab(props: Props) {
       <Link
         to={"/toprank"}
         className="Top_Rank_Tab"
-        onClick={() => props.asideTabHandler()}
+        onClick={() => props.onTabClicked()}
       >
         <h2>이달의 Top10</h2>
       </Link>
       <Link
         to={"/search"}
         className="Search_Nav_Tab"
-        onClick={() => props.asideTabHandler()}
+        onClick={() => props.onTabClicked()}
       >
         <h2>상품 검색</h2>
       </Link>

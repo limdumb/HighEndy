@@ -19,7 +19,7 @@ const RootContainer = styled.div`
 
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
-  const asideTabHandler = () => {
+  const onTabClicked = () => {
     if (window.innerWidth <= 390) {
       setIstActiveTab(!isActiveTab);
     }
@@ -27,7 +27,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header asideTabHandler={asideTabHandler} isActiveTab={isActiveTab}/>
+      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab}/>
       <RootContainer>
         <Routes>
           <Route
@@ -35,7 +35,7 @@ export default function App() {
             element={
               <ProductDefaultPage
                 isActiveTab={isActiveTab}
-                asideTabHandler={asideTabHandler}
+                onTabClicked={onTabClicked}
               />
             }
           >

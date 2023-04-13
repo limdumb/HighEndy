@@ -7,7 +7,7 @@ import "./style/productDefault.css";
 
 interface Props {
   isActiveTab: boolean;
-  asideTabHandler: () => void;
+  onTabClicked: () => void;
 }
 
 export default function ProductDefaultPage(props: Props) {
@@ -26,7 +26,7 @@ export default function ProductDefaultPage(props: Props) {
           <div className="Aside_Tab_Mobile_Wrapper">
             <AsideTab
               categoryClickHandler={categoryClickHandler}
-              asideTabHandler={props.asideTabHandler}
+              onTabClicked={props.onTabClicked}
             />
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function ProductDefaultPage(props: Props) {
       <div className="Aside_Tab_Wrapper">
         <AsideTab
           categoryClickHandler={categoryClickHandler}
-          asideTabHandler={props.asideTabHandler}
+          onTabClicked={props.onTabClicked}
         />
       </div>
       {/* Main Page에 대한 부분은 좀더 구상해볼 예정 */}
