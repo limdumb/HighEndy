@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
-import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import "./style/header.css";
 
 const HeaderContainer = styled.div`
@@ -36,21 +37,41 @@ const ProfileImage = styled.img`
   }
 `;
 
-export default function Header() {
+interface Props {
+  onTabClicked: () => void;
+  isActiveTab: boolean;
+}
+
+export default function Header(props: Props) {
   const headerTabs = [
     { tabTitle: "추천순", linkUrl: "/toprank" },
-    { tabTitle: "브랜드별", linkUrl: "/" },
+    { tabTitle: "브랜드별", linkUrl: "/products" },
   ];
 
   const memberId = "1";
 
+  const navigate = useNavigate();
+
   return (
     <HeaderContainer>
-      <AiOutlineMenuUnfold className="Header_Menu_Button" />
+      {props.isActiveTab ? (
+        <AiOutlineMenuFold
+          className="Header_Menu_Button"
+          onClick={() => props.onTabClicked()}
+        />
+      ) : (
+        <AiOutlineMenuUnfold
+          className="Header_Menu_Button"
+          onClick={() => props.onTabClicked()}
+        />
+      )}
       <div className="Mobile_Logo_Wrapper">
-        <img className="Header_Mobile_Logo_Image" />
+        <img
+          className="Header_Mobile_Logo_Image"
+          onClick={() => navigate("/")}
+        />
       </div>
-      <img className="Header_Logo_Image" />
+      <img className="Header_Logo_Image" onClick={() => navigate("/")} />
       {headerTabs.map((tab) => {
         return (
           <a

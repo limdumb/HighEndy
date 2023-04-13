@@ -1,0 +1,21 @@
+.Brand_Tab_Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Brand_Tab_Container > * {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  color: rgb(29, 29, 29);
+  cursor: pointer;
+}
+
+.Top_Rank_Tab {
+  margin-top: 20px;
+}
+
+.Search_Nav_Tab{
+  margin-top: 20px;
+}

@@ -1,0 +1,25 @@
+@media (max-width: 390px) {
+  .Aside_Tab_Mobile_Wrapper {
+    position: absolute;
+    z-index: 100000;
+    animation: slide-down 0.3s forwards;
+  }
+
+  .Menu_Active_Wrapper{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+    background-color: rgba(94, 94, 94, 0.7);
+  }
+
+  .Aside_Tab_Wrapper {
+    display: none;
+  }
+  
+  @keyframes slide-down {
+    0% {
+      transform: translateX(-100%);
+    }
+  }
+}
