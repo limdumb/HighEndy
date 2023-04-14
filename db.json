@@ -63,7 +63,6 @@
       }
     ]
   },
-
   "hermes": {
     "productList": [
       {
@@ -128,7 +127,6 @@
       }
     ]
   },
-
   "louisVuitton": {
     "productList": [
       {
@@ -193,7 +191,6 @@
       }
     ]
   },
-
   "burberry": {
     "productList": [
       {
@@ -258,7 +255,6 @@
       }
     ]
   },
-
   "chanel": {
     "productList": [
       {
@@ -323,7 +319,6 @@
       }
     ]
   },
-
   "dior": {
     "productList": [
       {
@@ -397,8 +392,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -408,8 +402,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -419,8 +412,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -430,8 +422,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -441,8 +432,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -452,8 +442,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -463,8 +452,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -474,8 +462,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -485,8 +472,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -496,8 +482,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -507,8 +492,7 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
     },
     {
       "id": 61,
@@ -518,8 +502,17 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""],
-      "comments": [{}]
+      "productMainImage": ["", ""]
+    }
+  ],
+
+  "comments": [
+    {
+      "id": 1,
+      "productId": 1,
+      "commentTitle": "product id 1에 대한 코멘트 1",
+      "buyPrice": 100000,
+      "commentContent": "ㅋㅋㅋㅋㅋ루삥루삥뽕"
     }
   ],
 
@@ -535,13 +528,11 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676506580/732517_ZANF5_4670_004_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676506587/732517_ZANF5_4670_010_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 2,
       "productName": "코튼 캔버스 및 GG 수프림 재킷",
-
       "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675989031/742854_XDCEY_1168_001_100_0000_Light--GG.jpg",
       "productBrand": "GUCCI",
       "productPrice": 4900000,
@@ -550,8 +541,7 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675878328/742854_XDCEY_1168_010_100_0000_Light--GG.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675878330/742854_XDCEY_1168_011_100_0000_Light--GG.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 3,
@@ -564,8 +554,7 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880138/742598_XDCEY_1168_002_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880141/742598_XDCEY_1168_003_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 4,
@@ -578,13 +567,11 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880127/741095_ZAM2H_4613_010_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675880130/741095_ZAM2H_4613_011_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 5,
       "productName": "기하학적 스퀘어 G 프린트 실크 셔츠",
-
       "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1679104913/740319_ZAMZX_4589_001_100_0000_Light--G.jpg",
       "productBrand": "GUCCI",
       "productPrice": 1640000,
@@ -593,13 +580,11 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1679104918/740319_ZAMZX_4589_002_100_0000_Light--G.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1679105703/740319_ZAMZX_4589_003_100_0000_Light--G.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 6,
       "productName": "리넨 캔버스 재킷",
-
       "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132003/734327_Z8BHT_9300_001_100_0000_Light-.jpg",
       "productBrand": "GUCCI",
       "productPrice": 5100000,
@@ -608,13 +593,11 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132007/734327_Z8BHT_9300_002_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132010/734327_Z8BHT_9300_003_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 7,
       "productName": "캔버스 리넨 스커트",
-
       "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677131103/734533_ZAMC7_9300_001_100_0000_Light-.jpg",
       "productBrand": "GUCCI",
       "productPrice": 2730000,
@@ -623,13 +606,11 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132007/734327_Z8BHT_9300_002_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677132010/734327_Z8BHT_9300_003_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 8,
       "productName": "체인 벨트 레트로 트위드 드레스",
-
       "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1680092165/748079_ZANJE_9169_001_100_0000_Light-.jpg",
       "productBrand": "GUCCI",
       "productPrice": 5800000,
@@ -638,13 +619,11 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676483159/748079_ZANJE_9169_002_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1680092171/748079_ZANJE_9169_011_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 9,
       "productName": "코튼 포플린 미디 드레스",
-
       "productImage": "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676971842/741057_Z8BGE_4910_001_100_0000_Light-.jpg",
       "productBrand": "GUCCI",
       "productPrice": 4300000,
@@ -653,13 +632,11 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676971845/741057_Z8BGE_4910_002_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1676971848/741057_Z8BGE_4910_003_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 10,
       "productName": "[구찌 블론디] 탑 핸들백",
-
       "productImage": "https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1680628128/744434_1IV0G_9022_001_054_0000_Light-.jpg",
       "productBrand": "GUCCI",
       "productPrice": 2820000,
@@ -668,8 +645,7 @@
       "productMainImage": [
         "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679910324/744434_1IV0G_9022_004_100_0000_Light-.jpg",
         "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679910321/744434_1IV0G_9022_003_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 11,
@@ -682,8 +658,7 @@
       "productMainImage": [
         "https://media.gucci.com/style/HEXF1E9FB_Center_0_0_800x800/1675208759/721172_FABM5_4084_006_100_0000_Light-.jpg",
         "https://media.gucci.com/style/HEXF1E9FB_Center_0_0_800x800/1673373686/721172_FABM5_4084_008_100_0000_Light-.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 12,
@@ -696,8 +671,7 @@
       "productMainImage": [
         "https://mblogthumb-phinf.pstatic.net/MjAyMzAzMjZfNTYg/MDAxNjc5ODMxNTYxMTg0.g5XU4yfia8G7b-tgU1A1zZZjy7BebT7w2HwAdge9tQQg.HRKpGX_AZeGb_g45le7RcNFXvGQYc-R2AC3REcGXyzMg.PNG.cocoleenice/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-03-26_%EC%98%A4%ED%9B%84_8.50.01.png?type=w800",
         "https://images.khan.co.kr/article/2023/03/24/news-p.v1.20230324.4eaab1af59fb4f71a1699623f872bb2c_P1.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 13,
@@ -710,8 +684,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EC%87%BC%ED%8A%B8-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%8A%B8%EC%9C%8C%EB%A0%8C-%EC%8A%A4%EC%9B%A8%ED%84%B0--3E2810DVU4-worn-3-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EC%87%BC%ED%8A%B8-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%8A%B8%EC%9C%8C%EB%A0%8C-%EC%8A%A4%EC%9B%A8%ED%84%B0--3E2810DVU4-worn-2-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 14,
@@ -724,8 +697,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/ex-libris-%EC%85%94%EC%B8%A0--3E0607D7S6-worn-1-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/ex-libris-%EC%85%94%EC%B8%A0--3E0607D7S6-worn-3-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 15,
@@ -738,8 +710,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/%EC%88%84%EB%8D%94-%EC%8A%A4%ED%8A%B8%EB%9E%A9-%EC%9E%A5%EC%8B%9D-ex-libris-%EB%93%9C%EB%A0%88%EC%8A%A4--3E0521D7W4-worn-2-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/%EC%88%84%EB%8D%94-%EC%8A%A4%ED%8A%B8%EB%9E%A9-%EC%9E%A5%EC%8B%9D-ex-libris-%EB%93%9C%EB%A0%88%EC%8A%A4--3E0521D7W4-worn-3-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 16,
@@ -752,8 +723,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/%EB%B4%84%EB%B2%84-%EC%9E%AC%ED%82%B7--3E0224DZ3B-worn-4-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/%EB%B4%84%EB%B2%84-%EC%9E%AC%ED%82%B7--3E0224DZ3B-worn-3-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 17,
@@ -766,8 +736,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/space-malice-%EB%B0%B1--082067CKAA-worn-3-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/space-malice-%EB%B0%B1--082067CKAA-worn-4-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 18,
@@ -780,8 +749,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/hermes-cadenas-%ED%81%B4%EB%9F%AC%EC%B9%98--083984CK89-worn-3-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/hermes-cadenas-%ED%81%B4%EB%9F%AC%EC%B9%98--083984CK89-worn-2-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 19,
@@ -794,8 +762,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EB%B0%B1--080245CAAC-worn-9-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/chaine-d-ancre-%EB%B0%B1--080245CAAC-side-2-300-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 20,
@@ -808,8 +775,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/sac-a-malice-%EB%B0%B1--083670CKAA-worn-3-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/sac-a-malice-%EB%B0%B1--083670CKAA-worn-4-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 21,
@@ -822,8 +788,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/grace-%EC%83%8C%EB%93%A4--231130Z%2090-worn-3-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/grace-%EC%83%8C%EB%93%A4--231130Z%2090-worn-4-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 22,
@@ -836,8 +801,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/hermes-flash-%EC%84%B8%EC%9D%BC%EB%9F%AC-%EB%B0%B1%ED%8C%A9--078254CK89-side-2-300-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/hermes-flash-%EC%84%B8%EC%9D%BC%EB%9F%AC-%EB%B0%B1%ED%8C%A9--078254CK89-above-4-300-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 23,
@@ -850,8 +814,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/cityslide-endless-road-%EB%B2%A8%ED%8A%B8-%EB%B0%B1--078568CBAB-worn-9-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/cityslide-endless-road-%EB%B2%A8%ED%8A%B8-%EB%B0%B1--078568CBAB-front-1-300-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 24,
@@ -864,8 +827,7 @@
       "productMainImage": [
         "https://assets.hermes.com/is/image/hermesproduct/pursangle-%ED%86%A0%ED%8A%B8%EB%B0%B1--083894CAAA-worn-3-0-0-800-800_g.jpg",
         "https://assets.hermes.com/is/image/hermesproduct/pursangle-%ED%86%A0%ED%8A%B8%EB%B0%B1--083894CAAA-worn-6-0-0-800-800_g.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 25,
@@ -878,8 +840,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%9D%B8%ED%94%BC%EB%8B%88%ED%8B%B0-%EB%8F%84%ED%8A%B8-%EB%8D%B0%EB%8B%98-%EC%85%94%EC%B8%A0-%EC%9D%98%EB%A5%98--HOS33WYN4650_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%9D%B8%ED%94%BC%EB%8B%88%ED%8B%B0-%EB%8F%84%ED%8A%B8-%EB%8D%B0%EB%8B%98-%EC%85%94%EC%B8%A0-%EC%9D%98%EB%A5%98--HOS33WYN4650_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 26,
@@ -892,8 +853,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%98%AC-%EC%98%A4%EB%B2%84-%ED%8E%8C%ED%82%A8-%EB%8D%B0%EB%8B%98-%EB%B8%94%EB%A3%A8%EC%A2%85-%EC%9D%98%EB%A5%98--HOA30WYN3650_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%98%AC-%EC%98%A4%EB%B2%84-%ED%8E%8C%ED%82%A8-%EB%8D%B0%EB%8B%98-%EB%B8%94%EB%A3%A8%EC%A2%85-%EC%9D%98%EB%A5%98--HOA30WYN3650_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 27,
@@ -906,8 +866,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%97%A0%EB%B8%8C%EB%A1%9C%EC%9D%B4%EB%8D%94%EB%93%9C-%ED%8E%98%EC%9D%B4%EC%8A%A4-%EB%B8%94%EB%A3%A8%EC%A2%85-%EC%9D%98%EB%A5%98--HOB30EV28608_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%97%A0%EB%B8%8C%EB%A1%9C%EC%9D%B4%EB%8D%94%EB%93%9C-%ED%8E%98%EC%9D%B4%EC%8A%A4-%EB%B8%94%EB%A3%A8%EC%A2%85-%EC%9D%98%EB%A5%98--HOB30EV28608_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 28,
@@ -920,8 +879,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%97%A0%EB%B8%8C%EB%A1%9C%EC%9D%B4%EB%8D%94%EB%93%9C-%ED%8E%98%EC%9D%B4%EC%8A%A4-%EB%B8%94%EB%A3%A8%EC%A2%85-%EC%9D%98%EB%A5%98--HOB30EV28608_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EC%97%A0%EB%B8%8C%EB%A1%9C%EC%9D%B4%EB%8D%94%EB%93%9C-%ED%8E%98%EC%9D%B4%EC%8A%A4-%EB%B8%94%EB%A3%A8%EC%A2%85-%EC%9D%98%EB%A5%98--HOB30EV28608_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 29,
@@ -934,8 +892,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EC%98%A8%EB%8D%94%EA%B3%A0-pm-%EA%B8%B0%ED%83%80-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EC%BA%94%EB%B2%84%EC%8A%A4-%ED%95%B8%EB%93%9C%EB%B0%B1--M46373_PM1_Side%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EC%98%A8%EB%8D%94%EA%B3%A0-pm-%EA%B8%B0%ED%83%80-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EC%BA%94%EB%B2%84%EC%8A%A4-%ED%95%B8%EB%93%9C%EB%B0%B1--M46373_PM1_Interior%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 30,
@@ -948,8 +905,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EC%8B%9C%ED%85%8C-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%ED%95%B8%EB%93%9C%EB%B0%B1--M46321_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EC%8B%9C%ED%85%8C-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%ED%95%B8%EB%93%9C%EB%B0%B1--M46321_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 31,
@@ -962,8 +918,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EB%8B%A4%EC%9D%B4%EC%95%A4-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EC%95%99%ED%94%84%EB%A0%9D%EB%9C%A8-%ED%95%B8%EB%93%9C%EB%B0%B1--M46386_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EB%8B%A4%EC%9D%B4%EC%95%A4-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EC%95%99%ED%94%84%EB%A0%9D%EB%9C%A8-%ED%95%B8%EB%93%9C%EB%B0%B1--M46386_PM1_Cropped%20worn%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 32,
@@ -976,8 +931,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EB%8D%B0%EB%8B%98-%EB%B2%84%ED%8A%BC-%ED%83%AD-%EB%93%9C%EB%A0%88%EC%8A%A4-%EC%9D%98%EB%A5%98--FODR33KJ2900_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EB%8D%B0%EB%8B%98-%EB%B2%84%ED%8A%BC-%ED%83%AD-%EB%93%9C%EB%A0%88%EC%8A%A4-%EC%9D%98%EB%A5%98--FODR33KJ2900_PM1_Ambiance%20view.png?wid=2048&hei=2048"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 33,
@@ -990,8 +944,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%ED%8A%B8%EB%A6%BC-%EC%98%A4%ED%94%88-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%81%AC%EB%A1%AD%EB%93%9C-%ED%92%80%EC%98%A4%EB%B2%84-%EC%9D%98%EB%A5%98--FOKL11XK7138_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%ED%8A%B8%EB%A6%BC-%EC%98%A4%ED%94%88-%EC%8A%AC%EB%A6%AC%EB%B8%8C-%ED%81%AC%EB%A1%AD%EB%93%9C-%ED%92%80%EC%98%A4%EB%B2%84-%EC%9D%98%EB%A5%98--FOKL11XK7138_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 34,
@@ -1004,8 +957,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EB%B2%84%ED%8A%BC-%EB%A0%88%EB%8D%94-%EB%AF%B8%EB%8B%88-%EC%8A%A4%EC%BB%A4%ED%8A%B8-%EC%9D%98%EB%A5%98--FOLS02LLD900_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-lv-x-yk-%EB%B2%84%ED%8A%BC-%EB%A0%88%EB%8D%94-%EB%AF%B8%EB%8B%88-%EC%8A%A4%EC%BB%A4%ED%8A%B8-%EC%9D%98%EB%A5%98--FOLS02LLD900_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 35,
@@ -1018,8 +970,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%ED%94%84-%EC%95%A1%EC%84%BC%ED%8A%B8-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EC%85%94%EC%B8%A0-%EB%93%9C%EB%A0%88%EC%8A%A4-%EC%9D%98%EB%A5%98--FODR48TR0613_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%ED%94%84-%EC%95%A1%EC%84%BC%ED%8A%B8-%EB%AA%A8%EB%85%B8%EA%B7%B8%EB%9E%A8-%EC%85%94%EC%B8%A0-%EB%93%9C%EB%A0%88%EC%8A%A4-%EC%9D%98%EB%A5%98--FODR48TR0613_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 36,
@@ -1032,8 +983,7 @@
       "productMainImage": [
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%ED%94%8C%EB%9E%A9-%ED%8F%AC%EC%BC%93-%ED%9B%84%EB%94%94%EB%93%9C-%EB%9E%A9-%EC%BD%94%ED%8A%B8-%EC%9D%98%EB%A5%98--FOCO46RO1631_PM1_Worn%20view.png?wid=1080&hei=1080",
         "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/%EB%A3%A8%EC%9D%B4-%EB%B9%84%ED%86%B5-%ED%94%8C%EB%9E%A9-%ED%8F%AC%EC%BC%93-%ED%9B%84%EB%94%94%EB%93%9C-%EB%9E%A9-%EC%BD%94%ED%8A%B8-%EC%9D%98%EB%A5%98--FOCO46RO1631_PM1_Ambiance%20view.png?wid=1080&hei=1080"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 37,
@@ -1046,8 +996,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/6089517C-A3FD-410A-9E7B-CAA0E568F28E?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/711BC357-6B1C-4F9C-A29A-0B59F6097DF1?$BBY_V2_ML_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 38,
@@ -1060,8 +1009,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/6089517C-A3FD-410A-9E7B-CAA0E568F28E?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/711BC357-6B1C-4F9C-A29A-0B59F6097DF1?$BBY_V2_ML_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 39,
@@ -1074,8 +1022,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/3FAD6B6B-BBC1-4F41-8E4B-BA84FD6D1572?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/80E553AC-57C2-4928-9812-3DF87CC17420?$BBY_V2_ML_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 40,
@@ -1088,8 +1035,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/CCCFFBA1-E314-48B1-9917-C7799B987095?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/3E104A61-0222-4B83-8D93-1FBC29F961AC?$BBY_V2_ML_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 41,
@@ -1102,8 +1048,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/7A09347A-2D34-49E7-BB04-609D0BF24537?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/CCF61B5E-0542-48BF-BB86-A7BD949708D7?$BBY_V2_SL_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 42,
@@ -1116,8 +1061,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/A51EFAF5-EDCB-4FFC-B2F7-CAD5862DA9D6?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/A0D5FF6D-D7DE-4C29-BF82-9CD462742E97?$BBY_V2_SL_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 43,
@@ -1130,8 +1074,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/969F460E-F75E-4628-AC55-5429DB846177?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/A68CD5AD-C4C6-4C6C-ABB2-B19212DF7C81?$BBY_V2_SL_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 44,
@@ -1144,8 +1087,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/61900B8C-C43C-4748-B4A7-80FC4FA14EB8?$BBY_V2_SL_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/89104E03-2D49-4456-8D64-F1983747C1A6?$BBY_V2_SL_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 45,
@@ -1158,8 +1100,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/9ECCCF15-A0F6-4537-93AE-03A71CF20094?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/B4A06707-77AC-4A13-99EE-424F1D60D3A7?$BBY_V2_ML_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 46,
@@ -1172,8 +1113,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/DE46CD64-94A2-49CB-8716-4F0B295BE2C1?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/EC14496D-313C-44C4-82FE-7D76586AFF57?$BBY_V2_SL_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 47,
@@ -1186,8 +1126,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/19DA72AC-88EE-4E5A-A092-DE9679FA3E4E?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/BAF65EC1-430B-4F60-93F2-CFDB49B8D465?$BBY_V2_SL_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 48,
@@ -1200,8 +1139,7 @@
       "productMainImage": [
         "https://assets.burberry.com/is/image/Burberryltd/DA29613B-0432-4704-A33D-57B6154D2E2D?$BBY_V2_ML_1x1$&wid=887&hei=887",
         "https://assets.burberry.com/is/image/Burberryltd/FCC5FAB1-7649-4041-86ED-61BCC9436821?$BBY_V2_ML_1x1$&wid=887&hei=887"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 49,
@@ -1214,8 +1152,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/mini-evening-bag-black-white-imitation-pearls-gold-tone-metal-imitation-pearls-gold-tone-metal-packshot-artistique-vue2-as3769b10869nn892-9521345200158.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/mini-evening-bag-black-white-imitation-pearls-gold-tone-metal-imitation-pearls-gold-tone-metal-packshot-artistique-vue3-as3769b10869nn892-9521534828574.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 50,
@@ -1228,8 +1165,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/star-minaudiere-gold-gold-tone-metal-metallic-lambskin-gold-tone-metal-metallic-lambskin-packshot-artistique-vue2-as4028b10994nn767-9521347067934.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/star-minaudiere-gold-gold-tone-metal-metallic-lambskin-gold-tone-metal-metallic-lambskin-packshot-artistique-vue3-as4028b10994nn767-9521534500894.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 51,
@@ -1242,8 +1178,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/heart-minaudiere-gold-gold-tone-metal-metallic-lambskin-gold-tone-metal-metallic-lambskin-packshot-artistique-vue2-as4026b10994nn767-9521347297310.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/heart-minaudiere-gold-gold-tone-metal-metallic-lambskin-gold-tone-metal-metallic-lambskin-packshot-artistique-vue3-as4026b10994nn767-9521535320094.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 52,
@@ -1256,8 +1191,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/classic-handbag-ecru-multicolor-tweed-gold-tone-metal-tweed-gold-tone-metal-packshot-artistique-vue2-a01112b10841nn394-9521345265694.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/classic-handbag-ecru-multicolor-tweed-gold-tone-metal-tweed-gold-tone-metal-packshot-artistique-vue3-a01112b10841nn394-9521534894110.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 53,
@@ -1270,8 +1204,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/chanel-22-handbag-ecru-golden-pearly-shaded-calfskin-gold-tone-metal-pearly-shaded-calfskin-gold-tone-metal-packshot-artistique-vue2-as3261b10686nn491-9521345003550.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/chanel-22-handbag-ecru-golden-pearly-shaded-calfskin-gold-tone-metal-pearly-shaded-calfskin-gold-tone-metal-packshot-artistique-vue3-as3261b10686nn491-9521534664734.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 54,
@@ -1284,8 +1217,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/chanel-19-handbag-light-blue-shiny-lambskin-gold-tone-silver-tone-ruthenium-finish-metal-shiny-lambskin-gold-tone-silver-tone-ruthenium-finish-metal-packshot-artistique-vue2-as1160b04852nn268-9521344970782.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/chanel-19-handbag-light-blue-shiny-lambskin-gold-tone-silver-tone-ruthenium-finish-metal-shiny-lambskin-gold-tone-silver-tone-ruthenium-finish-metal-packshot-artistique-vue3-as1160b04852nn268-9521534631966.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 55,
@@ -1298,8 +1230,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/classic-handbag-light-blue-lambskin-gold-tone-metal-lambskin-gold-tone-metal-packshot-artistique-vue2-a01112y04059nn268-9521345036318.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/classic-handbag-light-blue-lambskin-gold-tone-metal-lambskin-gold-tone-metal-packshot-artistique-vue3-a01112y04059nn268-9521534697502.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 56,
@@ -1312,8 +1243,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/mini-flap-bag-white-black-raffia-effect-braided-tweed-gold-tone-metal-raffia-effect-braided-tweed-gold-tone-metal-packshot-artistique-vue2-as3944b10621nn546-9521345593374.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/mini-flap-bag-white-black-raffia-effect-braided-tweed-gold-tone-metal-raffia-effect-braided-tweed-gold-tone-metal-packshot-artistique-vue3-as3944b10621nn546-9521532502046.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 57,
@@ -1326,8 +1256,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/jacket-white-black-cotton-tweed-cotton-tweed-packshot-alternative-p74832v65963mb103-9522196414494.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/jacket-white-black-cotton-tweed-cotton-tweed-packshot-other-p74832v65963mb103-9522197495838.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 58,
@@ -1340,8 +1269,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/cardigan-multicolor-glittered-mixed-fibers-cotton-glittered-mixed-fibers-cotton-packshot-alternative-p74708k10721nn082-9518364753950.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/cardigan-multicolor-glittered-mixed-fibers-cotton-glittered-mixed-fibers-cotton-packshot-other-p74708k10721nn082-9519760867358.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 59,
@@ -1354,8 +1282,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/jacket-blue-black-cotton-tweed-cotton-tweed-packshot-alternative-p74429v65955nm470-9518364033054.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/jacket-blue-black-cotton-tweed-cotton-tweed-packshot-other-p74429v65955nm470-9518365147166.jpg"
-      ],
-      "comments": [{}]
+      ]
     },
     {
       "id": 60,
@@ -1368,8 +1295,7 @@
       "productMainImage": [
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/dress-blue-white-navy-blue-black-cotton-tweed-cotton-tweed-packshot-other-p74450v66032nm667-9518360461342.jpg",
         "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/dress-blue-white-navy-blue-black-cotton-tweed-cotton-tweed-packshot-alternative-p74450v66032nm667-9518358790174.jpg"
-      ],
-      "comments": [{}]
+      ]
     }
   ]
 }
