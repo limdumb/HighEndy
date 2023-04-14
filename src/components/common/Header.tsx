@@ -48,7 +48,7 @@ export default function Header(props: Props) {
     { tabTitle: "브랜드별", linkUrl: "/products" },
   ];
 
-  const memberId = "1";
+  const memberId = localStorage.getItem("memberId");
 
   const navigate = useNavigate();
 
