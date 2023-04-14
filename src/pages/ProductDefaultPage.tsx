@@ -17,7 +17,10 @@ export default function ProductDefaultPage(props: Props) {
   const categoryClickHandler = (brand: string) => {
     setIsCategory(true);
     navigate(brand);
+    localStorage.setItem("clickState", `${isClickCategory}`);
   };
+
+  const clickStatus = localStorage.getItem("clickState");
 
   return (
     <HomeContainer>
@@ -37,8 +40,7 @@ export default function ProductDefaultPage(props: Props) {
           onTabClicked={props.onTabClicked}
         />
       </div>
-      {/* Main Page에 대한 부분은 좀더 구상해볼 예정 */}
-      {/* {isClickCategory ? null : <TitleSection />} */}
+      {clickStatus ? null : <TitleSection />}
       <Outlet />
     </HomeContainer>
   );
