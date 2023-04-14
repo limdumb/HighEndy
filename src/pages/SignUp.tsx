@@ -1,4 +1,3 @@
-import e from "express";
 import { ChangeEvent, useState } from "react";
 import styled from "styled-components";
 import registerUser from "../API/auth/signup";
