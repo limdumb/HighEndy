@@ -1,6 +1,10 @@
+import e from "express";
+import { ChangeEvent, useState } from "react";
 import styled from "styled-components";
+import registerUser from "../API/auth/signup";
 import CommonInput from "../components/common/CommonInput";
 import CustomButton from "../components/common/CustomButton";
+import validateInputs from "../function/validateFunc";
 import "./style/signup.css";
 
 export const AuthContent = styled.div`
@@ -23,6 +27,18 @@ export const AuthContent = styled.div`
 `;
 
 export default function SignUp() {
+  const [signUpValue, setSignUpValue] = useState({
+    nickName: "",
+    password: "",
+  });
+
+  const onSignUpValueChanged = (e: ChangeEvent<HTMLInputElement>) => {
+    setSignUpValue(() => ({
+      ...signUpValue,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <AuthContent>
       <div>
@@ -31,27 +47,61 @@ export default function SignUp() {
       <div className="Input_Wrapper">
         <CommonInput
           width={window.innerWidth <= 390 ? "320px" : "490px"}
+          name="nickName"
           height="34px"
           radius="3px"
-          value={""}
+          value={signUpValue.nickName}
           label={"닉네임"}
-          onChange={() => {}}
+          onChange={(e) => {
+            onSignUpValueChanged(e);
+          }}
           type={"text"}
           placeholder={"닉네임을 입력해주세요"}
         />
         <CommonInput
           width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
+          name="password"
           radius="3px"
-          value={""}
+          value={signUpValue.password}
           label={"비밀번호"}
-          onChange={() => {}}
+          onChange={(e) => {
+            onSignUpValueChanged(e);
+          }}
           type={"password"}
           placeholder={"비밀번호를 입력해주세요"}
         />
       </div>
       <div className="SignUp_Button_Wrapper">
-        <CustomButton width={"120px"} height={"41px"} contents={"회원가입"} />
+        <CustomButton
+          width={"120px"}
+          height={"41px"}
+          contents={"회원가입"}
+          onClick={() => {
+            const validateResult = validateInputs({
+              nickName: signUpValue.nickName,
+              password: signUpValue.password,
+            });
+            console.log("onClick In Validate Result=" + validateResult);
+            switch (validateResult) {
+              case "nickName False":
+                alert("닉네임이 잘못 되었습니다");
+                break;
+              case "password False":
+                alert("비밀번호가 잘못 되었습니다");
+                break;
+              default:
+                alert("로그인이 완료 되었습니다!");
+                break;
+            }
+            if (validateResult) {
+              registerUser({
+                nickName: signUpValue.nickName,
+                password: signUpValue.password,
+              });
+            }
+          }}
+        />
       </div>
     </AuthContent>
   );

@@ -1,15 +1,15 @@
 import { baseInstance } from "../instance";
 
-interface SignUpType {
+export interface SignUpType {
   nickName: string;
   password: string;
 }
 
-export default function signup(props: SignUpType) {
+export default function registerUser(props: SignUpType) {
   const request = { nickName: props.nickName, password: props.password };
   try {
     baseInstance.post(JSON.stringify(request));
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
 }
