@@ -1,0 +1,4 @@
+{
+  "/productDetail/:productId": "/productDetail/:productId",
+  "/productDetail/:id/comments" : "/productDetail/:id/comments"
+}
