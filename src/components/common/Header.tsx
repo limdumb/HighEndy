@@ -92,11 +92,11 @@ export default function Header(props: Props) {
           </div>
         ) : (
           <div className="Header_Auth_Wrapper">
-            <a className="Header_Tab_Content" href="auth/login">
+            <a className="Header_Tab_Content" href="/auth/login">
               로그인
             </a>
             /
-            <a className="Header_Tab_Content" href="auth/signup">
+            <a className="Header_Tab_Content" href="/auth/signup">
               회원가입
             </a>
           </div>

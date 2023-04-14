@@ -10,6 +10,6 @@ export default function signup(props: SignUpType) {
   try {
     baseInstance.post(JSON.stringify(request));
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
 }
