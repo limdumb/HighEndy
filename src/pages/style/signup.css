@@ -18,6 +18,12 @@
   justify-content: flex-end;
 }
 
+.Input_Container > span {
+  font-size: 15px;
+  margin-top: 5px;
+  color: #0085d1;
+}
+
 @media (max-width: 390px){
 
 }

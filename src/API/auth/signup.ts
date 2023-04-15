@@ -5,10 +5,12 @@ export interface SignUpType {
   password: string;
 }
 
-export default function registerUser(props: SignUpType) {
+export default async function registerUser(props: SignUpType) {
   const request = { nickName: props.nickName, password: props.password };
   try {
-    baseInstance.post(JSON.stringify(request));
+    const response = await baseInstance.post("/users", JSON.stringify(request));
+    localStorage.setItem("memberId", response.data.id);
+    return response.status
   } catch (error) {
     console.error(error);
   }

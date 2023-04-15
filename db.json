@@ -1,5 +1,21 @@
 {
-  "user":[],
+  "users": [
+    {
+      "nickName": "하이하이",
+      "password": "mk12345678",
+      "id": 1
+    },
+    {
+      "nickName": "닉네임이에요키",
+      "password": "MK1129111",
+      "id": 2
+    },
+    {
+      "nickName": "닉네임이에요키",
+      "password": "MK1129111",
+      "id": 3
+    }
+  ],
   "gucci": {
     "productList": [
       {
@@ -393,7 +409,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -403,7 +422,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -413,7 +435,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -423,7 +448,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -433,7 +461,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -443,7 +474,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -453,7 +487,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -463,7 +500,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -473,7 +513,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -483,7 +526,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -493,7 +539,10 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     },
     {
       "id": 61,
@@ -503,10 +552,12 @@
       "productPrice": 890000,
       "productLink": "",
       "productExplain": "",
-      "productMainImage": ["", ""]
+      "productMainImage": [
+        "",
+        ""
+      ]
     }
   ],
-
   "comments": [
     {
       "id": 1,
@@ -516,7 +567,6 @@
       "commentContent": "ㅋㅋㅋㅋㅋ루삥루삥뽕"
     }
   ],
-
   "productDetail": [
     {
       "id": 1,
