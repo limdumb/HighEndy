@@ -23,6 +23,7 @@ export const AuthContent = styled.div`
 
   @media (max-width: 390px) {
     width: 360px;
+    height: 570px;
   }
 `;
 
@@ -118,6 +119,7 @@ export default function SignUp() {
               });
               if (singUpResult === 201) {
                 navigate("/");
+                // 추후 Login 로직 추가 예정
               }
             }
           }}
