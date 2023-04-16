@@ -122,11 +122,7 @@ export default function SignUp() {
                 const loginResult = await login({
                   nickName: signUpValue.nickName,
                 });
-                console.log(loginResult?.data)
-                if (
-                  loginResult?.data.password === signUpValue.password &&
-                  loginResult.status === 200
-                ) {
+                if (loginResult.status === 200) {
                   navigate("/");
                 }
               }

@@ -1,10 +1,17 @@
+import { AxiosResponse } from "axios";
 import { baseInstance } from "../instance";
 
 interface Props {
   nickName:string
 }
 
-export default async function login(props: Props) {
+interface LoginReturnType{
+  id: number
+  nickName:string
+  password: string
+}
+
+export default async function login(props: Props):Promise<AxiosResponse<LoginReturnType, any>> {
   // JSON Server Filter 문자열은 인코딩되어서 사용해야하여 변환코드 생성
   const encodeValue = encodeURIComponent(props.nickName)
   try {
@@ -13,6 +20,6 @@ export default async function login(props: Props) {
     localStorage.setItem("memberId", response.data.id)
     return response
   } catch (err) {
-    console.error(err);
+    throw err
   }
 }
