@@ -9,10 +9,9 @@ export default async function login(props: Props) {
   const encodeValue = encodeURIComponent(props.nickName)
   try {
     // mock Server 프로젝트 진행으로 Login은 Get Data로 진행
-    const response = await baseInstance.get(`/users?id=${encodeValue}`);
-    if (response.data.length !== 0) {
-      localStorage.setItem("memberId", response.data.id);
-    }
+    const response = await baseInstance.get(`/users?nickName=${encodeValue}`);
+    localStorage.setItem("memberId", response.data.id)
+    return response
   } catch (err) {
     console.error(err);
   }
