@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import login from "../API/auth/login";
 import registerUser from "../API/auth/signup";
 import CommonInput from "../components/common/CommonInput";
 import CustomButton from "../components/common/CustomButton";
@@ -118,8 +119,12 @@ export default function SignUp() {
                 password: signUpValue.password,
               });
               if (singUpResult === 201) {
-                navigate("/");
-                // 추후 Login 로직 추가 예정
+                const loginResult = await login({
+                  nickName: signUpValue.nickName,
+                });
+                if (loginResult.status === 200) {
+                  navigate("/");
+                }
               }
             }
           }}
