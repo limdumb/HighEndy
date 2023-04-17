@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import "./style/header.css";
+import { useState } from "react";
+import logout from "../../API/auth/logout";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -28,6 +30,22 @@ const HeaderContainer = styled.div`
   }
 `;
 
+const DropDownBox = styled.div`
+  position: fixed;
+  top: 49px;
+  right: 41px;
+  z-index: 10;
+  width: 80px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+
+  @media(max-width: 390px){
+    display: none;
+  }
+`;
+
 const ProfileImage = styled.img`
   width: 35px;
   height: 35px;
@@ -43,6 +61,12 @@ interface Props {
 }
 
 export default function Header(props: Props) {
+  const [isDropDown, setIsDropDown] = useState(false);
+
+  const opDropDownCheckd = () => {
+    setIsDropDown(!isDropDown);
+  };
+
   const headerTabs = [
     { tabTitle: "추천순", linkUrl: "/toprank" },
     { tabTitle: "브랜드별", linkUrl: "/products" },
@@ -88,7 +112,21 @@ export default function Header(props: Props) {
           <div className="Header_Profile_Container">
             <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
             <span>닉네임이에요ㅋㅋ</span>
-            <RxTriangleDown className="DropDown_Button" />
+            <RxTriangleDown
+              className="DropDown_Button"
+              onClick={() => {
+                opDropDownCheckd();
+              }}
+            />
+            {isDropDown ? (
+              <DropDownBox onClick={()=>{
+                logout()
+                alert("로그아웃이 완료 되었습니다!")
+                navigate("/products/?brand=hermes")
+              }}>
+                <span>로그아웃</span>
+              </DropDownBox>
+            ) : null}
           </div>
         ) : (
           <div className="Header_Auth_Wrapper">

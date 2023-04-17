@@ -1,8 +1,21 @@
+import { ChangeEvent, useState } from "react";
 import CommonInput from "../components/common/CommonInput";
 import CustomButton from "../components/common/CustomButton";
 import { AuthContent } from "./SignUp";
 
 export default function Login() {
+  const [loginValue, setLoginValue] = useState({
+    nickName: "",
+    password: "",
+  });
+
+  const onLoginValueChanged = (e: ChangeEvent<HTMLInputElement>) => {
+    setLoginValue(() => ({
+      ...loginValue,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <AuthContent>
       <div>
@@ -13,9 +26,11 @@ export default function Login() {
           width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
-          value={""}
+          value={loginValue.nickName}
           label={"닉네임"}
-          onChange={() => {}}
+          onChange={(e) => {
+            onLoginValueChanged(e);
+          }}
           type={"text"}
           placeholder={"닉네임을 입력해주세요"}
         />
@@ -23,9 +38,11 @@ export default function Login() {
           width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
-          value={""}
+          value={loginValue.password}
           label={"비밀번호"}
-          onChange={() => {}}
+          onChange={(e) => {
+            onLoginValueChanged(e);
+          }}
           type={"password"}
           placeholder={"비밀번호를 입력해주세요"}
         />
