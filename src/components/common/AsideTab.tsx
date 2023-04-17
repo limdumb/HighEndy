@@ -53,9 +53,6 @@ export default function AsideTab(props: Props) {
     { tabTitle: "Louis Vuitton", tabUrl: "/products/?brand=louisvuitton" },
     { tabTitle: "Burberry", tabUrl: "/products/?brand=burberry" },
     { tabTitle: "Chanel", tabUrl: "/products/?brand=chanel" },
-    { tabTitle: "Prada", tabUrl: "/products/?brand=prada" },
-    { tabTitle: "MIUMIU", tabUrl: "/products/?brand=miumiu" },
-    { tabTitle: "Dior", tabUrl: "/products/?brand=dior" },
     { tabTitle: "Gucci", tabUrl: "/products/?brand=gucci" },
   ];
 
