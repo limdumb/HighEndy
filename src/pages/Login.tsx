@@ -1,10 +1,12 @@
 import { ChangeEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import login from "../API/auth/login";
 import CommonInput from "../components/common/CommonInput";
 import CustomButton from "../components/common/CustomButton";
 import { AuthContent } from "./SignUp";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [loginValue, setLoginValue] = useState({
     nickName: "",
     password: "",
@@ -61,9 +63,20 @@ export default function Login() {
           width={"120px"}
           height={"41px"}
           contents={"로그인"}
-          onClick={() => {
+          onClick={async () => {
             //validate는 이전 리뷰확인으로 수정후 적용 예정
-            login({ nickName: loginValue.nickName });
+            const loginResult = await login({ nickName: loginValue.nickName });
+            if (
+              loginResult.data.length !== 0 &&
+              loginResult.data[0].nickName === loginValue.nickName &&
+              loginResult.data[0].password === loginValue.password
+            ) {
+              localStorage.setItem("memberId", loginResult.data.id);
+              alert("로그인이 완료 되었습니다!");
+              navigate("/products/?brand=hermes");
+            } else {
+              alert("로그인 정보가 잘못 되었습니다.");
+            }
           }}
         />
       </div>
