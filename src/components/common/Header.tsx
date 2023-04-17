@@ -40,7 +40,8 @@ const DropDownBox = styled.div`
   border: 1px solid black;
   display: flex;
   justify-content: center;
-
+  cursor: pointer;
+  
   @media(max-width: 390px){
     display: none;
   }
