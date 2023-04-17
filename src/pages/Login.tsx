@@ -26,6 +26,7 @@ export default function Login() {
           width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
+          name="nickName"
           value={loginValue.nickName}
           label={"닉네임"}
           onChange={(e) => {
@@ -38,6 +39,7 @@ export default function Login() {
           width={window.innerWidth <= 390 ? "320px" : "490px"}
           height="34px"
           radius="3px"
+          name="password"
           value={loginValue.password}
           label={"비밀번호"}
           onChange={(e) => {
