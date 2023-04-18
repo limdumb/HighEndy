@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductCard from "../components/common/ProductCard";
 
@@ -35,10 +36,20 @@ export const ProductListWrapper = styled.ul`
 `;
 
 interface Props {
-  isActiveTab: boolean
+  isActiveTab: boolean;
+  activeCategoryName: string | null;
 }
 
 export default function ProductList(props: Props) {
+  const [categoryName, setCategoryName] = useState(props.activeCategoryName);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    setIsLoading(true);
+    setCategoryName(props.activeCategoryName);
+    setIsLoading(false);
+  }, [props.activeCategoryName]);
+
   const test = [
     "1번상품",
     "2번상품",
@@ -57,7 +68,9 @@ export default function ProductList(props: Props) {
     <HomeContainer>
       <ProductListContainer>
         <div className="Product_List_Title">
-          <h2>Gucci</h2>
+          <h2>
+            {!isLoading ? `${props.activeCategoryName}` : <div>Loading..</div>}
+          </h2>
         </div>
         <ProductListWrapper>
           {test.map((el) => {

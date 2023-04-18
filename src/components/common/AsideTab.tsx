@@ -42,8 +42,10 @@ const AsideContainer = styled.aside`
 `;
 
 interface Props {
+  onCategoryChanged: (category: string) => void;
   categoryClickHandler: (brand: string) => void;
   onTabClicked: () => void;
+  memberId?: string;
 }
 
 export default function AsideTab(props: Props) {
@@ -68,6 +70,7 @@ export default function AsideTab(props: Props) {
             <span
               key={tab.tabTitle}
               onClick={() => {
+                props.onCategoryChanged(tab.tabTitle);
                 props.categoryClickHandler(tab.tabUrl);
                 props.onTabClicked();
               }}

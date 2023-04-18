@@ -6,6 +6,7 @@ import { HomeContainer } from "./ProductList";
 import "./style/productDefault.css";
 
 interface Props {
+  onCategoryChanged: (category: string) => void;
   isActiveTab: boolean;
   onTabClicked: () => void;
 }
@@ -28,6 +29,7 @@ export default function ProductDefaultPage(props: Props) {
         <div className="Menu_Active_Wrapper">
           <div className="Aside_Tab_Mobile_Wrapper">
             <AsideTab
+              onCategoryChanged={props.onCategoryChanged}
               categoryClickHandler={categoryClickHandler}
               onTabClicked={props.onTabClicked}
             />
@@ -36,6 +38,7 @@ export default function ProductDefaultPage(props: Props) {
       ) : null}
       <div className="Aside_Tab_Wrapper">
         <AsideTab
+          onCategoryChanged={props.onCategoryChanged}
           categoryClickHandler={categoryClickHandler}
           onTabClicked={props.onTabClicked}
         />

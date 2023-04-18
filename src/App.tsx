@@ -9,7 +9,7 @@ import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDefaultPage from "./pages/ProductDefaultPage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 const RootContainer = styled.div`
@@ -19,21 +19,35 @@ const RootContainer = styled.div`
 
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
+  const [activeCategoryName, setActiveCategoryName] = useState(
+    localStorage.getItem("category")
+  );
   const onTabClicked = () => {
     if (window.innerWidth <= 390) {
       setIstActiveTab(!isActiveTab);
     }
   };
 
+  const onCategoryChanged = (category: string) => {
+    localStorage.setItem("category", category);
+    setActiveCategoryName(category);
+  };
+
   return (
     <BrowserRouter>
-      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab}/>
+      <Header
+        activeCategoryName={activeCategoryName}
+        onCategoryChanged={onCategoryChanged}
+        onTabClicked={onTabClicked}
+        isActiveTab={isActiveTab}
+      />
       <RootContainer>
         <Routes>
           <Route
             path="/"
             element={
               <ProductDefaultPage
+                onCategoryChanged={onCategoryChanged}
                 isActiveTab={isActiveTab}
                 onTabClicked={onTabClicked}
               />
@@ -41,7 +55,12 @@ export default function App() {
           >
             <Route
               path="products"
-              element={<ProductList isActiveTab={false} />}
+              element={
+                <ProductList
+                  activeCategoryName={activeCategoryName}
+                  isActiveTab={false}
+                />
+              }
             />
             <Route path="search" element={<Search />} />
             <Route path="toprank" element={<TopRank />} />
