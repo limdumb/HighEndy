@@ -6,9 +6,9 @@ import { HomeContainer } from "./ProductList";
 import "./style/productDefault.css";
 
 interface Props {
-  onCategoryChanged: (category: string) => void;
   isActiveTab: boolean;
   onTabClicked: () => void;
+  onCategoryChanged: (URLParams: string) => void;
 }
 
 export default function ProductDefaultPage(props: Props) {

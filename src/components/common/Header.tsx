@@ -39,9 +39,7 @@ const ProfileImage = styled.img`
 
 interface Props {
   onTabClicked: () => void;
-  activeCategoryName: string | null
   isActiveTab: boolean;
-  onCategoryChanged: (category: string) => void
 }
 
 export default function Header(props: Props) {

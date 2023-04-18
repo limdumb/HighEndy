@@ -17,30 +17,46 @@ const RootContainer = styled.div`
   margin: 0 auto;
 `;
 
+// URL의 쿼리를 확인해서 해당 Brand의 값에 맞춰서 예외처리 진행
+// 1. URL 쿼리값을 변수에 담는다
+// 2. 그 쿼리값을 AsideTab의 Props로 넘긴다
+// 3. click했을때 해당 Click값이 상태값에 담기게 한다
+// 4. 담긴 상태값을 Product List에 Props로 넘긴다
+
 export default function App() {
+  let params = window.location.search;
   const [isActiveTab, setIstActiveTab] = useState(false);
-  const [activeCategoryName, setActiveCategoryName] = useState(
-    localStorage.getItem("category")
-  );
+  const [activeBrand, setActiveBrand] = useState("");
+
   const onTabClicked = () => {
     if (window.innerWidth <= 390) {
       setIstActiveTab(!isActiveTab);
     }
   };
 
-  const onCategoryChanged = (category: string) => {
-    localStorage.setItem("category", category);
-    setActiveCategoryName(category);
+  const onCategoryChanged = (URLParams: string) => {
+    switch (URLParams) {
+      case "hermes":
+        setActiveBrand("Hermès");
+        break;
+      case "louisvuitton":
+        setActiveBrand("Louis Vuitton");
+        break;
+      case "burberry":
+        setActiveBrand("Burberry");
+        break;
+      case "chanel":
+        setActiveBrand("Chanel");
+        break;
+      case "gucci":
+        setActiveBrand("Gucci");
+        break;
+    }
   };
 
   return (
     <BrowserRouter>
-      <Header
-        activeCategoryName={activeCategoryName}
-        onCategoryChanged={onCategoryChanged}
-        onTabClicked={onTabClicked}
-        isActiveTab={isActiveTab}
-      />
+      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab} />
       <RootContainer>
         <Routes>
           <Route
@@ -56,10 +72,7 @@ export default function App() {
             <Route
               path="products"
               element={
-                <ProductList
-                  activeCategoryName={activeCategoryName}
-                  isActiveTab={false}
-                />
+                <ProductList isActiveTab={false} activeBrand={activeBrand} />
               }
             />
             <Route path="search" element={<Search />} />
