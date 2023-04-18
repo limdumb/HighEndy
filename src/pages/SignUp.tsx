@@ -41,20 +41,8 @@ export default function SignUp() {
     }));
   };
 
-  const onValidateChecked = (
-    validateResult: true | "nickName False" | "password False"
-  ) => {
-    switch (validateResult) {
-      case "nickName False":
-        alert("닉네임이 잘못 되었습니다");
-        break;
-      case "password False":
-        alert("비밀번호가 잘못 되었습니다");
-        break;
-      default:
-        alert("회원가입이 완료 되었습니다!");
-        break;
-    }
+  const onValidateChecked = (validateResult: string) => {
+    return alert(`${validateResult}`);
   };
 
   return (
@@ -107,19 +95,24 @@ export default function SignUp() {
           height={"41px"}
           contents={"회원가입"}
           onClick={async () => {
-            const validateResult = validateInputs({
-              nickName: signUpValue.nickName,
-              password: signUpValue.password,
-            });
-            onValidateChecked(validateResult);
-            if (validateResult === true) {
-              const singUpResult = await registerUser({
+            try {
+              validateInputs({
                 nickName: signUpValue.nickName,
                 password: signUpValue.password,
               });
-              if (singUpResult === 201) {
+              const signUpResult = await registerUser({
+                nickName: signUpValue.nickName,
+                password: signUpValue.password,
+              });
+              if (signUpResult === 201) {
+                alert("회원가입이 완료 되었습니다");
                 navigate("/");
-                // 추후 Login 로직 추가 예정
+              }
+            } catch (error) {
+              if (error instanceof Error) {
+                onValidateChecked(error.message);
+              } else {
+                onValidateChecked("알 수없는 오류가 발생 하였습니다.");
               }
             }
           }}
