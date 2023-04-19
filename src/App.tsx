@@ -24,7 +24,6 @@ const RootContainer = styled.div`
 // 4. 담긴 상태값을 Product List에 Props로 넘긴다
 
 export default function App() {
-  let params = window.location.search;
   const [isActiveTab, setIstActiveTab] = useState(false);
   const [activeBrand, setActiveBrand] = useState("");
 
