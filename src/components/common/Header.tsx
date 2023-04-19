@@ -88,6 +88,11 @@ export default function Header(props: Props) {
     setIsDropDown(!isDropDown);
   };
 
+  const iconClickHandler = () => {
+    localStorage.setItem("clickState", `false`);
+    // `${props.isClickCategory}`
+  };
+
   const headerTabs = [
     { tabTitle: "추천순", linkUrl: "/toprank" },
     { tabTitle: "브랜드별", linkUrl: "/products" },
@@ -109,12 +114,17 @@ export default function Header(props: Props) {
       <div className="Mobile_Logo_Wrapper">
         <img
           className="Header_Mobile_Logo_Image"
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+          }}
         />
       </div>
       <img
         className="Header_Logo_Image"
-        onClick={() => navigate("/products/?brand=hermes")}
+        onClick={() => {
+          navigate("/");
+          iconClickHandler()
+        }}
       />
       {headerTabs.map((tab) => {
         return (

@@ -20,6 +20,7 @@ const RootContainer = styled.div`
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
   const [activeBrand, setActiveBrand] = useState("");
+
   const memberId = localStorage.getItem("memberId");
 
   const onTabClicked = () => {
@@ -50,7 +51,11 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab} memberId={memberId}/>
+      <Header
+        onTabClicked={onTabClicked}
+        isActiveTab={isActiveTab}
+        memberId={memberId}
+      />
       <RootContainer>
         <Routes>
           <Route
