@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import AsideTab from "../components/common/AsideTab";
 import TitleSection from "../components/common/TitleSection";
@@ -12,13 +11,11 @@ interface Props {
 }
 
 export default function ProductDefaultPage(props: Props) {
-  const [isClickCategory, setIsCategory] = useState(false);
   const navigate = useNavigate();
 
   const categoryClickHandler = (brand: string) => {
-    setIsCategory(true);
     navigate(brand);
-    localStorage.setItem("clickState", `${isClickCategory}`);
+    localStorage.setItem("clickState", "true");
   };
 
   const clickStatus = localStorage.getItem("clickState");
@@ -43,7 +40,7 @@ export default function ProductDefaultPage(props: Props) {
           onTabClicked={props.onTabClicked}
         />
       </div>
-      {clickStatus ? null : <TitleSection />}
+      {clickStatus === "true" ? null : <TitleSection />}
       <Outlet />
     </HomeContainer>
   );
