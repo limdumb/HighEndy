@@ -41,8 +41,8 @@ const DropDownBox = styled.div`
   display: flex;
   justify-content: center;
   cursor: pointer;
-  
-  @media(max-width: 390px){
+
+  @media (max-width: 390px) {
     display: none;
   }
 `;
@@ -59,6 +59,7 @@ const ProfileImage = styled.img`
 interface Props {
   onTabClicked: () => void;
   isActiveTab: boolean;
+  memberId: string | null;
 }
 
 export default function Header(props: Props) {
@@ -72,8 +73,6 @@ export default function Header(props: Props) {
     { tabTitle: "추천순", linkUrl: "/toprank" },
     { tabTitle: "브랜드별", linkUrl: "/products" },
   ];
-
-  const memberId = localStorage.getItem("memberId");
 
   const navigate = useNavigate();
 
@@ -112,7 +111,7 @@ export default function Header(props: Props) {
         );
       })}
       <div>
-        {memberId ? (
+        {props.memberId ? (
           <div className="Header_Profile_Container">
             <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
             <span>닉네임이에요ㅋㅋ</span>
@@ -123,11 +122,13 @@ export default function Header(props: Props) {
               }}
             />
             {isDropDown ? (
-              <DropDownBox onClick={()=>{
-                logout()
-                alert("로그아웃이 완료 되었습니다!")
-                navigate("/products/?brand=hermes")
-              }}>
+              <DropDownBox
+                onClick={() => {
+                  logout();
+                  alert("로그아웃이 완료 되었습니다!");
+                  navigate("/products/?brand=hermes");
+                }}
+              >
                 <span>로그아웃</span>
               </DropDownBox>
             ) : null}
