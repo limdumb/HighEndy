@@ -1,18 +1,21 @@
 import { AxiosResponse } from "axios";
 import { baseInstance } from "../instance";
 
-interface UserDataType {
+export interface UserDataType {
   id: number;
   nickName: string;
-  password: string;
 }
 
 export default async function getUser(
   memberId: string | null
-): Promise<AxiosResponse<UserDataType>> {
+): Promise<UserDataType> {
   try {
     const response = await baseInstance.get(`/users?id=${memberId}`);
-    return response;
+    const result: UserDataType = {
+      id: response.data[0].id,
+      nickName: response.data[0].nickName,
+    };
+    return result;
   } catch (err) {
     throw err;
   }
