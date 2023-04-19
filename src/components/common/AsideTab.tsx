@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import logout from "../../API/auth/logout";
 import "./style/asideTab.css";
 
 const AsideContainer = styled.aside`
@@ -44,12 +45,12 @@ const AsideContainer = styled.aside`
 interface Props {
   categoryClickHandler: (brand: string) => void;
   onTabClicked: () => void;
-  memberId?: string;
+  memberId: string | null;
   onCategoryChanged: (URLParams: string) => void;
 }
 
 export default function AsideTab(props: Props) {
-  const memberId = localStorage.getItem("memberId"); // 추후 로그인 정보가 들어올 예정
+  const navigate = useNavigate();
   const asideTabList = [
     { tabTitle: "Hermès", tabUrl: "/products/?brand=hermes" },
     { tabTitle: "Louis Vuitton", tabUrl: "/products/?brand=louisvuitton" },
@@ -105,7 +106,30 @@ export default function AsideTab(props: Props) {
       >
         <h2>상품 검색</h2>
       </Link>
-      {memberId ? <h1>로그인/회원가입</h1> : null}
+      <div
+        className={
+          window.innerWidth <= 390 ? "Mobile_Auth_On" : "Mobile_Auth_Off"
+        }
+      >
+        {!props.memberId ? (
+          <div className="Mobile_Auth_Container">
+            <a href="/auth/login">로그인/</a>
+            <a href="/auth/signup">회원가입</a>
+          </div>
+        ) : (
+          <div className="Mobile_Logout_Container">
+            <button
+              onClick={() => {
+                logout();
+                alert("로그아웃이 완료 되었습니다!");
+                navigate("/products/?brand=hermes");
+              }}
+            >
+              로그아웃
+            </button>
+          </div>
+        )}
+      </div>
     </AsideContainer>
   );
 }

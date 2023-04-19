@@ -16,6 +16,30 @@
   margin-top: 20px;
 }
 
-.Search_Nav_Tab{
+.Search_Nav_Tab {
   margin-top: 20px;
+}
+
+.Mobile_Auth_Off {
+  display: none;
+}
+
+.Mobile_Auth_Container {
+  display: flex;
+}
+
+.Mobile_Auth_Container > a {
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.Mobile_Auth_On {
+  margin-top: 20px;
+}
+
+.Mobile_Logout_Container > button {
+  background-color: white;
+  border: none;
+  font-size: 22px;
+  font-weight: bolder;
 }
