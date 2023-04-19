@@ -12,6 +12,7 @@ interface Props {
 }
 
 export default function ProductDefaultPage(props: Props) {
+  const memberId = localStorage.getItem("memberId");
   const [isClickCategory, setIsCategory] = useState(false);
   const navigate = useNavigate();
 
@@ -29,6 +30,7 @@ export default function ProductDefaultPage(props: Props) {
         <div className="Menu_Active_Wrapper">
           <div className="Aside_Tab_Mobile_Wrapper">
             <AsideTab
+              memberId={memberId}
               onCategoryChanged={props.onCategoryChanged}
               categoryClickHandler={categoryClickHandler}
               onTabClicked={props.onTabClicked}
@@ -38,6 +40,7 @@ export default function ProductDefaultPage(props: Props) {
       ) : null}
       <div className="Aside_Tab_Wrapper">
         <AsideTab
+          memberId={memberId}
           onCategoryChanged={props.onCategoryChanged}
           categoryClickHandler={categoryClickHandler}
           onTabClicked={props.onTabClicked}
