@@ -71,7 +71,10 @@ export default function Header(props: Props) {
           onClick={() => navigate("/")}
         />
       </div>
-      <img className="Header_Logo_Image" onClick={() => navigate("/")} />
+      <img
+        className="Header_Logo_Image"
+        onClick={() => navigate("/products/?brand=hermes")}
+      />
       {headerTabs.map((tab) => {
         return (
           <a
