@@ -35,10 +35,12 @@ export const ProductListWrapper = styled.ul`
 `;
 
 interface Props {
-  isActiveTab: boolean
+  isActiveTab: boolean;
+  activeBrand: string;
 }
 
 export default function ProductList(props: Props) {
+
   const test = [
     "1번상품",
     "2번상품",
@@ -57,7 +59,7 @@ export default function ProductList(props: Props) {
     <HomeContainer>
       <ProductListContainer>
         <div className="Product_List_Title">
-          <h2>Gucci</h2>
+          <h2>{props.activeBrand}</h2>
         </div>
         <ProductListWrapper>
           {test.map((el) => {
