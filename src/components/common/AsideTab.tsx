@@ -45,12 +45,11 @@ const AsideContainer = styled.aside`
 interface Props {
   categoryClickHandler: (brand: string) => void;
   onTabClicked: () => void;
-  memberId?: string;
+  memberId: string | null;
   onCategoryChanged: (URLParams: string) => void;
 }
 
 export default function AsideTab(props: Props) {
-  const memberId = localStorage.getItem("memberId");
   const navigate = useNavigate();
   const asideTabList = [
     { tabTitle: "Hermès", tabUrl: "/products/?brand=hermes" },
@@ -112,7 +111,7 @@ export default function AsideTab(props: Props) {
           window.innerWidth <= 390 ? "Mobile_Auth_On" : "Mobile_Auth_Off"
         }
       >
-        {!memberId ? (
+        {!props.memberId ? (
           <div className="Mobile_Auth_Container">
             <a href="/auth/login">로그인/</a>
             <a href="/auth/signup">회원가입</a>
@@ -120,7 +119,7 @@ export default function AsideTab(props: Props) {
         ) : (
           <div className="Mobile_Logout_Container">
             <button
-              onClick={async () => {
+              onClick={() => {
                 logout();
                 alert("로그아웃이 완료 되었습니다!");
                 navigate("/products/?brand=hermes");

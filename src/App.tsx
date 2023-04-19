@@ -49,10 +49,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header
-        onTabClicked={onTabClicked}
-        isActiveTab={isActiveTab}
-      />
+      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab} />
       <RootContainer>
         <Routes>
           <Route
