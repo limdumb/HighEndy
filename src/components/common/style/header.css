@@ -21,8 +21,11 @@
 }
 
 .Header_Profile_Container > span {
+  display: flex;
+  justify-content: center;
   margin-left: 10px;
   margin-right: 10px;
+  width: 113px;
 }
 
 .DropDown_Button {

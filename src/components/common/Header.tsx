@@ -92,7 +92,7 @@ export default function Header(props: Props) {
     { tabTitle: "추천순", linkUrl: "/toprank" },
     { tabTitle: "브랜드별", linkUrl: "/products" },
   ];
-  
+
   return (
     <HeaderContainer>
       {props.isActiveTab ? (
@@ -131,7 +131,7 @@ export default function Header(props: Props) {
         {props.memberId ? (
           <div className="Header_Profile_Container">
             <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
-            <span>{user.id}</span>
+            <span>{user.nickName}</span>
             <RxTriangleDown
               className="DropDown_Button"
               onClick={() => {
