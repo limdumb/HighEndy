@@ -49,7 +49,7 @@ interface Props {
 }
 
 export default function AsideTab(props: Props) {
-  const memberId = 1;
+  const memberId = localStorage.getItem("memberId"); // 추후 로그인 정보가 들어올 예정
   const asideTabList = [
     { tabTitle: "Hermès", tabUrl: "/products/?brand=hermes" },
     { tabTitle: "Louis Vuitton", tabUrl: "/products/?brand=louisvuitton" },
