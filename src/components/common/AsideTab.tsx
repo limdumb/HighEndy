@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./style/asideTab.css";
@@ -29,7 +30,6 @@ const AsideContainer = styled.aside`
     min-height: 100vh;
     padding-top: 0px;
     background-color: #fffffffe;
-    /* background-color: rgba(211, 211, 211, 98%); */
 
     & > h1 {
       margin-top: 20px;
@@ -44,6 +44,8 @@ const AsideContainer = styled.aside`
 interface Props {
   categoryClickHandler: (brand: string) => void;
   onTabClicked: () => void;
+  memberId?: string;
+  onCategoryChanged: (URLParams: string) => void;
 }
 
 export default function AsideTab(props: Props) {
@@ -53,11 +55,17 @@ export default function AsideTab(props: Props) {
     { tabTitle: "Louis Vuitton", tabUrl: "/products/?brand=louisvuitton" },
     { tabTitle: "Burberry", tabUrl: "/products/?brand=burberry" },
     { tabTitle: "Chanel", tabUrl: "/products/?brand=chanel" },
-    { tabTitle: "Prada", tabUrl: "/products/?brand=prada" },
-    { tabTitle: "MIUMIU", tabUrl: "/products/?brand=miumiu" },
-    { tabTitle: "Dior", tabUrl: "/products/?brand=dior" },
     { tabTitle: "Gucci", tabUrl: "/products/?brand=gucci" },
   ];
+
+  useEffect(() => {
+    const urlSearchObj = new URL(window.location.href);
+    const urlParams = new URLSearchParams(urlSearchObj.search);
+    const navigateParams = urlParams.get("brand");
+    if (navigateParams !== null) {
+      props.onCategoryChanged(navigateParams);
+    }
+  }, []);
 
   return (
     <AsideContainer>
@@ -69,6 +77,12 @@ export default function AsideTab(props: Props) {
               key={tab.tabTitle}
               onClick={() => {
                 props.categoryClickHandler(tab.tabUrl);
+                const urlSearchObj = new URL(window.location.href);
+                const urlParams = new URLSearchParams(urlSearchObj.search);
+                const navigateParams = urlParams.get("brand");
+                if (navigateParams !== null) {
+                  props.onCategoryChanged(navigateParams);
+                }
                 props.onTabClicked();
               }}
             >

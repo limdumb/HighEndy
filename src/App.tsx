@@ -19,21 +19,44 @@ const RootContainer = styled.div`
 
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
+  const [activeBrand, setActiveBrand] = useState("");
+
   const onTabClicked = () => {
     if (window.innerWidth <= 390) {
       setIstActiveTab(!isActiveTab);
     }
   };
 
+  const onCategoryChanged = (URLParams: string) => {
+    switch (URLParams) {
+      case "hermes":
+        setActiveBrand("Hermès");
+        break;
+      case "louisvuitton":
+        setActiveBrand("Louis Vuitton");
+        break;
+      case "burberry":
+        setActiveBrand("Burberry");
+        break;
+      case "chanel":
+        setActiveBrand("Chanel");
+        break;
+      case "gucci":
+        setActiveBrand("Gucci");
+        break;
+    }
+  };
+
   return (
     <BrowserRouter>
-      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab}/>
+      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab} />
       <RootContainer>
         <Routes>
           <Route
             path="/"
             element={
               <ProductDefaultPage
+                onCategoryChanged={onCategoryChanged}
                 isActiveTab={isActiveTab}
                 onTabClicked={onTabClicked}
               />
@@ -41,7 +64,9 @@ export default function App() {
           >
             <Route
               path="products"
-              element={<ProductList isActiveTab={false} />}
+              element={
+                <ProductList isActiveTab={false} activeBrand={activeBrand} />
+              }
             />
             <Route path="search" element={<Search />} />
             <Route path="toprank" element={<TopRank />} />
