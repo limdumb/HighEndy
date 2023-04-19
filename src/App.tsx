@@ -21,6 +21,8 @@ export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
   const [activeBrand, setActiveBrand] = useState("");
 
+  const memberId = localStorage.getItem("memberId");
+
   const onTabClicked = () => {
     if (window.innerWidth <= 390) {
       setIstActiveTab(!isActiveTab);
@@ -49,7 +51,11 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header onTabClicked={onTabClicked} isActiveTab={isActiveTab} />
+      <Header
+        onTabClicked={onTabClicked}
+        isActiveTab={isActiveTab}
+        memberId={memberId}
+      />
       <RootContainer>
         <Routes>
           <Route
