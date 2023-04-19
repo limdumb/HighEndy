@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductCard from "../components/common/ProductCard";
 
@@ -41,7 +40,6 @@ interface Props {
 }
 
 export default function ProductList(props: Props) {
-  const [isLoading, setIsLoading] = useState(true);
 
   const test = [
     "1번상품",

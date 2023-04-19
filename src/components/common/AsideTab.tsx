@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./style/asideTab.css";
@@ -30,7 +30,6 @@ const AsideContainer = styled.aside`
     min-height: 100vh;
     padding-top: 0px;
     background-color: #fffffffe;
-    /* background-color: rgba(211, 211, 211, 98%); */
 
     & > h1 {
       margin-top: 20px;
@@ -50,7 +49,7 @@ interface Props {
 }
 
 export default function AsideTab(props: Props) {
-  const memberId = 1; // 추후 로그인 정보가 들어올 예정
+  const memberId = 1;
   const asideTabList = [
     { tabTitle: "Hermès", tabUrl: "/products/?brand=hermes" },
     { tabTitle: "Louis Vuitton", tabUrl: "/products/?brand=louisvuitton" },
