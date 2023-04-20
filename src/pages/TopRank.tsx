@@ -29,7 +29,15 @@ export default function TopRank() {
         </div>
         <ProductListWrapper>
           {test.map((el) => {
-            return <ProductCard key={el} productImage={el} productName={el} />;
+            // 추후 리팩토링 예정
+            return (
+              <ProductCard
+                key={el}
+                productImage={el}
+                productName={el}
+                productId={0}
+              />
+            );
           })}
         </ProductListWrapper>
       </ProductListContainer>

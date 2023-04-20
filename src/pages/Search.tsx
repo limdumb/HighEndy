@@ -44,7 +44,8 @@ export default function Search() {
         ) : null}
         <ProductListWrapper>
           {test.map((el) => {
-            return <ProductCard key={el} productImage={el} productName={el} />;
+            // 추후 리팩토링 예정
+            return <ProductCard key={el} productId={0} productImage={el} productName={el} />;
           })}
         </ProductListWrapper>
       </ProductListContainer>

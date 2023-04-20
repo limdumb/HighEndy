@@ -43,7 +43,7 @@ interface Props {
 
 interface ProductType {
   productList: {
-    productId: number;
+    id: number;
     productName: string;
     productImage: string;
   }[];
@@ -54,7 +54,7 @@ export default function ProductList(props: Props) {
   const urlParams = new URLSearchParams(urlSearchObj.search);
   const navigateParams = urlParams.get("brand");
   const productInitialValue: ProductType = {
-    productList: [{ productId: 0, productName: "", productImage: "" }],
+    productList: [{ id: 0, productName: "", productImage: "" }],
   };
   const getProductList = useFetch<ProductType>(
     `/${navigateParams}`,
@@ -87,7 +87,8 @@ export default function ProductList(props: Props) {
             getProductList.data.productList.map((el) => {
               return (
                 <ProductCard
-                  key={el.productId}
+                  key={el.id}
+                  productId={el.id}
                   productImage={el.productImage}
                   productName={el.productName}
                 />
