@@ -15,6 +15,7 @@ import "./App.css";
 const RootContainer = styled.div`
   height: 100%;
   margin: 0 auto;
+  margin-top: 50px;
 `;
 
 export default function App() {

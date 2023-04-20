@@ -15,6 +15,10 @@ const HeaderContainer = styled.div`
   background-color: white;
   border-bottom: 1px solid #b6b6b697;
   padding: 5px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
   @media (max-width: 390px) {
     display: flex;
@@ -90,7 +94,6 @@ export default function Header(props: Props) {
 
   const iconClickHandler = () => {
     localStorage.setItem("clickState", `false`);
-    // `${props.isClickCategory}`
   };
 
   const headerTabs = [
