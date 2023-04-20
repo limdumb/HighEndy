@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logout from "../../API/auth/logout";
+import { Link, useNavigate } from "react-router-dom";
 import "./style/asideTab.css";
 
 const AsideContainer = styled.aside`
@@ -43,7 +43,6 @@ const AsideContainer = styled.aside`
 `;
 
 interface Props {
-  categoryClickHandler: (brand: string) => void;
   onTabClicked: () => void;
   memberId: string | null;
   onCategoryChanged: (URLParams: string) => void;
@@ -68,6 +67,11 @@ export default function AsideTab(props: Props) {
     }
   }, []);
 
+  const onCategoryClicked = (brandURL: string) => {
+    navigate(brandURL);
+    localStorage.setItem("clickState", "true");
+  };
+
   return (
     <AsideContainer>
       <h1>제품 브랜드</h1>
@@ -77,7 +81,7 @@ export default function AsideTab(props: Props) {
             <span
               key={tab.tabTitle}
               onClick={() => {
-                props.categoryClickHandler(tab.tabUrl);
+                onCategoryClicked(tab.tabUrl);
                 const urlSearchObj = new URL(window.location.href);
                 const urlParams = new URLSearchParams(urlSearchObj.search);
                 const navigateParams = urlParams.get("brand");
