@@ -2,7 +2,6 @@
   background-color: white;
   width: 190px;
   height: 240px;
-  border-radius: 3px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -12,9 +11,7 @@
 .Product_Image_Wrapper {
   width: 190px;
   height: 180px;
-  background-color: white;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  background-color: hsl(0deg 0% 90.2%);
 }
 
 .Product_Name_Wrapper {
@@ -34,7 +31,7 @@
 @media (max-width: 390px) {
   .Product_Container{
     width: 150px;
-    height: 150px;
+    height: 200px;
   }
 
   .Product_Image_Wrapper{
@@ -47,11 +44,12 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    height: 36px;
+    height: 50px;
   }
 
   .Product_Name_Wrapper > span {
     font-size: 12px;
     font-weight: 500;
+    height: 100%;
   }
 }
