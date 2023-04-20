@@ -85,7 +85,9 @@ export default function Header(props: Props) {
         setUser(response);
       }
     };
-    if (!isLoading) fetchUserInfo();
+    if (props.memberId !== null) {
+      fetchUserInfo();
+    }
   }, []);
 
   const opDropDownCheckd = () => {
@@ -126,7 +128,7 @@ export default function Header(props: Props) {
         className="Header_Logo_Image"
         onClick={() => {
           navigate("/");
-          iconClickHandler()
+          iconClickHandler();
         }}
       />
       {headerTabs.map((tab) => {
