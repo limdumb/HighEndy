@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductCard from "../components/common/ProductCard";
+import useFetch from "../components/customHook/useFetch";
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -39,8 +41,27 @@ interface Props {
   activeBrand: string;
 }
 
-export default function ProductList(props: Props) {
+interface ProductType {
+  productList: {
+    productId: number;
+    productName: string;
+    productImage: string;
+  }[];
+}
 
+export default function ProductList(props: Props) {
+  const urlSearchObj = new URL(window.location.href);
+  const urlParams = new URLSearchParams(urlSearchObj.search);
+  const navigateParams = urlParams.get("brand");
+  const productInitialValue: ProductType = {
+    productList: [{ productId: 0, productName: "", productImage: "" }],
+  };
+  const getProductList = useFetch<ProductType>(
+    `/${navigateParams}`,
+    productInitialValue
+  );
+
+  console.log(getProductList);
   const test = [
     "1번상품",
     "2번상품",
@@ -62,9 +83,19 @@ export default function ProductList(props: Props) {
           <h2>{props.activeBrand}</h2>
         </div>
         <ProductListWrapper>
-          {test.map((el) => {
-            return <ProductCard key={el} productImage={el} productName={el} />;
-          })}
+          {!getProductList.loading ? (
+            getProductList.data.productList.map((el) => {
+              return (
+                <ProductCard
+                  key={el.productId}
+                  productImage={el.productImage}
+                  productName={el.productName}
+                />
+              );
+            })
+          ) : (
+            <div>로딩중..</div>
+          )}
         </ProductListWrapper>
       </ProductListContainer>
     </HomeContainer>

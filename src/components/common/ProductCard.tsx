@@ -13,8 +13,8 @@ export default function ProductCard(props: Props) {
       className="Product_Container"
       onClick={() => navigate("/product/:productId")}
     >
-      <div className="Product_Image_Wrapper">
-        <img src={props.productImage} />
+      <div>
+        <img className="Product_Image_Wrapper" src={props.productImage} />
       </div>
       <div className="Product_Name_Wrapper">
         <span>{props.productName}</span>

@@ -37,7 +37,7 @@ export default function useFetch<T>(
     return () => {
       isMounted = false;
     };
-  }, [endPoint, initialValue]);
+  }, [endPoint]);
 
   return fetchData;
 }
