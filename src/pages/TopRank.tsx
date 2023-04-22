@@ -1,4 +1,3 @@
-import AsideTab from "../components/common/AsideTab";
 import ProductCard from "../components/common/ProductCard";
 import {
   HomeContainer,
@@ -30,14 +29,7 @@ export default function TopRank() {
         <ProductListWrapper>
           {test.map((el) => {
             // 추후 리팩토링 예정
-            return (
-              <ProductCard
-                key={el}
-                productImage={el}
-                productName={el}
-                productId={0}
-              />
-            );
+            return <ProductCard key={el} productImage={el} productName={el} productId={0} />;
           })}
         </ProductListWrapper>
       </ProductListContainer>

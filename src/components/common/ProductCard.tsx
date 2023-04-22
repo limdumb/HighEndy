@@ -8,7 +8,6 @@ interface Props {
 }
 
 export default function ProductCard(props: Props) {
-  console.log(props.productId)
   const navigate = useNavigate();
   return (
     <li

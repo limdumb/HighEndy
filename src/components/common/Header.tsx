@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
-import "./style/header.css";
 import { useEffect, useState } from "react";
 import logout from "../../API/auth/logout";
 import getUser, { UserDataType } from "../../API/user/getUser";
+import "./style/header.css";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -90,7 +90,6 @@ export default function Header(props: Props) {
 
   const iconClickHandler = () => {
     localStorage.setItem("clickState", `false`);
-    // `${props.isClickCategory}`
   };
 
   const headerTabs = [
