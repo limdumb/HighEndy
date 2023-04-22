@@ -40,7 +40,6 @@ interface Props {
 }
 
 export default function ProductList(props: Props) {
-
   const test = [
     "1번상품",
     "2번상품",

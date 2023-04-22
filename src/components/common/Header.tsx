@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
 import getUser, { UserDataType } from "../../API/user/getUser";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
+import { onCategoryClicked } from "../../function/categoryFunc";
 import "./style/header.css";
 
 const HeaderContainer = styled.div`
@@ -65,6 +66,8 @@ interface Props {
   onTabClicked: () => void;
   isActiveTab: boolean;
   memberId: string | null;
+  clickStatus: string | null;
+  setClickStatus: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export default function Header(props: Props) {
@@ -94,10 +97,6 @@ export default function Header(props: Props) {
     setIsDropDown(!isDropDown);
   };
 
-  const iconClickHandler = () => {
-    localStorage.setItem("clickState", `false`);
-  };
-
   const headerTabs = [
     { tabTitle: "추천순", linkUrl: "/toprank" },
     { tabTitle: "브랜드별", linkUrl: "/products" },
@@ -121,6 +120,7 @@ export default function Header(props: Props) {
           className="Header_Mobile_Logo_Image"
           onClick={() => {
             navigate("/");
+            onCategoryClicked(``);
           }}
         />
       </div>
@@ -128,7 +128,8 @@ export default function Header(props: Props) {
         className="Header_Logo_Image"
         onClick={() => {
           navigate("/");
-          iconClickHandler();
+          props.setClickStatus("false");
+          onCategoryClicked(props.clickStatus);
         }}
       />
       {headerTabs.map((tab) => {
