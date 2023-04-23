@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ProductCard from "../components/common/ProductCard";
 import useFetch from "../components/customHook/useFetch";
+import trackQueryString from "../function/trackQueryString";
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -49,32 +50,15 @@ interface ProductType {
 }
 
 export default function ProductList(props: Props) {
-  const urlSearchObj = new URL(window.location.href);
-  const urlParams = new URLSearchParams(urlSearchObj.search);
-  const navigateParams = urlParams.get("brand");
+  const queryString = trackQueryString();
   const productInitialValue: ProductType = {
     productList: [{ id: 0, productName: "", productImage: "" }],
   };
   const getProductList = useFetch<ProductType>(
-    `/${navigateParams}`,
+    `/${queryString}`,
     productInitialValue
   );
 
-  console.log(getProductList);
-  const test = [
-    "1번상품",
-    "2번상품",
-    "3번상품",
-    "4번상품",
-    "5번상품",
-    "6번상품",
-    "7번상품",
-    "8번상품",
-    "9번상품",
-    "10번상품",
-    "11번상품",
-    "12번상품",
-  ];
   return (
     <HomeContainer>
       <ProductListContainer>
