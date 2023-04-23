@@ -4,6 +4,7 @@ import "./style/productCard.css";
 interface Props {
   productImage: string;
   productName: string;
+  productId: number;
 }
 
 export default function ProductCard(props: Props) {
@@ -11,11 +12,9 @@ export default function ProductCard(props: Props) {
   return (
     <li
       className="Product_Container"
-      onClick={() => navigate("/product/:productId")}
+      onClick={() => navigate(`/product/${props.productId}`)}
     >
-      <div className="Product_Image_Wrapper">
-        <img src={props.productImage} />
-      </div>
+      <img className="Product_Image_Wrapper" src={props.productImage} />
       <div className="Product_Name_Wrapper">
         <span>{props.productName}</span>
       </div>

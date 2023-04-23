@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logout from "../../API/auth/logout";
 import { Link, useNavigate } from "react-router-dom";
 import { onCategoryClicked } from "../../function/categoryFunc";
+import trackQueryString from "../../function/trackQueryString";
 import "./style/asideTab.css";
 
 const AsideContainer = styled.aside`
@@ -62,11 +63,9 @@ export default function AsideTab(props: Props) {
   ];
 
   useEffect(() => {
-    const urlSearchObj = new URL(window.location.href);
-    const urlParams = new URLSearchParams(urlSearchObj.search);
-    const navigateParams = urlParams.get("brand");
-    if (navigateParams !== null) {
-      props.onCategoryChanged(navigateParams);
+    const queryString = trackQueryString();
+    if (queryString !== null) {
+      props.onCategoryChanged(queryString);
     }
   }, []);
 
@@ -79,14 +78,10 @@ export default function AsideTab(props: Props) {
             <span
               key={tab.tabTitle}
               onClick={() => {
-                props.setClickStatus("true")
-                navigate(tab.tabUrl);
-                onCategoryClicked(`${props.clickStatus}`);
-                const urlSearchObj = new URL(window.location.href);
-                const urlParams = new URLSearchParams(urlSearchObj.search);
-                const navigateParams = urlParams.get("brand");
-                if (navigateParams !== null) {
-                  props.onCategoryChanged(navigateParams);
+                navigate(tab.tabUrl)
+                const queryString = trackQueryString();
+                if (queryString !== null) {
+                  props.onCategoryChanged(queryString);
                 }
                 props.onTabClicked();
               }}
