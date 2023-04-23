@@ -19,7 +19,7 @@ export default function useFetch<T>(
 
   useEffect(() => {
     let isMounted = true;
-    async function fetchData() {
+    async function getFetchData() {
       try {
         const response = await baseInstance.get(endPoint);
         if (isMounted) {
@@ -32,12 +32,12 @@ export default function useFetch<T>(
       }
     }
 
-    fetchData();
+    getFetchData();
 
     return () => {
       isMounted = false;
     };
-  }, [endPoint, initialValue]);
+  }, [endPoint, initialValue, baseInstance]);
 
   return fetchData;
 }
