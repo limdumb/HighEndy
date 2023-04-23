@@ -49,7 +49,7 @@ interface Props {
   memberId: string | null;
   onCategoryChanged: (URLParams: string) => void;
   clickStatus: string | null;
-  setClickStatus: React.Dispatch<React.SetStateAction<string | null>>
+  setClickStatus: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export default function AsideTab(props: Props) {
@@ -78,7 +78,9 @@ export default function AsideTab(props: Props) {
             <span
               key={tab.tabTitle}
               onClick={() => {
-                navigate(tab.tabUrl)
+                props.setClickStatus("true")
+                onCategoryClicked("true");
+                navigate(tab.tabUrl);
                 const queryString = trackQueryString();
                 if (queryString !== null) {
                   props.onCategoryChanged(queryString);

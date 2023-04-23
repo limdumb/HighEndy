@@ -118,7 +118,7 @@ export default function Header(props: Props) {
           className="Header_Mobile_Logo_Image"
           onClick={() => {
             navigate("/");
-            onCategoryClicked(``);
+            onCategoryClicked("false");
           }}
         />
       </div>
@@ -126,7 +126,6 @@ export default function Header(props: Props) {
         className="Header_Logo_Image"
         onClick={() => {
           navigate("/");
-          props.setClickStatus("false");
           onCategoryClicked(props.clickStatus);
         }}
       />
