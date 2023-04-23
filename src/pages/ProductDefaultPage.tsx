@@ -12,7 +12,6 @@ interface Props {
 
 export default function ProductDefaultPage(props: Props) {
   const memberId = localStorage.getItem("memberId");
-  const [isClickCategory, setIsCategory] = useState(false);
   const navigate = useNavigate();
 
   const categoryClickHandler = (brand: string) => {
@@ -49,3 +48,4 @@ export default function ProductDefaultPage(props: Props) {
     </HomeContainer>
   );
 }
+

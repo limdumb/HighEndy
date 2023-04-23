@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import ProductCard from "../components/common/ProductCard";
+import useFetch from "../components/customHook/useFetch";
+import trackQueryString from "../function/trackQueryString";
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -39,22 +41,24 @@ interface Props {
   activeBrand: string;
 }
 
-export default function ProductList(props: Props) {
+interface ProductType {
+  productList: {
+    id: number;
+    productName: string;
+    productImage: string;
+  }[];
+}
 
-  const test = [
-    "1번상품",
-    "2번상품",
-    "3번상품",
-    "4번상품",
-    "5번상품",
-    "6번상품",
-    "7번상품",
-    "8번상품",
-    "9번상품",
-    "10번상품",
-    "11번상품",
-    "12번상품",
-  ];
+export default function ProductList(props: Props) {
+  const queryString = trackQueryString();
+  const productInitialValue: ProductType = {
+    productList: [{ id: 0, productName: "", productImage: "" }],
+  };
+  const getProductList = useFetch<ProductType>(
+    `/${queryString}`,
+    productInitialValue
+  );
+
   return (
     <HomeContainer>
       <ProductListContainer>
@@ -62,9 +66,20 @@ export default function ProductList(props: Props) {
           <h2>{props.activeBrand}</h2>
         </div>
         <ProductListWrapper>
-          {test.map((el) => {
-            return <ProductCard key={el} productImage={el} productName={el} />;
-          })}
+          {!getProductList.loading ? (
+            getProductList.data.productList.map((el) => {
+              return (
+                <ProductCard
+                  key={el.id}
+                  productId={el.id}
+                  productImage={el.productImage}
+                  productName={el.productName}
+                />
+              );
+            })
+          ) : (
+            <div>로딩중..</div>
+          )}
         </ProductListWrapper>
       </ProductListContainer>
     </HomeContainer>
