@@ -1,4 +1,3 @@
-import { AxiosResponse } from "axios";
 import { baseInstance } from "../instance";
 
 export interface UserDataType {
