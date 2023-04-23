@@ -1,25 +1,30 @@
+import { useState } from "react";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Search from "./pages/Search";
 import TopRank from "./pages/TopRank";
 import styled from "styled-components";
 import AuthPage from "./pages/AuthPage";
-import Header from "./components/common/Header";
 import ProductList from "./pages/ProductList";
+import Header from "./components/common/Header";
 import ProductDetail from "./pages/ProductDetail";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AsideTab from "./components/common/AsideTab";
 import ProductDefaultPage from "./pages/ProductDefaultPage";
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 const RootContainer = styled.div`
   height: 100%;
   margin: 0 auto;
+  margin-top: 50px;
 `;
 
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
   const [activeBrand, setActiveBrand] = useState("");
+  const [clickStatus, setClickStatus] = useState(
+    localStorage.getItem("clickState")
+  );
 
   const memberId = localStorage.getItem("memberId");
 
@@ -51,17 +56,36 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header
-        onTabClicked={onTabClicked}
-        isActiveTab={isActiveTab}
-        memberId={memberId}
-      />
+      <>
+        <Header
+          clickStatus={clickStatus}
+          setClickStatus={setClickStatus}
+          onTabClicked={onTabClicked}
+          isActiveTab={isActiveTab}
+          memberId={memberId}
+        />
+        {isActiveTab ? (
+          <div className="Menu_Active_Wrapper">
+            <div className="Aside_Tab_Mobile_Wrapper">
+              <AsideTab
+                setClickStatus={setClickStatus}
+                clickStatus={clickStatus}
+                memberId={memberId}
+                onCategoryChanged={onCategoryChanged}
+                onTabClicked={onTabClicked}
+              />
+            </div>
+          </div>
+        ) : null}
+      </>
       <RootContainer>
         <Routes>
           <Route
             path="/"
             element={
               <ProductDefaultPage
+                setClickStatus={setClickStatus}
+                clickStatus={clickStatus}
                 onCategoryChanged={onCategoryChanged}
                 isActiveTab={isActiveTab}
                 onTabClicked={onTabClicked}

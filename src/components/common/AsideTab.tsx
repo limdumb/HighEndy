@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logout from "../../API/auth/logout";
+import { Link, useNavigate } from "react-router-dom";
+import { onCategoryClicked } from "../../function/categoryFunc";
 import trackQueryString from "../../function/trackQueryString";
 import "./style/asideTab.css";
 
@@ -44,10 +45,11 @@ const AsideContainer = styled.aside`
 `;
 
 interface Props {
-  categoryClickHandler: (brand: string) => void;
   onTabClicked: () => void;
   memberId: string | null;
   onCategoryChanged: (URLParams: string) => void;
+  clickStatus: string | null;
+  setClickStatus: React.Dispatch<React.SetStateAction<string | null>>
 }
 
 export default function AsideTab(props: Props) {
@@ -76,7 +78,7 @@ export default function AsideTab(props: Props) {
             <span
               key={tab.tabTitle}
               onClick={() => {
-                props.categoryClickHandler(tab.tabUrl);
+                navigate(tab.tabUrl)
                 const queryString = trackQueryString();
                 if (queryString !== null) {
                   props.onCategoryChanged(queryString);

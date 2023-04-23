@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
 import getUser, { UserDataType } from "../../API/user/getUser";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
+import { onCategoryClicked } from "../../function/categoryFunc";
 import "./style/header.css";
 
 const HeaderContainer = styled.div`
@@ -15,6 +16,10 @@ const HeaderContainer = styled.div`
   background-color: white;
   border-bottom: 1px solid #b6b6b697;
   padding: 5px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
   @media (max-width: 390px) {
     display: flex;
@@ -61,6 +66,8 @@ interface Props {
   onTabClicked: () => void;
   isActiveTab: boolean;
   memberId: string | null;
+  clickStatus: string | null;
+  setClickStatus: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export default function Header(props: Props) {
@@ -81,15 +88,13 @@ export default function Header(props: Props) {
         setUser(response);
       }
     };
-    if (!isLoading) fetchUserInfo();
+    if (props.memberId !== null) {
+      fetchUserInfo();
+    }
   }, []);
 
   const opDropDownCheckd = () => {
     setIsDropDown(!isDropDown);
-  };
-
-  const iconClickHandler = () => {
-    localStorage.setItem("clickState", `false`);
   };
 
   const headerTabs = [
@@ -115,6 +120,7 @@ export default function Header(props: Props) {
           className="Header_Mobile_Logo_Image"
           onClick={() => {
             navigate("/");
+            onCategoryClicked(``);
           }}
         />
       </div>
@@ -122,7 +128,8 @@ export default function Header(props: Props) {
         className="Header_Logo_Image"
         onClick={() => {
           navigate("/");
-          iconClickHandler()
+          props.setClickStatus("false");
+          onCategoryClicked(props.clickStatus);
         }}
       />
       {headerTabs.map((tab) => {
