@@ -1,12 +1,22 @@
 import ProductCard from "../components/common/ProductCard";
+import useFetch from "../components/customHook/useFetch";
 import {
   HomeContainer,
   ProductListContainer,
   ProductListWrapper,
+  ProductType,
 } from "./ProductList";
 import "./style/topRank.css";
 
 export default function TopRank() {
+  const productInitialValue: ProductType = {
+    productList: [{ id: 0, productName: "", productImage: "" }],
+  };
+  const topRankProductData = useFetch<ProductType>(
+    "/toprank",
+    productInitialValue
+  );
+
   const test = [
     "1번상품",
     "2번상품",
@@ -27,9 +37,15 @@ export default function TopRank() {
           <h2>이달의 Top 10 제품</h2>
         </div>
         <ProductListWrapper>
-          {test.map((el) => {
-            // 2023-04-22 임경인: Top Rank를 추후 Server Data로 개선 예정
-            return <ProductCard key={el} productImage={el} productName={el} productId={0} />;
+          {topRankProductData.data.productList.map((product) => {
+            return (
+              <ProductCard
+                key={product.id}
+                productImage={product.productImage}
+                productName={product.productName}
+                productId={product.id}
+              />
+            );
           })}
         </ProductListWrapper>
       </ProductListContainer>

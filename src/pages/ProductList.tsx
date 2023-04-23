@@ -41,7 +41,7 @@ interface Props {
   activeBrand: string;
 }
 
-interface ProductType {
+export interface ProductType {
   productList: {
     id: number;
     productName: string;
