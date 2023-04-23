@@ -20,7 +20,6 @@ const RootContainer = styled.div`
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
   const [activeBrand, setActiveBrand] = useState("");
-
   const memberId = localStorage.getItem("memberId");
 
   const onTabClicked = () => {

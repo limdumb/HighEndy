@@ -58,7 +58,7 @@ export default function ProductList(props: Props) {
     `/${queryString}`,
     productInitialValue
   );
-
+  
   return (
     <HomeContainer>
       <ProductListContainer>

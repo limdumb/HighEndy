@@ -81,7 +81,7 @@ export default function Header(props: Props) {
         setUser(response);
       }
     };
-    if (!isLoading) fetchUserInfo();
+    if (props.memberId !== null) fetchUserInfo();
   }, []);
 
   const opDropDownCheckd = () => {
