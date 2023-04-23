@@ -61,11 +61,9 @@ export default function AsideTab(props: Props) {
   ];
 
   useEffect(() => {
-    const urlSearchObj = new URL(window.location.href);
-    const urlParams = new URLSearchParams(urlSearchObj.search);
-    const navigateParams = urlParams.get("brand");
-    if (navigateParams !== null) {
-      props.onCategoryChanged(navigateParams);
+    const queryString = trackQueryString();
+    if (queryString !== null) {
+      props.onCategoryChanged(queryString);
     }
   }, []);
 
