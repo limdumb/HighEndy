@@ -78,7 +78,7 @@ export default function AsideTab(props: Props) {
             <span
               key={tab.tabTitle}
               onClick={() => {
-                props.setClickStatus("true")
+                props.setClickStatus("true");
                 onCategoryClicked("true");
                 navigate(tab.tabUrl);
                 const queryString = trackQueryString();
@@ -96,14 +96,22 @@ export default function AsideTab(props: Props) {
       <Link
         to={"/toprank"}
         className="Top_Rank_Tab"
-        onClick={() => props.onTabClicked()}
+        onClick={() => {
+          props.onTabClicked();
+          props.setClickStatus("true");
+          onCategoryClicked("true");
+        }}
       >
         <h2>이달의 Top10</h2>
       </Link>
       <Link
         to={"/search"}
         className="Search_Nav_Tab"
-        onClick={() => props.onTabClicked()}
+        onClick={() => {
+          props.onTabClicked();
+          props.setClickStatus("true");
+          onCategoryClicked("true");
+        }}
       >
         <h2>상품 검색</h2>
       </Link>
