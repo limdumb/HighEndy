@@ -86,7 +86,7 @@ export default function ProductDetail() {
     <ProductDetailContainer>
       {productDetailData.data.map((product) => {
         return (
-          <>
+          <div key={product.id}>
             <div className="Product_Detaile_Info_Container">
               <div className="Product_Detail_Image_Wrapper">
                 <ProductImage src={product.productImage} />
@@ -105,31 +105,30 @@ export default function ProductDetail() {
             <div className="Product_Explanation">
               <h3>제품설명</h3>
               <div className="Product_Explation_Content">
-                <span>
-                  하우스 아카이브로부터 탄생한 구찌 블론디 라인을 특징하는
-                  라운드 인터로킹 G. 구찌 블론디 숄더백 및 크로스백과 같은
-                  시그니처 아이템에서 섬세한 레더 패치 디테일로 엠블럼을 구현함.
-                </span>
+                <span>{product.productExplain}</span>
               </div>
             </div>
             <div className="Product_Detail_Outfit_Container">
-              <ProductOutfitImage src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679682627/742360_1IV0G_6420_003_100_0000_Light-.jpg" />
-              <ProductOutfitImage src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1679682629/742360_1IV0G_6420_004_100_0000_Light-.jpg" />
-            </div>
-          </>
-        );
-      })}
-      {commentData.data.map((comment) => {
-        return (
-          <div className="Product_Review_Container">
-            <ProductComment />
-            <ContourLine />
-            <div>
-              <CommentBox />
+              {product.productMainImage.map((img) => {
+                return <ProductOutfitImage key={img} src={img} />;
+              })}
             </div>
           </div>
         );
       })}
+      <div className="Product_Review_Container">
+        <ProductComment />
+        <ContourLine />
+      </div>
+      {commentData.data.length !== 0
+        ? commentData.data.map((comment) => {
+            return (
+              <div>
+                <CommentBox />
+              </div>
+            );
+          })
+        : null}
     </ProductDetailContainer>
   );
 }
