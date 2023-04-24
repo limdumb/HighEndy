@@ -42,23 +42,21 @@ interface Props {
 }
 
 interface ProductType {
-  productList: {
-    id: number;
-    productName: string;
-    productImage: string;
-  }[];
+  id: number;
+  productName: string;
+  productImage: string;
 }
 
 export default function ProductList(props: Props) {
   const queryString = trackQueryString();
-  const productInitialValue: ProductType = {
-    productList: [{ id: 0, productName: "", productImage: "" }],
-  };
-  const getProductList = useFetch<ProductType>(
-    `/${queryString}`,
+  const productInitialValue: ProductType[] = [
+    { id: 0, productName: "", productImage: "" },
+  ];
+  const getProductList = useFetch<Array<ProductType>>(
+    `products?brand=${queryString}`,
     productInitialValue
   );
-  
+
   return (
     <HomeContainer>
       <ProductListContainer>
@@ -67,7 +65,7 @@ export default function ProductList(props: Props) {
         </div>
         <ProductListWrapper>
           {!getProductList.loading ? (
-            getProductList.data.productList.map((el) => {
+            getProductList.data.map((el) => {
               return (
                 <ProductCard
                   key={el.id}
