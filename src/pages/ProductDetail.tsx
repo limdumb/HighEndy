@@ -123,7 +123,7 @@ export default function ProductDetail() {
       {commentData.data.length !== 0
         ? commentData.data.map((comment) => {
             return (
-              <div>
+              <div key={comment.id}>
                 <CommentBox />
               </div>
             );

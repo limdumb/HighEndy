@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import formatPrice from "../../function/formatPrice";
 import "./style/productInfo.css";
 
 export const ContourLine = styled.div`
@@ -21,6 +22,7 @@ interface Props {
 }
 
 export default function ProductInfo(props:Props) {
+  const formationNumber = formatPrice(props.productPrice)
   return (
     <div className="Product_Detail_Info_Wrapper">
       <div className="Product_Detail_Title">
@@ -35,7 +37,7 @@ export default function ProductInfo(props:Props) {
           <span>제품 사이트</span>
         </div>
         <div className="Product_Detail_Info_Contents">
-          <span>{props.productPrice}원</span>
+          <span>{formationNumber}원</span>
           <span>{props.productExplain}
           </span>
           <a href={props.productLink}>
