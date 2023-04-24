@@ -5,9 +5,11 @@ import trackQueryString from "../function/trackQueryString";
 
 export const HomeContainer = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 export const ProductListContainer = styled.ul`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +43,7 @@ interface Props {
   activeBrand: string;
 }
 
-interface ProductType {
+export interface ProductType {
   id: number;
   productName: string;
   productImage: string;
