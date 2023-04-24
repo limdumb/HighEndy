@@ -1,4 +1,6 @@
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import useFetch from "../components/customHook/useFetch";
 import CommentBox from "../components/ProductDetail/CommentBox";
 import ProductComment from "../components/ProductDetail/ProductComment";
 import ProductInfo, {
@@ -35,7 +37,49 @@ const ProductOutfitImage = styled.img`
   }
 `;
 
+interface ProductDetailType {
+  id: number;
+  productImage: string;
+  productBrand: string;
+  productPrice: number;
+  productLink: string;
+  productExplain: string;
+  productMainImage: string;
+}
+
+interface CommentType {
+  id: number;
+  productId: number;
+  commentTitle: string;
+  buyPrice: number;
+  commentContent: string;
+}
+
 export default function ProductDetail() {
+  const param = useParams();
+  const detailInitialValue: ProductDetailType[] = [
+    {
+      id: 0,
+      productImage: "",
+      productBrand: "",
+      productPrice: 0,
+      productLink: "",
+      productExplain: "",
+      productMainImage: "",
+    },
+  ];
+  const commentInitialValue: CommentType[] = [
+    { id: 0, productId: 0, commentTitle: "", buyPrice: 0, commentContent: "" },
+  ];
+  const productDetailData = useFetch<Array<ProductDetailType>>(
+    `productDetail?id=${param.productId}`,
+    detailInitialValue
+  );
+  const commentData = useFetch<Array<CommentType>>(
+    `comments?id=${param.productId}`,
+    commentInitialValue
+  );
+
   return (
     <ProductDetailContainer>
       <div className="Product_Detaile_Info_Container">
