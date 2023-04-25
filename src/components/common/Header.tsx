@@ -7,6 +7,7 @@ import getUser, { UserDataType } from "../../API/user/getUser";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import { onCategoryClicked } from "../../function/categoryFunc";
 import "./style/header.css";
+import { response } from "express";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -87,6 +88,7 @@ export default function Header(props: Props) {
       if (response && !isLoading) {
         setUser(response);
       }
+      localStorage.setItem("nickName", response.nickName);
     };
     if (props.memberId !== null) fetchUserInfo();
   }, []);

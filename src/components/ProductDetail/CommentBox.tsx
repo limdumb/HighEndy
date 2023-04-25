@@ -9,6 +9,7 @@ const CommentBoxContainer = styled.div`
   height: 90px;
   background-color: white;
   border: 1px solid gray;
+  margin-bottom: 20px;
 
   & > :last-child {
     font-weight: 600;
@@ -53,7 +54,6 @@ const ReviewContents = styled.div`
 `;
 
 interface Props {
-  commentTitle: string;
   buyPrice: number;
   commentContent: string;
   userName: string;

@@ -15,6 +15,7 @@ export default function ProductComment(props: Props) {
       e.preventDefault();
     }
   };
+  console.log(props.commentValue.buyPrice)
 
   return (
     <div>
@@ -39,6 +40,7 @@ export default function ProductComment(props: Props) {
           height={"25px"}
           border={"1px solid #afafaf"}
         />
+        
         <CommonInput
           defaultValue={props.commentValue.commentContent}
           onChange={(e) => {

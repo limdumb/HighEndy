@@ -64,6 +64,11 @@
       "nickName": "안녕하세요저는밀",
       "password": "mk123456789",
       "id": 13
+    },
+    {
+      "nickName": "닉네임입니다",
+      "password": "mk123123123",
+      "id": 14
     }
   ],
   "gucci": {
@@ -386,15 +391,48 @@
       }
     ]
   },
-
   "comments": [
     {
       "id": 1,
       "productId": 1,
-      "commentTitle": "product id 1에 대한 코멘트 1",
       "buyPrice": 100000,
       "commentContent": "ㅋㅋㅋㅋㅋ루삥루삥뽕",
       "userName": "나김유저"
+    },
+    {
+      "buyPrice": 100000,
+      "commentContent": "이제품 별로 안좋은것같아요 좀 비싸?ㅋ",
+      "userName": "임덤덤임",
+      "productId": 1,
+      "id": 2
+    },
+    {
+      "buyPrice": 100000,
+      "commentContent": "이제품 넘 비싸고 별로에요",
+      "userName": "닉네임입니다",
+      "productId": 13,
+      "id": 3
+    },
+    {
+      "buyPrice": 1000000,
+      "commentContent": "이제품 넘 비싸고 별로에요",
+      "userName": "닉네임입니다",
+      "productId": 13,
+      "id": 4
+    },
+    {
+      "buyPrice": 10000000,
+      "commentContent": "이거좀그럼..",
+      "userName": "닉네임입니다",
+      "productId": 13,
+      "id": 5
+    },
+    {
+      "buyPrice": 1000000,
+      "commentContent": "이제품 좋아요",
+      "userName": "닉네임입니다",
+      "productId": 13,
+      "id": 6
     }
   ],
   "productDetail": [
