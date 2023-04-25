@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { getOnlyNumbersRegex } from "../../function/validateFunc";
 import { CommentValue } from "../../pages/ProductDetail";
 import CommonInput from "../common/CommonInput";
 import "./style/productComment.css";
@@ -9,14 +10,27 @@ interface Props {
 }
 
 export default function ProductComment(props: Props) {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key !== "Backspace" && e.key !== "Delete" && isNaN(Number(e.key))) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div>
       <div className="Product_Review_Write_Container">
         <CommonInput
           defaultValue={props.commentValue.buyPrice}
           onChange={(e) => {
-            props.handleInputChanged(e);
+            const regexResult = getOnlyNumbersRegex(e);
+            const koreaRegexResult = !/^[ㄱ-ㅎㅏ-ㅣ가-힣]*$/.test(
+              e.target.value
+            );
+            if (regexResult && koreaRegexResult) {
+              props.handleInputChanged(e);
+            }
           }}
+          onKeyPress={(e) => handleKeyPress(e)}
           name={"buyPrice"}
           type={"text"}
           placeholder={"구입하셨던 상품 금액을 입력해주세요"}
@@ -27,7 +41,9 @@ export default function ProductComment(props: Props) {
         />
         <CommonInput
           defaultValue={props.commentValue.commentContent}
-          onChange={(e) => {props.handleInputChanged(e)}}
+          onChange={(e) => {
+            props.handleInputChanged(e);
+          }}
           type={"text"}
           name={"commentContent"}
           placeholder={"구입하셨던 리뷰를 입력해주세요"}

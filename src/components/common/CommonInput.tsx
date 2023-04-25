@@ -13,7 +13,8 @@ interface InputProps {
   label?: string;
   name?: string;
   border?: string;
-  defaultValue?: string
+  defaultValue?: string;
+  onKeyPress?: React.KeyboardEventHandler<HTMLInputElement>;
 }
 
 const Input = styled.input<InputProps>`
@@ -35,6 +36,7 @@ export default function CommonInput(props: InputProps) {
         <Input
           name={props.name}
           radius={props.radius}
+          onKeyPress={props.onKeyPress}
           placeholder={props.placeholder}
           type={props.type}
           defaultValue={props.defaultValue}
