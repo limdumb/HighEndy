@@ -1,3 +1,4 @@
+import { ChangeEvent, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import useFetch from "../components/customHook/useFetch";
@@ -6,6 +7,7 @@ import ProductComment from "../components/ProductDetail/ProductComment";
 import ProductInfo, {
   ContourLine,
 } from "../components/ProductDetail/ProductInfo";
+import { onInputChanged } from "../function/onInputChanged";
 import "./style/productDetail.css";
 
 const ProductDetailContainer = styled.div`
@@ -54,9 +56,24 @@ interface CommentType {
   commentTitle: string;
   buyPrice: number;
   commentContent: string;
+  userName: string;
+}
+
+export interface CommentValue {
+  commentContent: string;
+  buyPrice: string;
 }
 
 export default function ProductDetail() {
+  const [commentValue, setCommentValue] = useState<CommentValue>({
+    commentContent: "",
+    buyPrice: "",
+  });
+
+  const handleInputChanged = (e: ChangeEvent<HTMLInputElement>) => {
+    onInputChanged<CommentValue>(commentValue, setCommentValue, e);
+  };
+
   const param = useParams();
   const detailInitialValue: ProductDetailType[] = [
     {
@@ -71,7 +88,14 @@ export default function ProductDetail() {
     },
   ];
   const commentInitialValue: CommentType[] = [
-    { id: 0, productId: 0, commentTitle: "", buyPrice: 0, commentContent: "" },
+    {
+      id: 0,
+      userName: "",
+      productId: 0,
+      commentTitle: "",
+      buyPrice: 0,
+      commentContent: "",
+    },
   ];
   const productDetailData = useFetch<Array<ProductDetailType>>(
     `productDetail?id=${param.productId}`,
@@ -117,14 +141,22 @@ export default function ProductDetail() {
         );
       })}
       <div className="Product_Review_Container">
-        <ProductComment />
+        <ProductComment
+          commentValue={commentValue}
+          handleInputChanged={handleInputChanged}
+        />
         <ContourLine />
       </div>
       {commentData.data.length !== 0
         ? commentData.data.map((comment) => {
             return (
               <div key={comment.id}>
-                <CommentBox />
+                <CommentBox
+                  commentTitle={comment.commentTitle}
+                  buyPrice={comment.buyPrice}
+                  commentContent={comment.commentContent}
+                  userName={comment.userName}
+                />
               </div>
             );
           })

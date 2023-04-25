@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import formatPrice from "../../function/formatPrice";
 
 const CommentBoxContainer = styled.div`
   display: flex;
@@ -15,7 +16,6 @@ const CommentBoxContainer = styled.div`
   @media (max-width: 390px) {
     padding: 5px 10px;
     & > :last-child {
-      padding-bottom: 10px;
       font-size: 12px;
       font-weight: 600;
     }
@@ -39,34 +39,40 @@ const ReviewContents = styled.div`
 
   @media (max-width: 390px) {
     & > :first-child {
+      display: flex;
       font-size: 10px;
       font-weight: 600;
-      padding-bottom: 10px;
+      width: 60px;
     }
     & > :last-child {
-      width: 210px;
-      padding-left: 10px;
+      width: 212px;
       font-size: 10px;
-      padding: 0px 10px;
+      padding: 0;
     }
   }
 `;
 
-export default function CommentBox() {
+interface Props {
+  commentTitle: string;
+  buyPrice: number;
+  commentContent: string;
+  userName: string;
+}
+
+export default function CommentBox(props:Props) {
+  const formationBuyPrice = formatPrice(props.buyPrice)
   return (
     <CommentBoxContainer>
       <ReviewContents>
         <div>
-          <span>사용자 이름</span>
+          <span>{props.userName}</span>
         </div>
         <div>
-          <span>
-            제품 상태는 되게 좋았고 근데 뭔가 문제는 좀 있었어요
-          </span>
+          <span>{props.commentContent}</span>
         </div>
       </ReviewContents>
       <div>
-        <span>3,869,000원</span>
+        <span>{formationBuyPrice}원</span>
       </div>
     </CommentBoxContainer>
   );

@@ -393,7 +393,8 @@
       "productId": 1,
       "commentTitle": "product id 1에 대한 코멘트 1",
       "buyPrice": 100000,
-      "commentContent": "ㅋㅋㅋㅋㅋ루삥루삥뽕"
+      "commentContent": "ㅋㅋㅋㅋㅋ루삥루삥뽕",
+      "userName": "나김유저"
     }
   ],
   "productDetail": [

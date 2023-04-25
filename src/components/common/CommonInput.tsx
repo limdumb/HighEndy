@@ -5,7 +5,7 @@ import "./style/commonInput.css";
 interface InputProps {
   width?: string;
   height?: string;
-  value: string;
+  value?: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   type: "text" | "password" | "email";
   placeholder: string;
@@ -13,6 +13,7 @@ interface InputProps {
   label?: string;
   name?: string;
   border?: string;
+  defaultValue?: string
 }
 
 const Input = styled.input<InputProps>`
@@ -36,6 +37,7 @@ export default function CommonInput(props: InputProps) {
           radius={props.radius}
           placeholder={props.placeholder}
           type={props.type}
+          defaultValue={props.defaultValue}
           value={props.value}
           onChange={props.onChange}
           width={props.width}
