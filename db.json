@@ -475,6 +475,13 @@
       "userName": "닉네임입니다",
       "productId": 13,
       "id": 6
+    },
+    {
+      "buyPrice": 10000,
+      "commentContent": "이거별로임",
+      "userName": "닉네임입니다",
+      "productId": 1,
+      "id": 7
     }
   ],
   "productDetail": [

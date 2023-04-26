@@ -118,6 +118,9 @@ export default function CommentBox(props: Props) {
     }
   };
 
+  console.log(props.userName);
+  console.log(props.userNickName);
+
   return (
     <CommentBoxContainer>
       <ReviewContents>
@@ -170,7 +173,7 @@ export default function CommentBox(props: Props) {
           border={"1px solid #afafaf"}
         />
       )}
-      {!isEditMode ? (
+      {props.userNickName === props.userName ? !isEditMode ? (
         <FaPencilAlt className="Edit_Pan" onClick={() => setIsEditMode(true)} />
       ) : (
         <FaPencilAlt
@@ -179,7 +182,7 @@ export default function CommentBox(props: Props) {
             onEditSubmit();
           }}
         />
-      )}
+      ) : null}
     </CommentBoxContainer>
   );
 }
