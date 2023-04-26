@@ -9,10 +9,10 @@ import {
 import "./style/topRank.css";
 
 export default function TopRank() {
-  const productInitialValue: ProductType = {
-    productList: [{ id: 0, productName: "", productImage: "" }],
-  };
-  const topRankProductData = useFetch<ProductType>(
+  const productInitialValue: ProductType[] = 
+    [{ id: 0, productName: "", productImage: "" }]
+  ;
+  const topRankProductData = useFetch<Array<ProductType>>(
     "/toprank",
     productInitialValue
   );
@@ -24,7 +24,7 @@ export default function TopRank() {
           <h2>이달의 Top 10 제품</h2>
         </div>
         <ProductListWrapper>
-          {topRankProductData.data.productList.map((product) => {
+          {topRankProductData.data.map((product) => {
             return (
               <ProductCard
                 key={product.id}
