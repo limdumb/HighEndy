@@ -1,11 +1,15 @@
+import { ChangeEvent, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { postComment } from "../API/comment/postComment";
+import CustomButton from "../components/common/CustomButton";
 import useFetch from "../components/customHook/useFetch";
 import CommentBox from "../components/ProductDetail/CommentBox";
 import ProductComment from "../components/ProductDetail/ProductComment";
 import ProductInfo, {
   ContourLine,
 } from "../components/ProductDetail/ProductInfo";
+import { onInputChanged } from "../function/onInputChanged";
 import "./style/productDetail.css";
 
 const ProductDetailContainer = styled.div`
@@ -51,13 +55,28 @@ interface ProductDetailType {
 interface CommentType {
   id: number;
   productId: number;
-  commentTitle: string;
   buyPrice: number;
   commentContent: string;
+  userName: string;
+}
+
+export interface CommentValue {
+  commentContent: string;
+  buyPrice: string;
 }
 
 export default function ProductDetail() {
+  const [commentValue, setCommentValue] = useState<CommentValue>({
+    commentContent: "",
+    buyPrice: "",
+  });
+
+  const handleInputChanged = (e: ChangeEvent<HTMLInputElement>) => {
+    onInputChanged<CommentValue>(commentValue, setCommentValue, e);
+  };
+
   const param = useParams();
+  const userNickName = localStorage.getItem("nickName");
   const detailInitialValue: ProductDetailType[] = [
     {
       id: 0,
@@ -71,14 +90,20 @@ export default function ProductDetail() {
     },
   ];
   const commentInitialValue: CommentType[] = [
-    { id: 0, productId: 0, commentTitle: "", buyPrice: 0, commentContent: "" },
+    {
+      id: 0,
+      userName: "",
+      productId: 0,
+      buyPrice: 0,
+      commentContent: "",
+    },
   ];
   const productDetailData = useFetch<Array<ProductDetailType>>(
     `productDetail?id=${param.productId}`,
     detailInitialValue
   );
   const commentData = useFetch<Array<CommentType>>(
-    `comments?id=${param.productId}`,
+    `comments?productId=${param.productId}`,
     commentInitialValue
   );
 
@@ -117,14 +142,57 @@ export default function ProductDetail() {
         );
       })}
       <div className="Product_Review_Container">
-        <ProductComment />
+        <ProductComment
+          commentValue={commentValue}
+          handleInputChanged={handleInputChanged}
+        />
+        <div className="Submit_Button_Container">
+          {userNickName ? (
+            <CustomButton
+              onClick={async () => {
+                if (
+                  commentValue.buyPrice.length !== 0 &&
+                  commentValue.commentContent.length !== 0
+                ) {
+                  const postResult = await postComment({
+                    buyPrice: Number(commentValue.buyPrice),
+                    commentContent: commentValue.commentContent,
+                    userName: userNickName,
+                    productId: Number(param.productId),
+                  });
+                  if (postResult) {
+                    alert("등록이 완료 되었습니다!");
+                    window.location.reload();
+                  }
+                } else {
+                  alert("내용이나 금액을 입력해주세요");
+                }
+              }}
+              width={"70px"}
+              height={"30px"}
+              contents={"등록"}
+            />
+          ) : (
+            <CustomButton
+              onClick={() => alert("로그인 후 작성 가능합니다")}
+              width={"70px"}
+              height={"30px"}
+              contents={"등록"}
+            />
+          )}
+        </div>
         <ContourLine />
       </div>
       {commentData.data.length !== 0
         ? commentData.data.map((comment) => {
             return (
               <div key={comment.id}>
-                <CommentBox />
+                <CommentBox
+                userNickName={userNickName}
+                  buyPrice={comment.buyPrice}
+                  commentContent={comment.commentContent}
+                  userName={comment.userName}
+                />
               </div>
             );
           })

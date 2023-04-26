@@ -87,6 +87,7 @@ export default function Header(props: Props) {
       if (response && !isLoading) {
         setUser(response);
       }
+      localStorage.setItem("nickName", response.nickName);
     };
     if (props.memberId !== null) fetchUserInfo();
   }, []);

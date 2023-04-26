@@ -10,6 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const CommonButton = styled.button<ButtonProps>`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: ${(props) => (props.width ? props.width : {})};
   height: ${(props) => (props.width ? props.height : {})};
   border-radius: 15px;
