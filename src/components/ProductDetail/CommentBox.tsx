@@ -89,7 +89,8 @@ export default function CommentBox(props: Props) {
   // 3-1. Edit Mode를 True로 할 수 있는 아이콘으로 변경
 
   const onEditRequested = () => {
-    setIsEditMode(!isEditMode);
+    setIsEditMode(false);
+    
   };
 
   return (
@@ -108,7 +109,7 @@ export default function CommentBox(props: Props) {
       {!isEditMode ? (
         <FaPencilAlt
           className="Edit_Pan"
-          onClick={() => setIsEditMode(!isEditMode)}
+          onClick={() => setIsEditMode(true)}
         />
       ) : (
         <FaPencilAlt

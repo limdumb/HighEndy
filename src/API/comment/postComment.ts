@@ -1,14 +1,14 @@
 import { baseInstance } from "../instance";
 
-interface RequestType {
+export interface CommentRequestType {
   buyPrice: number;
   commentContent: string;
   userName: string | null;
   productId: number;
 }
 
-export const postComment = async (props: RequestType) => {
-  const request: RequestType = {
+export const postComment = async (props: CommentRequestType) => {
+  const request: CommentRequestType = {
     buyPrice: props.buyPrice,
     commentContent: props.commentContent,
     userName: props.userName,

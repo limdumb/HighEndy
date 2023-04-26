@@ -433,14 +433,13 @@
       "productImage": "https://www.chanel.com/images//t_one///q_auto:good,f_auto,fl_lossy,dpr_1.2/w_620/dress-blue-white-navy-blue-black-cotton-tweed-cotton-tweed-packshot-default-p74450v66032nm667-9518360526878.jpg"
     }
   ],
-
   "comments": [
     {
-      "id": 1,
+      "buyPrice": 1000,
+      "commentContent": "이거뭔데요",
+      "userName": "임덤덤임",
       "productId": 1,
-      "buyPrice": 100000,
-      "commentContent": "ㅋㅋㅋㅋㅋ루삥루삥뽕",
-      "userName": "나김유저"
+      "id": 1
     },
     {
       "buyPrice": 100000,
