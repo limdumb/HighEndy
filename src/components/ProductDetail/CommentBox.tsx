@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import formatPrice from "../../function/formatPrice";
 import { FaPencilAlt } from "react-icons/fa";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
+import { editComment } from "../../API/comment/editComment";
+import CommonInput from "../common/CommonInput";
+import {
+  getOnlyNumbersRegex,
+  handleKeyPress,
+} from "../../function/validateFunc";
+import { onInputChanged } from "../../function/onInputChanged";
 
 const CommentBoxContainer = styled.div`
   display: flex;
@@ -75,22 +82,40 @@ interface Props {
   commentContent: string;
   userName: string;
   userNickName: string | null;
+  commentId: number;
+  productId: number;
 }
 
 export default function CommentBox(props: Props) {
   const formationBuyPrice = formatPrice(props.buyPrice);
   const [isEditMode, setIsEditMode] = useState(false);
+  const [editCommentValue, setEditCommentValue] = useState({
+    commentContent: props.commentContent,
+    buyPrice: props.buyPrice,
+  });
 
-  // 1. Edit Mode를 toggle을 해준다
-  // 2. Edit Mode가 true일때
-  // 2-1. Content에 인풋이 생기면서 Input Value를 수정할수있게함 ( 이전 Input Value )
-  // 2-2. Edit Pen은 toggle이 아닌 요청을 보낼수있는 아이콘
-  // 3. Edit Mode가 false일때
-  // 3-1. Edit Mode를 True로 할 수 있는 아이콘으로 변경
-
-  const onEditRequested = () => {
+  const onEditRequested = async () => {
     setIsEditMode(false);
-    
+    if (editCommentValue.commentContent.length !== 0) {
+      const response = await editComment({
+        commentId: props.commentId,
+        buyPrice: editCommentValue.buyPrice,
+        commentContent: editCommentValue.commentContent,
+        userName: props.userName,
+        productId: props.productId,
+      });
+      return response;
+    } else {
+      alert("수정 정보를 입력 해주세요");
+    }
+  };
+
+  const onEditSubmit = async () => {
+    const response = await onEditRequested();
+    if (response === 200) {
+      alert("수정이 완료 되었습니다.");
+      window.location.reload();
+    }
   };
 
   return (
@@ -99,22 +124,60 @@ export default function CommentBox(props: Props) {
         <div>
           <span>{props.userName}</span>
         </div>
-        <div>
-          <span>{props.commentContent}</span>
-        </div>
+        {!isEditMode ? (
+          <div>
+            <span>{props.commentContent}</span>
+          </div>
+        ) : (
+          <div>
+            <CommonInput
+              defaultValue={editCommentValue.commentContent}
+              onChange={(e) => {
+                onInputChanged(editCommentValue, setEditCommentValue, e);
+              }}
+              type={"text"}
+              name={"commentContent"}
+              placeholder={"구입하셨던 리뷰를 입력해주세요"}
+              width={window.innerWidth <= 390 ? "180px" : "490px"}
+              height={window.innerWidth <= 390 ? "40px" : "40px"}
+              border={"1px solid #afafaf"}
+            />
+          </div>
+        )}
       </ReviewContents>
-      <div className="Buy_Price_Container">
-        <span>{formationBuyPrice}원</span>
-      </div>
       {!isEditMode ? (
-        <FaPencilAlt
-          className="Edit_Pan"
-          onClick={() => setIsEditMode(true)}
+        <div className="Buy_Price_Container">
+          <span>{formationBuyPrice}원</span>
+        </div>
+      ) : (
+        <CommonInput
+          defaultValue={`${editCommentValue.buyPrice}`}
+          onChange={(e) => {
+            const regexResult = getOnlyNumbersRegex(e);
+            const koreaRegexResult = !/^[ㄱ-ㅎㅏ-ㅣ가-힣]*$/.test(
+              e.target.value
+            );
+            if (regexResult && koreaRegexResult) {
+              onInputChanged(editCommentValue, setEditCommentValue, e);
+            }
+          }}
+          onKeyPress={(e) => handleKeyPress(e)}
+          name={"buyPrice"}
+          type={"text"}
+          placeholder={"구입하셨던 상품 금액을 입력해주세요"}
+          width={window.innerWidth <= 390 ? "180px" : "100px"}
+          height={window.innerWidth <= 390 ? "40px" : "40px"}
+          border={"1px solid #afafaf"}
         />
+      )}
+      {!isEditMode ? (
+        <FaPencilAlt className="Edit_Pan" onClick={() => setIsEditMode(true)} />
       ) : (
         <FaPencilAlt
           className="Edit_Pan"
-          onClick={() => onEditRequested()}
+          onClick={() => {
+            onEditSubmit();
+          }}
         />
       )}
     </CommentBoxContainer>

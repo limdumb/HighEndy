@@ -188,7 +188,9 @@ export default function ProductDetail() {
             return (
               <div key={comment.id}>
                 <CommentBox
-                userNickName={userNickName}
+                  productId={Number(param.productId)}
+                  commentId={comment.id}
+                  userNickName={userNickName}
                   buyPrice={comment.buyPrice}
                   commentContent={comment.commentContent}
                   userName={comment.userName}

@@ -64,7 +64,6 @@ export default function Login() {
           height={"41px"}
           contents={"로그인"}
           onClick={async () => {
-            //validate는 이전 리뷰확인으로 수정후 적용 예정
             const loginResult = await login({ nickName: loginValue.nickName });
             if (
               loginResult.data.length !== 0 &&

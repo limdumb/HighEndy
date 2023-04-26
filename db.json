@@ -435,8 +435,8 @@
   ],
   "comments": [
     {
-      "buyPrice": 1000,
-      "commentContent": "이거뭔데요",
+      "buyPrice": "1000000",
+      "commentContent": "이거뭔데요ㅠㅠㅠ",
       "userName": "임덤덤임",
       "productId": 1,
       "id": 1
@@ -450,7 +450,7 @@
     },
     {
       "buyPrice": 100000,
-      "commentContent": "이제품 넘 비싸고 별로에요",
+      "commentContent": "이제품 넘 비싸고 별로에요ㅜㅜㅜ",
       "userName": "닉네임입니다",
       "productId": 13,
       "id": 3
