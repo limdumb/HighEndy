@@ -1,4 +1,5 @@
 {
   "/productDetail/:productId": "/productDetail/:productId",
-  "/productDetail/:id/comments" : "/productDetail/:id/comments"
+  "/productDetail/:id/comments" : "/productDetail/:id/comments",
+  "/products?productName_like=:searchTerm": "/products?productName_like=:searchTerm"
 }
