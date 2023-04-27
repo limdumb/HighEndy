@@ -162,9 +162,10 @@ export default function CommentBox(props: Props) {
               type={"text"}
               name={"commentContent"}
               placeholder={"구입하셨던 리뷰를 입력해주세요"}
-              width={window.innerWidth <= 390 ? "180px" : "490px"}
-              height={window.innerWidth <= 390 ? "40px" : "40px"}
+              width={window.innerWidth <= 390 ? "170px" : "490px"}
+              height={window.innerWidth <= 390 ? "20px" : "40px"}
               border={"1px solid #afafaf"}
+              
             />
           </div>
         )}
@@ -189,8 +190,8 @@ export default function CommentBox(props: Props) {
           name={"buyPrice"}
           type={"text"}
           placeholder={"구입하셨던 상품 금액을 입력해주세요"}
-          width={window.innerWidth <= 390 ? "180px" : "100px"}
-          height={window.innerWidth <= 390 ? "40px" : "40px"}
+          width={window.innerWidth <= 390 ? "60px" : "100px"}
+          height={window.innerWidth <= 390 ? "20px" : "40px"}
           border={"1px solid #afafaf"}
         />
       )}
