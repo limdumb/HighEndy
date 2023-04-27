@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import formatPrice from "../../function/formatPrice";
 import { FaPencilAlt } from "react-icons/fa";
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 import { editComment } from "../../API/comment/editComment";
 import CommonInput from "../common/CommonInput";
 import {
@@ -117,9 +117,6 @@ export default function CommentBox(props: Props) {
       window.location.reload();
     }
   };
-
-  console.log(props.userName);
-  console.log(props.userNickName);
 
   return (
     <CommentBoxContainer>
