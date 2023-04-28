@@ -69,6 +69,11 @@
       "nickName": "닉네임입니다",
       "password": "mk123123123",
       "id": 14
+    },
+    {
+      "nickName": "test",
+      "password": "test123123",
+      "id": 15
     }
   ],
   "products": [

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import login from "../API/auth/login";
 import CommonInput from "../components/common/CommonInput";
 import CustomButton from "../components/common/CustomButton";
+import { setLoginItem } from "../function/setLocalStorage";
 import { AuthContent } from "./SignUp";
 
 export default function Login() {
@@ -66,14 +67,16 @@ export default function Login() {
           onClick={async () => {
             const loginResult = await login({ nickName: loginValue.nickName });
             if (
-              loginResult.data.length !== 0 &&
-              loginResult.data[0].nickName === loginValue.nickName &&
-              loginResult.data[0].password === loginValue.password
+              loginResult.length !== 0 &&
+              loginResult[0].nickName === loginValue.nickName &&
+              loginResult[0].password === loginValue.password
             ) {
-              localStorage.setItem("memberId", loginResult.data.id);
-              localStorage.setItem("nickName", loginResult.data.nickName);
+              setLoginItem({
+                nickName: loginResult[0].nickName,
+                memberId: loginResult[0].id
+              })
               alert("로그인이 완료 되었습니다!");
-              navigate("/products/?brand=hermes");
+              navigate("/");
             } else {
               alert("로그인 정보가 잘못 되었습니다.");
             }

@@ -159,7 +159,9 @@ export default function Header(props: Props) {
                 onClick={() => {
                   logout();
                   alert("로그아웃이 완료 되었습니다!");
-                  navigate("/products/?brand=hermes");
+                  setIsDropDown(false)
+                  navigate("/");
+                  window.location.reload()
                 }}
               >
                 <span>로그아웃</span>
