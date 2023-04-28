@@ -107,7 +107,9 @@ export default function SignUp() {
               });
               if (signUpResult === 201) {
                 alert("회원가입이 완료 되었습니다");
-
+                login({
+                  nickName: signUpValue.nickName
+                })
                 navigate("/");
               }
             } catch (error) {

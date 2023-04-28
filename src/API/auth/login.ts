@@ -5,12 +5,6 @@ interface Props {
   nickName:string
 }
 
-interface LoginReturnType{
-  id: number
-  nickName:string
-  password: string
-}
-
 export default async function login(props: Props):Promise<AxiosResponse<any, any>> {
   // JSON Server Filter 문자열은 인코딩되어서 사용해야하여 변환코드 생성
   const encodeValue = encodeURIComponent(props.nickName)

@@ -71,6 +71,7 @@ export default function Login() {
               loginResult.data[0].password === loginValue.password
             ) {
               localStorage.setItem("memberId", loginResult.data.id);
+              localStorage.setItem("nickName", loginResult.data.nickName);
               alert("로그인이 완료 되었습니다!");
               navigate("/products/?brand=hermes");
             } else {
