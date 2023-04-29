@@ -127,8 +127,8 @@ export default function CommentBox(props: Props) {
       try {
         const response = await deleteComment(props.commentId);
         if (response === 200) {
-          alert("삭제가 완료 되었습니다")
-          window.location.reload()
+          alert("삭제가 완료 되었습니다");
+          window.location.reload();
         } else {
           throw new Error("삭제 요청이 실패 하였습니다.");
         }
@@ -136,9 +136,9 @@ export default function CommentBox(props: Props) {
         alert(err);
       }
     } else {
-      alert("삭제 요청이 취소 되었습니다.")
+      alert("삭제 요청이 취소 되었습니다.");
     }
-  }
+  };
 
   const onEditSubmit = async () => {
     const response = await onEditRequested();
@@ -171,7 +171,6 @@ export default function CommentBox(props: Props) {
               width={window.innerWidth <= 390 ? "170px" : "490px"}
               height={window.innerWidth <= 390 ? "20px" : "40px"}
               border={"1px solid #afafaf"}
-              
             />
           </div>
         )}
