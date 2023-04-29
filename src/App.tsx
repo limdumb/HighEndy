@@ -57,13 +57,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <>
-        <Header
-          clickStatus={clickStatus}
-          setClickStatus={setClickStatus}
-          onTabClicked={onTabClicked}
-          isActiveTab={isActiveTab}
-          memberId={memberId}
-        />
+          <Header
+            clickStatus={clickStatus}
+            setClickStatus={setClickStatus}
+            onTabClicked={onTabClicked}
+            isActiveTab={isActiveTab}
+            memberId={memberId}
+          />
         {isActiveTab ? (
           <div className="Menu_Active_Wrapper">
             <div className="Aside_Tab_Mobile_Wrapper">

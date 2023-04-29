@@ -5,6 +5,7 @@ import login from "../API/auth/login";
 import registerUser from "../API/auth/signup";
 import CommonInput from "../components/common/CommonInput";
 import CustomButton from "../components/common/CustomButton";
+import { setLoginItem } from "../function/setLocalStorage";
 import validateInputs from "../function/validateFunc";
 import "./style/signup.css";
 
@@ -107,6 +108,13 @@ export default function SignUp() {
               });
               if (signUpResult === 201) {
                 alert("회원가입이 완료 되었습니다");
+                const loginResult = await login({
+                  nickName: signUpValue.nickName
+                })
+                setLoginItem({
+                  nickName: loginResult[0].nickName,
+                  memberId: loginResult[0].id
+                })
                 navigate("/");
               }
             } catch (error) {

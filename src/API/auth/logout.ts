@@ -1,7 +1,7 @@
 export default function logout() {
   return new Promise((resolve, rejects) => {
     try {
-      resolve(localStorage.removeItem("memberId"));
+      localStorage.clear()
     } catch (err) {
       rejects(err);
     }
