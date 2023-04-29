@@ -79,11 +79,6 @@ export default function Header(props: Props) {
     nickName: "",
   });
 
-  //1. 로딩이 true이고 로그인이 되지 않았을땐 로그인/회원가입을 띄운다 => {isMounted && props.memberId === null}
-  //2. 로딩이 false이고 로그인이 되지 않았을땐 로그인/회원가입을 띄운다 => {!isMounted && props.memberId === null}
-  //3. 로딩이 true이고 로그인이 되었으면 loading..을 띄운다 => {isMounted && props.memberId !==null}
-  //4. 로딩이 false이고 로그인이 되었으면 닉네임을 띄운다 => {!isMounted && props.memberId !== null}
-
   useEffect(() => {
     console.log(isMounted)
     const fetchUserInfo = async () => {
