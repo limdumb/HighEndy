@@ -77,19 +77,17 @@ export default function Header(props: Props) {
     id: 0,
     nickName: "",
   });
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchUserInfo = async () => {
-      setIsLoading(true);
       const response = await getUser(props.memberId);
-      setIsLoading(false);
-      if (response && !isLoading) {
+      if (response) {
         setUser(response);
       }
-      localStorage.setItem("nickName", response.nickName);
     };
-    if (props.memberId !== null) fetchUserInfo();
+    if (props.memberId !== null) {
+      fetchUserInfo();
+    }
   }, []);
 
   const opDropDownCheckd = () => {
@@ -144,7 +142,7 @@ export default function Header(props: Props) {
         );
       })}
       <div>
-        {props.memberId ? (
+        {props.memberId !== null ? (
           <div className="Header_Profile_Container">
             <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
             <span>{user.nickName}</span>
@@ -159,7 +157,9 @@ export default function Header(props: Props) {
                 onClick={() => {
                   logout();
                   alert("로그아웃이 완료 되었습니다!");
-                  navigate("/products/?brand=hermes");
+                  setIsDropDown(false);
+                  navigate("/");
+                  window.location.reload();
                 }}
               >
                 <span>로그아웃</span>
