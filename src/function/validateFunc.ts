@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import { SignUpType } from "../API/auth/signup";
 
 export default function validateInputs(props: SignUpType) {
@@ -9,3 +10,14 @@ export default function validateInputs(props: SignUpType) {
   if (!passwordRegex.test(props.password))
     throw new Error("비밀번호가 잘못 되었습니다.");
 }
+
+export const getOnlyNumbersRegex = (e: ChangeEvent<HTMLInputElement>) => {
+  const regex = /^[0-9]*$/;
+  return regex.test(e.target.value);
+};
+
+export const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  if (e.key !== "Backspace" && e.key !== "Delete" && isNaN(Number(e.key))) {
+    e.preventDefault();
+  }
+};

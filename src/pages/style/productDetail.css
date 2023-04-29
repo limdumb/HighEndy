@@ -12,6 +12,18 @@
   display: none;
 }
 
+.Product_Review_Container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Submit_Button_Container{
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
 @media (max-width: 390px) {
   .Product_Detaile_Info_Container {
     display: flex;
@@ -34,8 +46,4 @@
     flex-direction: column;
     margin-top: 60px;
   }
-}
-
-.Product_Review_Container{
-  margin-top: 40px;
 }
