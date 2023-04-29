@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import formatPrice from "../../function/formatPrice";
 import { FaPencilAlt } from "react-icons/fa";
+import { TiDeleteOutline } from "react-icons/ti";
 import { useState } from "react";
 import { editComment } from "../../API/comment/editComment";
 import CommonInput from "../common/CommonInput";
@@ -9,6 +10,7 @@ import {
   handleKeyPress,
 } from "../../function/validateFunc";
 import { onInputChanged } from "../../function/onInputChanged";
+import { deleteComment } from "../../API/comment/deleteComment";
 
 const CommentBoxContainer = styled.div`
   display: flex;
@@ -25,6 +27,11 @@ const CommentBoxContainer = styled.div`
     cursor: pointer;
   }
 
+  & > .Edit_On_Pan {
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+
   @media (max-width: 390px) {
     padding: 5px 10px;
     & > .Buy_Price_Container {
@@ -32,6 +39,11 @@ const CommentBoxContainer = styled.div`
       font-weight: 600;
     }
     & > .Edit_Pan {
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    & > .Edit_On_Pan {
       font-size: 12px;
       margin-bottom: 2px;
     }
@@ -52,7 +64,7 @@ const ReviewContents = styled.div`
   & > :last-child {
     display: flex;
     align-items: center;
-    width: 1200px;
+    width: 1180px;
     padding-left: 40px;
     font-size: 15px;
     height: 100%;
@@ -110,6 +122,24 @@ export default function CommentBox(props: Props) {
     }
   };
 
+  const onDeleteSubmit = async () => {
+    if (window.confirm("정말로 삭제하시겠습니까?")) {
+      try {
+        const response = await deleteComment(props.commentId);
+        if (response === 200) {
+          alert("삭제가 완료 되었습니다");
+          window.location.reload();
+        } else {
+          throw new Error("삭제 요청이 실패 하였습니다.");
+        }
+      } catch (err) {
+        alert(err);
+      }
+    } else {
+      alert("삭제 요청이 취소 되었습니다.");
+    }
+  };
+
   const onEditSubmit = async () => {
     const response = await onEditRequested();
     if (response === 200) {
@@ -138,8 +168,8 @@ export default function CommentBox(props: Props) {
               type={"text"}
               name={"commentContent"}
               placeholder={"구입하셨던 리뷰를 입력해주세요"}
-              width={window.innerWidth <= 390 ? "180px" : "490px"}
-              height={window.innerWidth <= 390 ? "40px" : "40px"}
+              width={window.innerWidth <= 390 ? "170px" : "490px"}
+              height={window.innerWidth <= 390 ? "20px" : "40px"}
               border={"1px solid #afafaf"}
             />
           </div>
@@ -165,20 +195,32 @@ export default function CommentBox(props: Props) {
           name={"buyPrice"}
           type={"text"}
           placeholder={"구입하셨던 상품 금액을 입력해주세요"}
-          width={window.innerWidth <= 390 ? "180px" : "100px"}
-          height={window.innerWidth <= 390 ? "40px" : "40px"}
+          width={window.innerWidth <= 390 ? "60px" : "100px"}
+          height={window.innerWidth <= 390 ? "20px" : "40px"}
           border={"1px solid #afafaf"}
         />
       )}
-      {props.userNickName === props.userName ? !isEditMode ? (
-        <FaPencilAlt className="Edit_Pan" onClick={() => setIsEditMode(true)} />
-      ) : (
-        <FaPencilAlt
-          className="Edit_Pan"
-          onClick={() => {
-            onEditSubmit();
-          }}
-        />
+      {props.userNickName === props.userName ? (
+        !isEditMode ? (
+          <FaPencilAlt
+            className="Edit_Pan"
+            onClick={() => setIsEditMode(true)}
+          />
+        ) : (
+          <>
+            <FaPencilAlt
+              className="Edit_On_Pan"
+              onClick={() => {
+                onEditSubmit();
+              }}
+            />
+            <TiDeleteOutline
+              onClick={() => {
+                onDeleteSubmit();
+              }}
+            />
+          </>
+        )
       ) : null}
     </CommentBoxContainer>
   );
