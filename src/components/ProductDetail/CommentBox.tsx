@@ -124,10 +124,16 @@ export default function CommentBox(props: Props) {
 
   const onDeleteSubmit = async () => {
     if (window.confirm("정말로 삭제하시겠습니까?")) {
-      const response = await deleteComment(props.commentId);
-      if(response === 200){
-        alert("삭제가 완료 되었습니다")
-        window.location.reload()
+      try {
+        const response = await deleteComment(props.commentId);
+        if (response === 200) {
+          alert("삭제가 완료 되었습니다")
+          window.location.reload()
+        } else {
+          throw new Error("삭제 요청이 실패 하였습니다.");
+        }
+      } catch (err) {
+        alert(err);
       }
     } else {
       alert("삭제 요청이 취소 되었습니다.")
