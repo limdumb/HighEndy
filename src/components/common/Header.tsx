@@ -73,24 +73,30 @@ interface Props {
 export default function Header(props: Props) {
   const navigate = useNavigate();
   const [isDropDown, setIsDropDown] = useState(false);
+  const [isMounted, setIsMounted] = useState(true);
   const [user, setUser] = useState<UserDataType>({
     id: 0,
     nickName: "",
   });
-  const [isLoading, setIsLoading] = useState(false);
+
+  //1. 로딩이 true이고 로그인이 되지 않았을땐 로그인/회원가입을 띄운다 => {isMounted && props.memberId === null}
+  //2. 로딩이 false이고 로그인이 되지 않았을땐 로그인/회원가입을 띄운다 => {!isMounted && props.memberId === null}
+  //3. 로딩이 true이고 로그인이 되었으면 loading..을 띄운다 => {isMounted && props.memberId !==null}
+  //4. 로딩이 false이고 로그인이 되었으면 닉네임을 띄운다 => {!isMounted && props.memberId !== null}
 
   useEffect(() => {
+    console.log(isMounted)
     const fetchUserInfo = async () => {
-      setIsLoading(true);
       const response = await getUser(props.memberId);
-      setIsLoading(false);
-      if (response && !isLoading) {
+      if (response) {
         setUser(response);
       }
-      localStorage.setItem("nickName", response.nickName);
+      setIsMounted(false);
     };
-    if (props.memberId !== null) fetchUserInfo();
-  }, []);
+    if (props.memberId !== null) {
+      fetchUserInfo();
+    }
+  }, [isMounted]);
 
   const opDropDownCheckd = () => {
     setIsDropDown(!isDropDown);
@@ -144,7 +150,7 @@ export default function Header(props: Props) {
         );
       })}
       <div>
-        {props.memberId ? (
+        {props.memberId !== null ? (
           <div className="Header_Profile_Container">
             <ProfileImage src="https://w1.pngwing.com/pngs/348/1013/png-transparent-black-circle-user-symbol-login-user-profile-rim-black-and-white-line-thumbnail.png" />
             <span>{user.nickName}</span>
@@ -159,9 +165,9 @@ export default function Header(props: Props) {
                 onClick={() => {
                   logout();
                   alert("로그아웃이 완료 되었습니다!");
-                  setIsDropDown(false)
+                  setIsDropDown(false);
                   navigate("/");
-                  window.location.reload()
+                  window.location.reload();
                 }}
               >
                 <span>로그아웃</span>
