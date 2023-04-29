@@ -73,25 +73,22 @@ interface Props {
 export default function Header(props: Props) {
   const navigate = useNavigate();
   const [isDropDown, setIsDropDown] = useState(false);
-  const [isMounted, setIsMounted] = useState(true);
   const [user, setUser] = useState<UserDataType>({
     id: 0,
     nickName: "",
   });
 
   useEffect(() => {
-    console.log(isMounted)
     const fetchUserInfo = async () => {
       const response = await getUser(props.memberId);
       if (response) {
         setUser(response);
       }
-      setIsMounted(false);
     };
     if (props.memberId !== null) {
       fetchUserInfo();
     }
-  }, [isMounted]);
+  }, []);
 
   const opDropDownCheckd = () => {
     setIsDropDown(!isDropDown);
