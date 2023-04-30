@@ -74,6 +74,11 @@
       "nickName": "test",
       "password": "test123123",
       "id": 15
+    },
+    {
+      "nickName": "지현이메롱",
+      "password": "mk123123123",
+      "id": 16
     }
   ],
   "products": [
