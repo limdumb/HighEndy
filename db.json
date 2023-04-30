@@ -480,6 +480,13 @@
       "userName": "닉네임입니다",
       "productId": 13,
       "id": 6
+    },
+    {
+      "buyPrice": 1000000,
+      "commentContent": "이 제품은 좀 ..",
+      "userName": "test",
+      "productId": 53,
+      "id": 7
     }
   ],
   "productDetail": [

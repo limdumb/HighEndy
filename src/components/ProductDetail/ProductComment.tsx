@@ -1,5 +1,8 @@
 import { ChangeEvent } from "react";
-import { getOnlyNumbersRegex, handleKeyPress } from "../../function/validateFunc";
+import {
+  getOnlyNumbersRegex,
+  handleKeyPress,
+} from "../../function/validateFunc";
 import { CommentValue } from "../../pages/ProductDetail";
 import CommonInput from "../common/CommonInput";
 import "./style/productComment.css";
@@ -10,7 +13,6 @@ interface Props {
 }
 
 export default function ProductComment(props: Props) {
-
   return (
     <div>
       <div className="Product_Review_Write_Container">
