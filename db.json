@@ -487,18 +487,11 @@
       "id": 6
     },
     {
-      "buyPrice": 1000,
-      "commentContent": "ㅁㄴㅇㄹㅁㄴㅇㄹ",
-      "userName": "지현이메롱",
-      "productId": 13,
-      "id": 7
-    },
-    {
-      "buyPrice": 10000,
-      "commentContent": "ㅡㅡㅡ",
+      "buyPrice": 1000000,
+      "commentContent": "이 제품은 좀 ..",
       "userName": "test",
-      "productId": 13,
-      "id": 8
+      "productId": 53,
+      "id": 7
     }
   ],
   "productDetail": [
