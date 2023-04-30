@@ -9,6 +9,7 @@ import ProductComment from "../components/ProductDetail/ProductComment";
 import ProductInfo, {
   ContourLine,
 } from "../components/ProductDetail/ProductInfo";
+import { getNickName } from "../function/getUserData";
 import { onInputChanged } from "../function/onInputChanged";
 import "./style/productDetail.css";
 
@@ -76,7 +77,7 @@ export default function ProductDetail() {
   };
 
   const param = useParams();
-  const userNickName = localStorage.getItem("nickName");
+  const userNickName = getNickName()
   const detailInitialValue: ProductDetailType[] = [
     {
       id: 0,

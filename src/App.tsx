@@ -12,6 +12,7 @@ import AsideTab from "./components/common/AsideTab";
 import ProductDefaultPage from "./pages/ProductDefaultPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { getMemberId } from "./function/getUserData";
 
 const RootContainer = styled.div`
   height: 100%;
@@ -26,7 +27,7 @@ export default function App() {
     localStorage.getItem("clickState")
   );
 
-  const memberId = localStorage.getItem("memberId");
+  const memberId = getMemberId();
 
   const onTabClicked = () => {
     if (window.innerWidth <= 390) {
