@@ -13,6 +13,7 @@ import ProductDefaultPage from "./pages/ProductDefaultPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { getMemberId } from "./function/getUserData";
+import Home from "./pages/Home";
 
 const RootContainer = styled.div`
   height: 100%;
@@ -81,8 +82,9 @@ export default function App() {
       </>
       <RootContainer>
         <Routes>
+          <Route path="/" element={<Home/>}/>
           <Route
-            path="/"
+            path="/products"
             element={
               <ProductDefaultPage
                 setClickStatus={setClickStatus}
@@ -94,7 +96,7 @@ export default function App() {
             }
           >
             <Route
-              path="products"
+              path=""
               element={
                 <ProductList isActiveTab={false} activeBrand={activeBrand} />
               }
