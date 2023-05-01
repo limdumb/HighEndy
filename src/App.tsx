@@ -27,7 +27,7 @@ export default function App() {
     localStorage.getItem("clickState")
   );
 
-  const memberId = getMemberId();
+  const memberId = getMemberId()
 
   const onTabClicked = () => {
     if (window.innerWidth <= 390) {

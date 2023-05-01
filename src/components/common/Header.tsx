@@ -96,7 +96,7 @@ export default function Header(props: Props) {
 
   const headerTabs = [
     { tabTitle: "추천순", linkUrl: "/toprank" },
-    { tabTitle: "브랜드별", linkUrl: "/products" },
+    { tabTitle: "브랜드별", linkUrl: "/products/?brand=hermes" },
   ];
 
   return (
@@ -122,7 +122,8 @@ export default function Header(props: Props) {
       >
         <HighEndyLogo />
       </div>
-      <div className="Header_Logo_Wrapper"
+      <div
+        className="Header_Logo_Wrapper"
         onClick={() => {
           navigate("/");
           props.setClickStatus("false");
@@ -133,12 +134,8 @@ export default function Header(props: Props) {
       </div>
       {headerTabs.map((tab) => {
         return (
-          <div className="Header_Tab_Wrapper">
-            <a
-              key={tab.tabTitle}
-              className="Header_Tab_Content"
-              href={tab.linkUrl}
-            >
+          <div key={tab.tabTitle} className="Header_Tab_Wrapper">
+            <a className="Header_Tab_Content" href={tab.linkUrl}>
               {tab.tabTitle}
             </a>
           </div>
