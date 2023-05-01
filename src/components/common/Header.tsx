@@ -13,7 +13,7 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 40px;
   background-color: white;
   border-bottom: 1px solid #b6b6b697;
   padding: 5px 30px;
@@ -26,7 +26,7 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 40px;
     border-bottom: 1px solid #b6b6b697;
     padding-left: 10px;
     & > .Mobile_Logo_Wrapper,
@@ -54,8 +54,8 @@ const DropDownBox = styled.div`
 `;
 
 const ProfileImage = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 25px;
   @media (max-width: 390px) {
     display: none;
@@ -95,7 +95,7 @@ export default function Header(props: Props) {
   };
 
   const headerTabs = [
-    { tabTitle: "추천순", linkUrl: "/toprank" },
+    { tabTitle: "추천순", linkUrl: "/products/toprank" },
     { tabTitle: "브랜드별", linkUrl: "/products/?brand=hermes" },
   ];
 

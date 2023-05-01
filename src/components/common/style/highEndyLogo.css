@@ -4,8 +4,8 @@
 }
 
 .square {
-  width: 50px;
-  height: 49px;
+  width: 40px;
+  height: 39.7px;
   background-color: #cc0000;
   display: flex;
   align-items: center;
@@ -16,10 +16,10 @@
 .letter {
   color: #FFFFFF;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .text {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
 }

@@ -15,7 +15,7 @@ interface HomeDataType {
 
 const CarouselImage = styled.img`
   width: 80%;
-  height: 700px;
+  height: 500px;
   margin: 0 auto;
 
   @media (max-width: 390px) {

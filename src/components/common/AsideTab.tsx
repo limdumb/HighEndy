@@ -13,7 +13,7 @@ const AsideContainer = styled.aside`
   align-items: center;
   min-height: calc(100vh - 50px);
   height: 100%;
-  width: 160px;
+  width: 140px;
   border-right: 1px solid #aaaaaa;
   background-color: #ffffff;
   & > button {
@@ -71,7 +71,7 @@ export default function AsideTab(props: Props) {
 
   return (
     <AsideContainer>
-      <h1>제품 브랜드</h1>
+      <h2>제품 브랜드</h2>
       <div className="Brand_Tab_Container">
         {asideTabList.map((tab) => {
           return (

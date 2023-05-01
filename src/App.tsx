@@ -18,7 +18,7 @@ import Home from "./pages/Home";
 const RootContainer = styled.div`
   height: 100%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
 `;
 
 export default function App() {
