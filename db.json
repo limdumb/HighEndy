@@ -1,5 +1,43 @@
 {
-
+  "home": {
+    "carousel": [
+      "https://img.wkorea.com/w/2023/04/style_6441e95ba0342.jpg",
+      "https://img.wkorea.com/w/2023/04/style_6441ea4f2bdd8.jpg",
+      "https://img.wkorea.com/w/2023/04/style_6441eb040853a.jpg"
+    ],
+    "article": [
+      {
+        "articleId": 1,
+        "articleTitle": "루이 비통 2023 프리폴 컬렉션",
+        "articleImage": "https://img.wkorea.com/w/2023/05/style_644f24e17d4f6-500x354.jpg",
+        "articleUrl": "https://www.wkorea.com/2023/05/01/%eb%a3%a8%ec%9d%b4-%eb%b9%84%ed%86%b5-2023-%ed%94%84%eb%a6%ac%ed%8f%b4-%ec%bb%ac%eb%a0%89%ec%85%98"
+      },
+      {
+        "articleId": 2,
+        "articleTitle": "5월에 들기 좋은 파스텔 컬러 아이템",
+        "articleImage": "https://img.wkorea.com/w/2023/04/style_6449e2a95ae9b-500x354-1682564697.jpg",
+        "articleUrl": "https://www.wkorea.com/2023/04/29/5%ec%9b%94%ec%9d%b4-%ec%98%a4%eb%a9%b4-%ed%8c%8c%ec%8a%a4%ed%85%94-%ec%bb%ac%eb%9f%ac-%ec%95%84%ec%9d%b4%ed%85%9c/"
+      },
+      {
+        "articleId": 3,
+        "articleTitle": "스타일리스트 없어도 괜찮아! 혼자서도 옷 잘 입는 셀럽",
+        "articleImage": "https://www.wkorea.com/2023/04/29/5%ec%9b%94%ec%9d%b4-%ec%98%a4%eb%a9%b4-%ed%8c%8c%ec%8a%a4%ed%85%94-%ec%bb%ac%eb%9f%ac-%ec%95%84%ec%9d%b4%ed%85%9c/",
+        "articleUrl": "https://www.wkorea.com/2023/04/29/%ec%8a%a4%ed%83%80%ec%9d%bc%eb%a6%ac%ec%8a%a4%ed%8a%b8-%ec%97%86%ec%96%b4%eb%8f%84-%ea%b4%9c%ec%b0%ae%ec%95%84-%ed%98%bc%ec%9e%90%ec%84%9c%eb%8f%84-%ec%98%b7-%ec%9e%98-%ec%9e%85%eb%8a%94-%ec%85%80/"
+      },
+      {
+        "articleId": 4,
+        "articleTitle": "블랙핑크 제니처럼 입고 페스티벌 갈까?",
+        "articleImage": "https://img.wkorea.com/w/2023/04/style_644b664614fd4-500x354-1682670549.jpg 500w, https://img.wkorea.com/w/2023/04/style_644b664614fd4.jpg 665w",
+        "articleUrl": "https://www.wkorea.com/2023/04/28/%eb%b8%94%eb%9e%99%ed%95%91%ed%81%ac-%ec%a0%9c%eb%8b%88%ec%b2%98%eb%9f%bc-%ec%9e%85%ea%b3%a0-%ed%8e%98%ec%8a%a4%ed%8b%b0%eb%b2%8c-%ea%b0%88%ea%b9%8c/"
+      },
+      {
+        "articleId": 5,
+        "articleTitle": "요즘 가장 핫한 스타들의 선택, 뮈글러",
+        "articleImage": "https://img.wkorea.com/w/2023/04/style_644a11852c190-e1682578201843-500x354.jpg",
+        "articleUrl": "https://www.wkorea.com/2023/04/27/%ec%9a%94%ec%a6%98-%ea%b0%80%ec%9e%a5-%ed%95%ab%ed%95%9c-%ec%8a%a4%ed%83%80%eb%93%a4%ec%9d%98-%ec%84%a0%ed%83%9d-%eb%ae%88%ea%b8%80%eb%9f%ac/"
+      }
+    ]
+  },
 
   "users": [
     {
