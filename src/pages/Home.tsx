@@ -14,13 +14,18 @@ interface HomeDataType {
 }
 
 const CarouselImage = styled.img`
-width: 80%;
-  height: 600px;
+  width: 80%;
+  height: 700px;
   margin: 0 auto;
+
+  @media (max-width: 390px) {
+    width: 100%;
+    height: 200px;
+  }
 `;
 
 const SlideItem = styled.div`
-  text-align: center;
+  width: 100%;
 `;
 
 export default function Home() {
@@ -33,12 +38,12 @@ export default function Home() {
 
   const settings: Settings = {
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     dots: true, // 페이지네이션 표시
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    // slidesToScroll: 1,
   };
 
   return (
@@ -46,7 +51,7 @@ export default function Home() {
       <Slider {...settings}>
         {homeData.data.carousel.map((image, index) => (
           <SlideItem key={index}>
-            <CarouselImage src={image} alt={`slide ${index}`} />
+            <CarouselImage src={image}/>
           </SlideItem>
         ))}
       </Slider>

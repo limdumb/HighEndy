@@ -1,3 +1,8 @@
 .Carousel_Container{
   display: flex;
 }
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
