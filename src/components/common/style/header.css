@@ -41,6 +41,10 @@
   display: none;
 }
 
+.Header_Logo_Wrapper{
+  cursor: pointer;
+}
+
 @media (max-width: 390px) {
   .DropDown_Button {
     display: none;

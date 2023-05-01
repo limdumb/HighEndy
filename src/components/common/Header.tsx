@@ -7,6 +7,7 @@ import getUser, { UserDataType } from "../../API/user/getUser";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import { onCategoryClicked } from "../../function/categoryFunc";
 import "./style/header.css";
+import HighEndyLogo from "./HighEndyLogo";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -28,8 +29,7 @@ const HeaderContainer = styled.div`
     height: 50px;
     border-bottom: 1px solid #b6b6b697;
     padding-left: 10px;
-    & > .Header_Logo_Image,
-    span,
+    & > .Mobile_Logo_Wrapper,
     a {
       display: none;
     }
@@ -112,33 +112,36 @@ export default function Header(props: Props) {
           onClick={() => props.onTabClicked()}
         />
       )}
-      <div className="Mobile_Logo_Wrapper">
-        <img
-          className="Header_Mobile_Logo_Image"
-          onClick={() => {
-            navigate("/");
-            props.setClickStatus("false");
-            onCategoryClicked(props.clickStatus);
-          }}
-        />
-      </div>
-      <img
-        className="Header_Logo_Image"
+      <div
+        className="Mobile_Logo_Wrapper"
         onClick={() => {
           navigate("/");
           props.setClickStatus("false");
           onCategoryClicked(props.clickStatus);
         }}
-      />
+      >
+        <HighEndyLogo />
+      </div>
+      <div className="Header_Logo_Wrapper"
+        onClick={() => {
+          navigate("/");
+          props.setClickStatus("false");
+          onCategoryClicked(props.clickStatus);
+        }}
+      >
+        <HighEndyLogo />
+      </div>
       {headerTabs.map((tab) => {
         return (
-          <a
-            key={tab.tabTitle}
-            className="Header_Tab_Content"
-            href={tab.linkUrl}
-          >
-            {tab.tabTitle}
-          </a>
+          <div className="Header_Tab_Wrapper">
+            <a
+              key={tab.tabTitle}
+              className="Header_Tab_Content"
+              href={tab.linkUrl}
+            >
+              {tab.tabTitle}
+            </a>
+          </div>
         );
       })}
       <div>

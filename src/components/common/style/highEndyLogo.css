@@ -1,0 +1,25 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.square {
+  width: 50px;
+  height: 49px;
+  background-color: #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.letter {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.text {
+  font-weight: bold;
+  font-size: 24px;
+}
