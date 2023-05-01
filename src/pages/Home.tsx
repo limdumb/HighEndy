@@ -24,6 +24,16 @@ const CarouselImage = styled.img`
   }
 `;
 
+const ArticleWrapper = styled.li`
+  width: 220px;
+  height: 250px;
+`;
+
+const ArticleImage = styled.img`
+  width: 220px;
+  height: 160px;
+`;
+
 const SlideItem = styled.div`
   width: 100%;
 `;
@@ -39,22 +49,37 @@ export default function Home() {
   const settings: Settings = {
     autoplay: true,
     autoplaySpeed: 4000,
-    dots: true, // 페이지네이션 표시
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    // slidesToScroll: 1,
   };
 
   return (
     <div className="Home_Wrapper">
-      <Slider {...settings}>
-        {homeData.data.carousel.map((image, index) => (
-          <SlideItem key={index}>
-            <CarouselImage src={image}/>
-          </SlideItem>
-        ))}
-      </Slider>
+      <div className="Slider_Wrapper">
+        <Slider {...settings}>
+          {homeData.data.carousel.map((image, index) => (
+            <SlideItem key={index}>
+              <CarouselImage src={image} />
+            </SlideItem>
+          ))}
+        </Slider>
+      </div>
+      <div className="Article_Title_Wrapper">
+        <span className="Article_Main_Title">TODAY’S STORIES</span>
+      </div>
+      <ul className="Article_Wrapper">
+        {homeData.data.article.map((element) => {
+          return (
+            <ArticleWrapper key={element.articleId}>
+              <ArticleImage src={element.articleImage} />
+              <span className="Article_Category">FASHION</span>
+              <a href={element.articleUrl} className="Article_Title">{element.articleTitle}</a>
+            </ArticleWrapper>
+          );
+        })}
+      </ul>
     </div>
   );
 }

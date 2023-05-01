@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import logout from "../../API/auth/logout";
 import { Link, useNavigate } from "react-router-dom";
-import { onCategoryClicked } from "../../function/categoryFunc";
 import trackQueryString from "../../function/trackQueryString";
 import "./style/asideTab.css";
 
@@ -30,16 +29,13 @@ const AsideContainer = styled.aside`
   }
 
   @media (max-width: 390px) {
+    width: 137px;
     min-height: 100vh;
     padding-top: 0px;
     background-color: #fffffffe;
 
-    & > h1 {
+    & > h2 {
       margin-top: 20px;
-    }
-
-    & > h1:last-child {
-      display: block;
     }
   }
 `;
@@ -48,8 +44,6 @@ interface Props {
   onTabClicked: () => void;
   memberId: string | null;
   onCategoryChanged: (URLParams: string) => void;
-  clickStatus: string | null;
-  setClickStatus: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export default function AsideTab(props: Props) {
@@ -78,8 +72,6 @@ export default function AsideTab(props: Props) {
             <span
               key={tab.tabTitle}
               onClick={() => {
-                props.setClickStatus("true");
-                onCategoryClicked("true");
                 navigate(tab.tabUrl);
                 const queryString = trackQueryString();
                 if (queryString !== null) {
@@ -94,23 +86,19 @@ export default function AsideTab(props: Props) {
         })}
       </div>
       <Link
-        to={"/toprank"}
+        to={"/products/toprank"}
         className="Top_Rank_Tab"
         onClick={() => {
           props.onTabClicked();
-          props.setClickStatus("true");
-          onCategoryClicked("true");
         }}
       >
         <h2>이달의 Top10</h2>
       </Link>
       <Link
-        to={"/search"}
+        to={"/products/search"}
         className="Search_Nav_Tab"
         onClick={() => {
           props.onTabClicked();
-          props.setClickStatus("true");
-          onCategoryClicked("true");
         }}
       >
         <h2>상품 검색</h2>

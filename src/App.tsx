@@ -24,9 +24,6 @@ const RootContainer = styled.div`
 export default function App() {
   const [isActiveTab, setIstActiveTab] = useState(false);
   const [activeBrand, setActiveBrand] = useState("");
-  const [clickStatus, setClickStatus] = useState(
-    localStorage.getItem("clickState")
-  );
 
   const memberId = getMemberId()
 
@@ -60,8 +57,6 @@ export default function App() {
     <BrowserRouter>
       <>
           <Header
-            clickStatus={clickStatus}
-            setClickStatus={setClickStatus}
             onTabClicked={onTabClicked}
             isActiveTab={isActiveTab}
             memberId={memberId}
@@ -70,8 +65,6 @@ export default function App() {
           <div className="Menu_Active_Wrapper">
             <div className="Aside_Tab_Mobile_Wrapper">
               <AsideTab
-                setClickStatus={setClickStatus}
-                clickStatus={clickStatus}
                 memberId={memberId}
                 onCategoryChanged={onCategoryChanged}
                 onTabClicked={onTabClicked}
@@ -87,8 +80,6 @@ export default function App() {
             path="/products"
             element={
               <ProductDefaultPage
-                setClickStatus={setClickStatus}
-                clickStatus={clickStatus}
                 onCategoryChanged={onCategoryChanged}
                 isActiveTab={isActiveTab}
                 onTabClicked={onTabClicked}

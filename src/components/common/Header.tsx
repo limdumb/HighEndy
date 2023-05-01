@@ -5,11 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
 import getUser, { UserDataType } from "../../API/user/getUser";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
-import { onCategoryClicked } from "../../function/categoryFunc";
 import "./style/header.css";
 import HighEndyLogo from "./HighEndyLogo";
 
 const HeaderContainer = styled.div`
+  position: fixed;
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,8 +67,6 @@ interface Props {
   onTabClicked: () => void;
   isActiveTab: boolean;
   memberId: string | null;
-  clickStatus: string | null;
-  setClickStatus: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export default function Header(props: Props) {
@@ -116,8 +115,6 @@ export default function Header(props: Props) {
         className="Mobile_Logo_Wrapper"
         onClick={() => {
           navigate("/");
-          props.setClickStatus("false");
-          onCategoryClicked(props.clickStatus);
         }}
       >
         <HighEndyLogo />
@@ -126,8 +123,6 @@ export default function Header(props: Props) {
         className="Header_Logo_Wrapper"
         onClick={() => {
           navigate("/");
-          props.setClickStatus("false");
-          onCategoryClicked(props.clickStatus);
         }}
       >
         <HighEndyLogo />

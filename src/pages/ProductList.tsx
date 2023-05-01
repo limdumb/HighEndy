@@ -19,7 +19,6 @@ export const ProductListContainer = styled.ul`
   & > .Product_List_Title {
     width: 81%;
     height: 50px;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +33,7 @@ export const ProductListWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 3em;
+  padding-top: 2em;
   gap: 3em 12.5%;
 `;
 
