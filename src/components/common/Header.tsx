@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { RxTriangleDown } from "react-icons/rx";
 import getUser, { UserDataType } from "../../API/user/getUser";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
-import "./style/header.css";
 import HighEndyLogo from "./HighEndyLogo";
+import "./style/header.css";
 
 const HeaderContainer = styled.div`
   position: fixed;
