@@ -39,7 +39,7 @@ const HeaderContainer = styled.div`
 
 const DropDownBox = styled.div`
   position: fixed;
-  top: 49px;
+  top: 39px;
   right: 41px;
   z-index: 10;
   width: 80px;
