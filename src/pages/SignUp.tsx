@@ -19,7 +19,7 @@ export const AuthContent = styled.div`
   background-color: #ffffffcd;
   margin-bottom: 40px;
   border-radius: 10px;
-  border: 1px solid 1px solid rgba(164, 164, 164, 0.153);
+  border: 1px solid #dadce0;
   margin-top: 50px;
   box-shadow: 3px 2px 5px rgba(164, 164, 164, 0.153);
 
@@ -109,12 +109,12 @@ export default function SignUp() {
               if (signUpResult === 201) {
                 alert("회원가입이 완료 되었습니다");
                 const loginResult = await login({
-                  nickName: signUpValue.nickName
-                })
+                  nickName: signUpValue.nickName,
+                });
                 setLoginItem({
                   nickName: loginResult[0].nickName,
-                  memberId: loginResult[0].id
-                })
+                  memberId: loginResult[0].id,
+                });
                 navigate("/");
               }
             } catch (error) {

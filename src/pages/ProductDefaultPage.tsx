@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { HomeContainer } from "./ProductList";
 import AsideTab from "../components/common/AsideTab";
-import TitleSection from "../components/common/TitleSection";
 import "./style/productDefault.css";
 
 

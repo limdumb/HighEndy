@@ -1,3 +1,4 @@
+import Home from "./pages/Home";
 import { useState } from "react";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -9,11 +10,10 @@ import ProductList from "./pages/ProductList";
 import Header from "./components/common/Header";
 import ProductDetail from "./pages/ProductDetail";
 import AsideTab from "./components/common/AsideTab";
+import { getMemberId } from "./function/getUserData";
 import ProductDefaultPage from "./pages/ProductDefaultPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { getMemberId } from "./function/getUserData";
-import Home from "./pages/Home";
 
 const RootContainer = styled.div`
   height: 100%;
